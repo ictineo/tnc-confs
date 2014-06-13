@@ -148,14 +148,14 @@ function tnc_ui_strongarm() {
   $strongarm->name = 'imce_profiles';
   $strongarm->value = array(
     1 => array(
-      'name' => 'User-1',
+      'name' => 'TNC',
       'usertab' => 1,
-      'filesize' => 0,
-      'quota' => 0,
-      'tuquota' => 0,
+      'filesize' => '0',
+      'quota' => '0',
+      'tuquota' => '0',
       'extensions' => '*',
       'dimensions' => '1200x1200',
-      'filenum' => 0,
+      'filenum' => '0',
       'directories' => array(
         0 => array(
           'name' => '.',
@@ -189,7 +189,7 @@ function tnc_ui_strongarm() {
           'suffix' => '',
         ),
       ),
-      'mkdirnum' => 0,
+      'mkdirnum' => '0',
     ),
     2 => array(
       'name' => 'Sample profile',
@@ -803,7 +803,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   $strongarm = new stdClass();
