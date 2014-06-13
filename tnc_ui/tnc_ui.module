@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tnc_ui feature.
+ */
+
+include_once 'tnc_ui.features.inc';
