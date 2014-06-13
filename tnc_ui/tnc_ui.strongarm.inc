@@ -24,5 +24,26 @@ function tnc_ui_strongarm() {
   $strongarm->value = '1';
   $export['login_redirect_status'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'special_menu_items_nolink_tag';
+  $strongarm->value = '<span>';
+  $export['special_menu_items_nolink_tag'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'special_menu_items_separator_tag';
+  $strongarm->value = '<span>';
+  $export['special_menu_items_separator_tag'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'special_menu_items_separator_value';
+  $strongarm->value = '<hr>';
+  $export['special_menu_items_separator_value'] = $strongarm;
+
   return $export;
 }
