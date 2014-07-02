@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tnc_cont feature.
+ */
+
+include_once 'tnc_cont.features.inc';
