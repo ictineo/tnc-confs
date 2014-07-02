@@ -69,6 +69,22 @@ function tnc_i18n_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_sessio';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_sessio';
+  $strongarm->value = array(
+    0 => 'current',
+  );
+  $export['i18n_node_options_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_string_allowed_formats';
   $strongarm->value = array(
     'plain_text' => 'plain_text',
@@ -83,6 +99,13 @@ function tnc_i18n_strongarm() {
   $strongarm->name = 'i18n_string_source_language';
   $strongarm->value = 'ca';
   $export['i18n_string_source_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_sessio';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_sessio'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -106,7 +129,7 @@ function tnc_i18n_strongarm() {
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '-10',
-    'javascript' => 'SDWbhGrYyWOtNrpUz4kwZkhPPn_ySPlAt-QGOua8RoU',
+    'javascript' => '98PMiIDtq5jqvhzZvP7gU9D4NAOb1hMN9EKEyyJXMBg',
   );
   $export['language_default'] = $strongarm;
 
