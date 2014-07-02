@@ -1,0 +1,11 @@
+name = tnc_editor
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = image_resize_filter
+dependencies[] = transliteration
+dependencies[] = wysiwyg
+features[features_api][] = api:2
+features[filter][] = editor_web
+features[wysiwyg][] = editor_web
