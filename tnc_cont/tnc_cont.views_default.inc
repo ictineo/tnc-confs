@@ -103,6 +103,17 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
+  /* Camp: Camp: Tarifa */
+  $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['label'] = '';
+  $handler->display->display_options['fields']['field_tarifa']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tarifa']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
   /* Criteri d'ordenació: Field collection item: Hora (field_hora_sessio) */
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
@@ -271,6 +282,17 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
+  /* Camp: Camp: Tarifa */
+  $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['label'] = '';
+  $handler->display->display_options['fields']['field_tarifa']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tarifa']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
   /* Criteri d'ordenació: Field collection item: Dia (field_dia_sessio) */
   $handler->display->display_options['sorts']['field_dia_sessio_value']['id'] = 'field_dia_sessio_value';
   $handler->display->display_options['sorts']['field_dia_sessio_value']['table'] = 'field_data_field_dia_sessio';
@@ -413,6 +435,84 @@ return $nids_or;';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['relationship'] = 'field_dia_hora_node';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextual: Data: Data (field_collection_item) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
+  );
+
+  /* Display: Calendari menu */
+  $handler = $view->new_display('block', 'Calendari menu', 'block_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month';
+  $handler->display->display_options['pager']['options']['pager_position'] = 'both';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_dia_sessio' => 'field_dia_sessio',
+  );
+  $handler->display->display_options['row_options']['separator'] = '||';
+  $handler->display->display_options['row_options']['colors']['taxonomy_field'] = 'field_sala';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_vocabulary'] = array(
+    'field_sala' => '9',
+  );
+  $handler->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = array(
+    34 => '#ffffff',
+    21 => '#ffffff',
+    20 => '#ffffff',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Field collection item: Dia */
+  $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['label'] = '';
+  $handler->display->display_options['fields']['field_dia_sessio']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_dia_sessio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_dia_sessio']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_dia_sessio']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => '',
+  );
+  $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
+  /* Camp: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['label'] = '';
+  $handler->display->display_options['fields']['item_id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextual: Data: Data (field_collection_item) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
+  );
   $export['calendar'] = $view;
 
   $view = new view();
@@ -1731,6 +1831,67 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'ops_1' => 'ops_1',
+    'ops_2' => 'ops_2',
+    'ops_3' => 'ops_3',
+    'ops' => 'ops',
+    'ops_4' => 'ops_4',
+    'ops_5' => 'ops_5',
+    'ops_6' => 'ops_6',
+    'ops_7' => 'ops_7',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_1' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_2' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_3' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_4' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_5' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_6' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_7' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
@@ -1775,6 +1936,30 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_4']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'proximament_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_edu_primaria */
+  $handler->display->display_options['relationships']['flag_content_rel_5']['id'] = 'flag_content_rel_5';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['label'] = 'primària';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_5']['flag'] = 'megamenu_edu_primaria';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_edu_secundaria */
+  $handler->display->display_options['relationships']['flag_content_rel_6']['id'] = 'flag_content_rel_6';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['label'] = 'secundària';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_6']['flag'] = 'megamenu_edu_secundaria';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_batxillerat */
+  $handler->display->display_options['relationships']['flag_content_rel_7']['id'] = 'flag_content_rel_7';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['label'] = 'batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_7']['flag'] = 'megamenu_batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -1816,6 +2001,24 @@ return $nids_or;';
   $handler->display->display_options['fields']['ops_4']['relationship'] = 'flag_content_rel_4';
   $handler->display->display_options['fields']['ops_4']['label'] = 'Espectacle "pròximament" al megamenú';
   $handler->display->display_options['fields']['ops_4']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_5']['id'] = 'ops_5';
+  $handler->display->display_options['fields']['ops_5']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_5']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_5']['relationship'] = 'flag_content_rel_5';
+  $handler->display->display_options['fields']['ops_5']['label'] = 'Educació primària al megamenú';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_6']['id'] = 'ops_6';
+  $handler->display->display_options['fields']['ops_6']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_6']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_6']['relationship'] = 'flag_content_rel_6';
+  $handler->display->display_options['fields']['ops_6']['label'] = 'Educació secundària al megamenú';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_7']['id'] = 'ops_7';
+  $handler->display->display_options['fields']['ops_7']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_7']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_7']['relationship'] = 'flag_content_rel_7';
+  $handler->display->display_options['fields']['ops_7']['label'] = 'Batxillerat al megamenú';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Criteri de filtratge: Contingut: Tipus */
@@ -1824,6 +2027,219 @@ return $nids_or;';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fitxa_espectacle' => 'fitxa_espectacle',
+  );
+
+  /* Display: Bloc entorn */
+  $handler = $view->new_display('block', 'Bloc entorn', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Entorn';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '15, 20, 40, 60';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: slide_portada */
+  $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['label'] = 'Slide';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'slide_portada';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
+  /* Relació: Flags: carrousel_gran */
+  $handler->display->display_options['relationships']['flag_content_rel_2']['id'] = 'flag_content_rel_2';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['label'] = 'c_gran';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_2']['flag'] = 'carrousel_gran';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['user_scope'] = 'any';
+  /* Relació: Flags: carrousel_petit */
+  $handler->display->display_options['relationships']['flag_content_rel_3']['id'] = 'flag_content_rel_3';
+  $handler->display->display_options['relationships']['flag_content_rel_3']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_3']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_3']['label'] = 'c_petit';
+  $handler->display->display_options['relationships']['flag_content_rel_3']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_3']['flag'] = 'carrousel_petit';
+  $handler->display->display_options['relationships']['flag_content_rel_3']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_edu_primaria */
+  $handler->display->display_options['relationships']['flag_content_rel_5']['id'] = 'flag_content_rel_5';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['label'] = 'primària';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_5']['flag'] = 'megamenu_edu_primaria';
+  $handler->display->display_options['relationships']['flag_content_rel_5']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_edu_secundaria */
+  $handler->display->display_options['relationships']['flag_content_rel_6']['id'] = 'flag_content_rel_6';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['label'] = 'secundària';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_6']['flag'] = 'megamenu_edu_secundaria';
+  $handler->display->display_options['relationships']['flag_content_rel_6']['user_scope'] = 'any';
+  /* Relació: Flags: megamenu_batxillerat */
+  $handler->display->display_options['relationships']['flag_content_rel_7']['id'] = 'flag_content_rel_7';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['label'] = 'batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_7']['flag'] = 'megamenu_batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel_7']['user_scope'] = 'any';
+  /* Relació: Flags: afons_megamenu */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'aFons';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'afons_megamenu';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relació: Flags: entorn_proximament */
+  $handler->display->display_options['relationships']['flag_content_rel_4']['id'] = 'flag_content_rel_4';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['label'] = 'entorn_prox';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'entorn_proximament';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
+  $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
+  $handler->display->display_options['fields']['ops_1']['label'] = 'Destaca al slide de portada';
+  $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_2']['id'] = 'ops_2';
+  $handler->display->display_options['fields']['ops_2']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_2']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_2']['relationship'] = 'flag_content_rel_2';
+  $handler->display->display_options['fields']['ops_2']['label'] = 'Destaca al carrousel gran de portada';
+  $handler->display->display_options['fields']['ops_2']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_3']['id'] = 'ops_3';
+  $handler->display->display_options['fields']['ops_3']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_3']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_3']['relationship'] = 'flag_content_rel_3';
+  $handler->display->display_options['fields']['ops_3']['label'] = 'Destaca al carrousel petit de portada';
+  $handler->display->display_options['fields']['ops_3']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Entorn A fons';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_4']['id'] = 'ops_4';
+  $handler->display->display_options['fields']['ops_4']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_4']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_4']['relationship'] = 'flag_content_rel_4';
+  $handler->display->display_options['fields']['ops_4']['label'] = 'Entorn pròximament';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_5']['id'] = 'ops_5';
+  $handler->display->display_options['fields']['ops_5']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_5']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_5']['relationship'] = 'flag_content_rel_5';
+  $handler->display->display_options['fields']['ops_5']['label'] = 'Educació primària al megamenú';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_6']['id'] = 'ops_6';
+  $handler->display->display_options['fields']['ops_6']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_6']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_6']['relationship'] = 'flag_content_rel_6';
+  $handler->display->display_options['fields']['ops_6']['label'] = 'Educació secundària al megamenú';
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_7']['id'] = 'ops_7';
+  $handler->display->display_options['fields']['ops_7']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_7']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_7']['relationship'] = 'flag_content_rel_7';
+  $handler->display->display_options['fields']['ops_7']['label'] = 'Batxillerat al megamenú';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Criteri de filtratge: Contingut: Tipus */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fitxa_entorn' => 'fitxa_entorn',
+  );
+
+  /* Display: Bloc premsa */
+  $handler = $view->new_display('block', 'Bloc premsa', 'block_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Premsa';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '15, 20, 40, 60';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: dossier_premsa_megamen_ */
+  $handler->display->display_options['relationships']['flag_content_rel_4']['id'] = 'flag_content_rel_4';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['label'] = 'premsa';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'dossier_premsa_megamen_';
+  $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel_4';
+  $handler->display->display_options['fields']['ops']['label'] = 'Premsa al megamenú';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Criteri de filtratge: Contingut: Tipus */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fitxa_premsa' => 'fitxa_premsa',
   );
   $export['gestio_megamenu'] = $view;
 
@@ -1852,6 +2268,11 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Camp: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
   /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
@@ -1910,14 +2331,6 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = TRUE;
-
-  /* Display: EVA Field */
-  $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
-  $handler->display->display_options['entity_type'] = 'node';
-  $handler->display->display_options['bundles'] = array(
-    0 => 'fitxa_entorn',
-    1 => 'fitxa_espectacle',
-  );
   $export['sessions'] = $view;
 
   $view = new view();
@@ -1994,6 +2407,11 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_subtitol']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_subtitol']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_subtitol']['field_api_classes'] = TRUE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -2019,10 +2437,88 @@ return $nids_or;';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'megamenu';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Global: Text personalitzat */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Arrossega els elements amb la creueta de la dreta fins la posició desitjada i prem "desa"
+';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'admin/workbench/draggmenu';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Endreça els elements del megamenú';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Espectacles en cartell */
   $handler = $view->new_display('block', 'Espectacles en cartell', 'block_1');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: disponible_megamenu */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relació: Camp: Temporada (field_temporada) */
+  $handler->display->display_options['relationships']['field_temporada_tid']['id'] = 'field_temporada_tid';
+  $handler->display->display_options['relationships']['field_temporada_tid']['table'] = 'field_data_field_temporada';
+  $handler->display->display_options['relationships']['field_temporada_tid']['field'] = 'field_temporada_tid';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_10';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextual: Terme de taxonomia: Nom */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['relationship'] = 'field_temporada_tid';
+  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['name']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Criteri de filtratge: Contingut: Publicat */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Criteri de filtratge: Contingut: Tipus */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fitxa_espectacle' => 'fitxa_espectacle',
+  );
 
   /* Display: Espectacles pròximament */
   $handler = $view->new_display('block', 'Espectacles pròximament', 'block_2');
@@ -2070,6 +2566,19 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_11';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
 
   /* Display: Entorn A fons */
@@ -2118,6 +2627,18 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_12';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
 
   /* Display: Entorn proximament */
@@ -2153,7 +2674,6 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_dia_hora']['settings'] = array(
     'view_mode' => 'entityreference_view_widget',
   );
-  $handler->display->display_options['fields']['field_dia_hora']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_hora']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_dia_hora']['field_api_classes'] = TRUE;
   /* Camp: Contingut: Tipus d'entorn */
@@ -2174,6 +2694,607 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_13';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Dossiers premsa */
+  $handler = $view->new_display('block', 'Dossiers premsa', 'block_5');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: dossier_premsa_megamen_ */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'dossier_premsa';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_14';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Primària */
+  $handler = $view->new_display('block', 'Primària', 'block_6');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: megamenu_edu_primaria */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'primària';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_primaria';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Secundària */
+  $handler = $view->new_display('block', 'Secundària', 'block_7');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: megamenu_edu_secundaria */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'secundària';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_secundaria';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextual: Camp: Temporada (field_temporada) */
+  $handler->display->display_options['arguments']['field_temporada_tid']['id'] = 'field_temporada_tid';
+  $handler->display->display_options['arguments']['field_temporada_tid']['table'] = 'field_data_field_temporada';
+  $handler->display->display_options['arguments']['field_temporada_tid']['field'] = 'field_temporada_tid';
+  $handler->display->display_options['arguments']['field_temporada_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_temporada_tid']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['field_temporada_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_temporada_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_temporada_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_temporada_tid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Batxillerat */
+  $handler = $view->new_display('block', 'Batxillerat', 'block_8');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: megamenu_batxillerat */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_batxillerat';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Patrocinadors */
+  $handler = $view->new_display('block', 'Patrocinadors', 'block_9');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: dossier_premsa_megamen_ */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'patrocinadors';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Tipus de patrocinador */
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['id'] = 'field_tipus_patrocinador';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['field'] = 'field_tipus_patrocinador';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['label'] = '';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tipus_patrocinador']['field_api_classes'] = TRUE;
+  /* Camp: Global: Text personalitzat */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="[field_tipus_patrocinador]"><a href="[field_link]">[field_imatge]</a></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Dragg espectacles cartell */
+  $handler = $view->new_display('block', 'Dragg espectacles cartell', 'block_10');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Espectacles en cartell disponibles al megamenú';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_imatge_capcalera' => 'field_imatge_capcalera',
+    'field_sala' => 'field_sala',
+    'title' => 'title',
+    'field_subtitol' => 'field_subtitol',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_imatge_capcalera' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_sala' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_subtitol' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: disponible_megamenu */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relació: Camp: Temporada (field_temporada) */
+  $handler->display->display_options['relationships']['field_temporada_tid']['id'] = 'field_temporada_tid';
+  $handler->display->display_options['relationships']['field_temporada_tid']['table'] = 'field_data_field_temporada';
+  $handler->display->display_options['relationships']['field_temporada_tid']['field'] = 'field_temporada_tid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Camp: Terme de taxonomia: Nom */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'field_temporada_tid';
+  $handler->display->display_options['fields']['name']['label'] = 'Temporada';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Espectacle "en cartell" al megamenú';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Camp: Draggableviews: Contingut */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Criteri de filtratge: Contingut: Publicat */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Criteri de filtratge: Contingut: Tipus */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fitxa_espectacle' => 'fitxa_espectacle',
+  );
+
+  /* Display: Dragg espectacles pròximament */
+  $handler = $view->new_display('block', 'Dragg espectacles pròximament', 'block_11');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Espectacles disponibles al megamenú secció pròximament';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'nid' => 'nid',
+    'title' => 'title',
+    'draggableviews' => 'draggableviews',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'draggableviews' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: proximament_megamenu */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'proximament_megamenu';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Espectacle "pròximament" al megamenú';
+  /* Camp: Draggableviews: Contingut */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Dragg Entorn A fons */
+  $handler = $view->new_display('block', 'Dragg Entorn A fons', 'block_12');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Entorns "a fons" disponibles al megamenú';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_data' => 'field_data',
+    'field_tipus_entorn' => 'field_tipus_entorn',
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_data' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_tipus_entorn' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: afons_megamenu */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'afons_megamenu';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Entorn A fons';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Camp: Draggableviews: Contingut */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Dragg Entorn proximament */
+  $handler = $view->new_display('block', 'Dragg Entorn proximament', 'block_13');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Entorns disponibles al megamenú secció pròximament';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_dia' => 'field_dia',
+    'field_dia_hora' => 'field_dia_hora',
+    'field_tipus_entorn' => 'field_tipus_entorn',
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_dia' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_dia_hora' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_tipus_entorn' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: entorn_proximament */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'entorn_proximament';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Entorn "pròximament" al megamenú';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Camp: Draggableviews: Contingut */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Dragg dossiers premsa */
+  $handler = $view->new_display('block', 'Dragg dossiers premsa', 'block_14');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Contingut disponible a Dossier de premsa al megamenú';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_imatge_capcalera' => 'field_imatge_capcalera',
+    'field_sala' => 'field_sala',
+    'title' => 'title',
+    'field_subtitol' => 'field_subtitol',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_imatge_capcalera' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_sala' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_subtitol' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Flags: dossier_premsa_megamen_ */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'dossier_premsa';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Secció Dossier de premsa al megamenú';
+  /* Camp: Draggableviews: Contingut */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $export['view_megamenu'] = $view;
 

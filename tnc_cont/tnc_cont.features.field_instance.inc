@@ -233,10 +233,10 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
         ),
         'type' => 'viewfield_default',
         'weight' => 1,
@@ -249,19 +249,157 @@ function tnc_cont_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_altres_llistats',
     'label' => 'Altres llistats',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'allowed_views' => array(),
-      'force_default' => FALSE,
+      'allowed_views' => array(
+        'blo' => 0,
+        'calendar' => 0,
+        'carrousel' => 0,
+        'eva_espectacle' => 0,
+        'eva_taxo_tarifes' => 0,
+        'field_collection_view' => 0,
+        'gestio_megamenu' => 0,
+        'list_node_page_titles' => 0,
+        'sessions_node' => 0,
+        'view_megamenu' => 'view_megamenu',
+        'vistes_auxiliars' => 0,
+        'vistes_auxiliars_premsa' => 0,
+        'workbench_current_user' => 0,
+        'workbench_edited' => 0,
+        'workbench_recent_content' => 0,
+      ),
+      'force_default' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'viewfield',
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_columna_1-field_calendari'
+  $field_instances['field_collection_item-field_columna_1-field_calendari'] = array(
+    'bundle' => 'field_columna_1',
+    'default_value' => array(
+      0 => array(
+        'vname' => 'calendar|block_2',
+        'vargs' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'viewfield_default',
+        'weight' => 3,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_calendari',
+    'label' => 'Calendari',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'blo' => 0,
+        'calendar' => 'calendar',
+        'carrousel' => 0,
+        'eva_espectacle' => 0,
+        'eva_taxo_tarifes' => 0,
+        'field_collection_view' => 0,
+        'gestio_megamenu' => 0,
+        'list_node_page_titles' => 0,
+        'sessions_node' => 0,
+        'view_megamenu' => 0,
+        'vistes_auxiliars' => 0,
+        'vistes_auxiliars_premsa' => 0,
+        'workbench_current_user' => 0,
+        'workbench_edited' => 0,
+        'workbench_recent_content' => 0,
+      ),
+      'force_default' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_columna_1-field_enllac_megamenu'
+  $field_instances['field_collection_item-field_columna_1-field_enllac_megamenu'] = array(
+    'bundle' => 'field_columna_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'link_default',
+        'weight' => 5,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_enllac_megamenu',
+    'label' => 'Enllaç megamenú',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_top',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 5,
     ),
   );
 
@@ -278,10 +416,10 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
         ),
         'type' => 'viewfield_default',
         'weight' => 0,
@@ -296,25 +434,25 @@ function tnc_cont_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'fences_wrapper' => 'div',
     'field_name' => 'field_espectacle_menu',
-    'label' => 'Espectacle per temporada',
+    'label' => 'Espectacle en cartell',
     'required' => 0,
     'settings' => array(
       'allowed_views' => array(
         'blo' => 0,
-        'bloc_calendari' => 0,
         'calendar' => 0,
-        'calendari' => 0,
-        'calendari_test_quiron' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
+        'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
+        'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
-        'proves_jude_pager' => 0,
-        'proves_quiron' => 0,
-        'proves_quiron_fc' => 0,
+        'sessions_node' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
+        'workbench_current_user' => 0,
+        'workbench_edited' => 0,
+        'workbench_recent_content' => 0,
       ),
       'force_default' => 0,
       'user_register_form' => FALSE,
@@ -325,6 +463,112 @@ function tnc_cont_field_default_field_instances() {
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_columna_1-field_espectacle_prox'
+  $field_instances['field_collection_item-field_columna_1-field_espectacle_prox'] = array(
+    'bundle' => 'field_columna_1',
+    'default_value' => array(
+      0 => array(
+        'vname' => 'view_megamenu|block_2',
+        'vargs' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'viewfield_default',
+        'weight' => 2,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_espectacle_prox',
+    'label' => 'Espectacle pròximament',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'blo' => 0,
+        'calendar' => 0,
+        'carrousel' => 0,
+        'eva_espectacle' => 0,
+        'eva_taxo_tarifes' => 0,
+        'field_collection_view' => 0,
+        'gestio_megamenu' => 0,
+        'list_node_page_titles' => 0,
+        'sessions_node' => 0,
+        'view_megamenu' => 'view_megamenu',
+        'vistes_auxiliars' => 0,
+        'vistes_auxiliars_premsa' => 0,
+        'workbench_current_user' => 0,
+        'workbench_edited' => 0,
+        'workbench_recent_content' => 0,
+      ),
+      'force_default' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_columna_1-field_text_lliure'
+  $field_instances['field_collection_item-field_columna_1-field_text_lliure'] = array(
+    'bundle' => 'field_columna_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_text_lliure',
+    'label' => 'Text lliure',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
     ),
   );
 
@@ -2439,7 +2683,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4405,59 +4649,6 @@ function tnc_cont_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-megamenu-body'
-  $field_instances['node-megamenu-body'] = array(
-    'bundle' => 'megamenu',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => 0,
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'node-megamenu-field_columna_1'
   $field_instances['node-megamenu-field_columna_1'] = array(
     'bundle' => 'megamenu',
@@ -4466,7 +4657,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'semantic_field_format' => 0,
@@ -4501,7 +4692,7 @@ function tnc_cont_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 41,
+      'weight' => 0,
     ),
   );
 
@@ -4513,10 +4704,10 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
@@ -4548,7 +4739,7 @@ function tnc_cont_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 42,
+      'weight' => 1,
     ),
   );
 
@@ -4560,10 +4751,10 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
@@ -4595,7 +4786,7 @@ function tnc_cont_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 43,
+      'weight' => 2,
     ),
   );
 
@@ -4607,10 +4798,10 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
@@ -4642,7 +4833,7 @@ function tnc_cont_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 44,
+      'weight' => 3,
     ),
   );
 
@@ -5554,7 +5745,7 @@ function tnc_cont_field_default_field_instances() {
   t('Artista i càrrec');
   t('Audiodescripció');
   t('Autor');
-  t('Body');
+  t('Calendari');
   t('Columna 1');
   t('Columna 2');
   t('Columna 3');
@@ -5570,9 +5761,11 @@ function tnc_cont_field_default_field_instances() {
   t('Document');
   t('Documentació');
   t('Durada');
+  t('Enllaç megamenú');
   t('Entorn');
   t('Entrada');
-  t('Espectacle per temporada');
+  t('Espectacle en cartell');
+  t('Espectacle pròximament');
   t('Estrenat');
   t('Grup tarifes');
   t('Hashtag Twitter');
@@ -5600,6 +5793,7 @@ function tnc_cont_field_default_field_instances() {
   t('Tarifa');
   t('Temporada');
   t('Text');
+  t('Text lliure');
   t('Tipus d\'entorn');
   t('Tipus de multimèdia');
   t('Tria d\'entre la llista de suggeriments o introdueix un nou terme. En el camp Artista es poden incloure múltiples valors separats per comes.');

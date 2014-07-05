@@ -937,6 +937,7 @@ function tnc_cont_strongarm() {
     'group_multimedia|node|fitxa_espectacle|form' => FALSE,
     'group_multimedia|node|fitxa_premsa|form' => FALSE,
     'group_sessio|node|fitxa_premsa|form' => FALSE,
+    'group_espectacles|field_collection_item|field_columna_1|form' => TRUE,
   );
   $export['default_field_group'] = $strongarm;
 
@@ -1598,7 +1599,17 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_collection_item__field_columna_1';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(),
       'display' => array(),
@@ -2103,7 +2114,19 @@ function tnc_cont_strongarm() {
         ),
         'eva_taxo_tarifes_entity_view_1' => array(
           'default' => array(
+            'weight' => '12',
+            'visible' => TRUE,
+          ),
+        ),
+        'sessions_node_entity_view_1' => array(
+          'default' => array(
             'weight' => '9',
+            'visible' => TRUE,
+          ),
+        ),
+        'sessions_node_entity_view_2' => array(
+          'default' => array(
+            'weight' => '10',
             'visible' => TRUE,
           ),
         ),
@@ -2270,26 +2293,55 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__megamenu';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '9',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '4',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '7',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__megamenu'] = $strongarm;
@@ -2953,6 +3005,7 @@ function tnc_cont_strongarm() {
     4 => 'main-menu',
     5 => 'navigation',
     6 => 'user-menu',
+    7 => 'menu-tauler',
   );
   $export['menu_default_active_menus'] = $strongarm;
 
