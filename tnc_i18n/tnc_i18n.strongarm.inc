@@ -129,7 +129,7 @@ function tnc_i18n_strongarm() {
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '-10',
-    'javascript' => '98PMiIDtq5jqvhzZvP7gU9D4NAOb1hMN9EKEyyJXMBg',
+    'javascript' => 'CYeZh2oh8pXroaHtWIgQoY3AHPEyZ0p0KwLL9WxoFd0',
   );
   $export['language_default'] = $strongarm;
 
