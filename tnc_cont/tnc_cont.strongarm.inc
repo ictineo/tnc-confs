@@ -14,7 +14,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_audio';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +49,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_imatge';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_imatge'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -91,7 +91,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_video';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-i18n';
   $export['additional_settings__active_tab_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2914,7 +2914,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_audio';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_audio'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2949,7 +2949,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_imatge';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_imatge'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2991,7 +2991,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_video';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3013,7 +3013,9 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_expanded';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'menu-tauler',
+  );
   $export['menu_expanded'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -50,7 +50,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -11,
+    'weight' => -14,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -89,7 +89,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -15,
+    'weight' => -18,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -128,7 +128,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -14,
+    'weight' => -17,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -165,7 +165,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -13,
+    'weight' => -16,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -202,7 +202,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -10,
+    'weight' => -13,
     'show_in_links' => array(
       'rss' => 'rss',
       'full' => 0,
@@ -239,7 +239,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -12,
+    'weight' => -15,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -277,7 +277,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -17,
+    'weight' => -20,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -314,7 +314,7 @@ function tnc_cont_flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => -16,
+    'weight' => -19,
     'show_in_links' => array(
       'full' => 'full',
       'teaser' => 'teaser',
