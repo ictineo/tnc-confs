@@ -1821,7 +1821,7 @@ function tnc_cont_strongarm() {
       'display' => array(
         'language' => array(
           'entityreference_view_widget' => array(
-            'weight' => '8',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -1839,11 +1839,11 @@ function tnc_cont_strongarm() {
         ),
         'eva_espectacle_entity_view_1' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '12',
             'visible' => TRUE,
           ),
           'entityreference_view_widget' => array(
-            'weight' => '15',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -1875,7 +1875,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_petit' => array(
           'default' => array(
-            'weight' => '17',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -1887,13 +1887,13 @@ function tnc_cont_strongarm() {
             'visible' => TRUE,
           ),
           'entityreference_view_widget' => array(
-            'weight' => '6',
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),
         'flag_carrousel_gran' => array(
           'default' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -1905,7 +1905,7 @@ function tnc_cont_strongarm() {
             'visible' => TRUE,
           ),
           'entityreference_view_widget' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),
@@ -1925,25 +1925,53 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'entityreference_view_widget' => array(
-            'weight' => '10',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
         'flag_afons_megamenu' => array(
           'default' => array(
-            'weight' => '16',
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'entityreference_view_widget' => array(
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
         'eva_taxo_tarifes_entity_view_1' => array(
           'default' => array(
-            'weight' => '11',
+            'weight' => '10',
             'visible' => TRUE,
+          ),
+          'entityreference_view_widget' => array(
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
         'sessions_entity_view_1' => array(
           'default' => array(
             'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+        'sessions_node_entity_view_1' => array(
+          'entityreference_view_widget' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+        ),
+        'sessions_node_entity_view_2' => array(
+          'entityreference_view_widget' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '8',
             'visible' => TRUE,
           ),
         ),
@@ -2004,7 +2032,7 @@ function tnc_cont_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '29',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'entityreference_view_widget' => array(
@@ -2046,7 +2074,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_petit' => array(
           'default' => array(
-            'weight' => '26',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2074,7 +2102,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_disponible_megamenu' => array(
           'default' => array(
-            'weight' => '24',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2088,7 +2116,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_proximament_megamenu' => array(
           'default' => array(
-            'weight' => '25',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2114,19 +2142,19 @@ function tnc_cont_strongarm() {
         ),
         'eva_taxo_tarifes_entity_view_1' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '14',
             'visible' => TRUE,
           ),
         ),
         'sessions_node_entity_view_1' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '11',
             'visible' => TRUE,
           ),
         ),
         'sessions_node_entity_view_2' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '12',
             'visible' => TRUE,
           ),
         ),
@@ -2166,22 +2194,22 @@ function tnc_cont_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '14',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '12',
         ),
         'flag' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(
@@ -2221,8 +2249,8 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
         'flag_carrousel_gran' => array(
@@ -2231,7 +2259,13 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+        ),
+        'sessio_premsa_entity_view_1' => array(
+          'default' => array(
+            'weight' => '12',
             'visible' => TRUE,
           ),
         ),

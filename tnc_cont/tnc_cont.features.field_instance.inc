@@ -2520,13 +2520,13 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 21,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2584,13 +2584,13 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 20,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2647,13 +2647,22 @@ function tnc_cont_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 9,
+        'weight' => 2,
       ),
       'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'mig',
+          'fromto' => 'value',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'semantic_field_format' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2703,13 +2712,13 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -2759,13 +2768,13 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2803,18 +2812,15 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2873,13 +2879,18 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'image',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'semantic_field_format' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2963,13 +2974,13 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 18,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3021,7 +3032,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'entityreference_view_widget' => array(
         'label' => 'hidden',
@@ -3030,7 +3041,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3082,13 +3093,13 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3137,16 +3148,16 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'entityreference_view_widget' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(
           'semantic_field_format' => '',
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3201,7 +3212,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3239,12 +3250,9 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 8,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'entityreference_view_widget' => array(
         'label' => 'hidden',
@@ -3253,7 +3261,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3305,7 +3313,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'link_default',
-        'weight' => 7,
+        'weight' => 11,
       ),
       'entityreference_view_widget' => array(
         'label' => 'hidden',
@@ -3314,7 +3322,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3374,13 +3382,13 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3435,13 +3443,13 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3497,7 +3505,7 @@ function tnc_cont_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3609,7 +3617,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3669,7 +3677,7 @@ function tnc_cont_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3735,7 +3743,7 @@ function tnc_cont_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3784,7 +3792,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 27,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3896,7 +3904,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4017,7 +4025,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 31,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4068,7 +4076,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 26,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4126,7 +4134,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 29,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4182,7 +4190,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'image',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4269,7 +4277,7 @@ function tnc_cont_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 15,
+        'weight' => 1,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4324,7 +4332,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 32,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4379,7 +4387,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 30,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4434,7 +4442,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4489,7 +4497,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4544,7 +4552,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4648,7 +4656,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 33,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4703,7 +4711,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'link_default',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4869,7 +4877,7 @@ function tnc_cont_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 6,
     ),
   );
 
@@ -4887,7 +4895,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4918,7 +4926,7 @@ function tnc_cont_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 46,
+      'weight' => 2,
     ),
   );
 
@@ -4936,7 +4944,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 3,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -4984,7 +4992,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'file_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5040,7 +5048,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 54,
+      'weight' => 15,
     ),
   );
 
@@ -5053,12 +5061,9 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 11,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5108,7 +5113,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5138,7 +5143,7 @@ function tnc_cont_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 59,
+      'weight' => 7,
     ),
   );
 
@@ -5155,7 +5160,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'file_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5211,7 +5216,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 53,
+      'weight' => 14,
     ),
   );
 
@@ -5224,12 +5229,9 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 13,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5279,7 +5281,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5340,7 +5342,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 51,
+      'weight' => 12,
     ),
   );
 
@@ -5359,7 +5361,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'image',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5420,7 +5422,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 50,
+      'weight' => 11,
     ),
   );
 
@@ -5438,7 +5440,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5469,7 +5471,7 @@ function tnc_cont_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 48,
+      'weight' => 3,
     ),
   );
 
@@ -5482,11 +5484,11 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
+        'module' => 'taxonomy',
         'settings' => array(
           'semantic_field_format' => '',
         ),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 2,
       ),
       'entityreference_view_widget' => array(
@@ -5518,7 +5520,7 @@ function tnc_cont_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 42,
+      'weight' => 4,
     ),
   );
 
@@ -5536,7 +5538,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5567,7 +5569,7 @@ function tnc_cont_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 44,
+      'weight' => 1,
     ),
   );
 
@@ -5582,7 +5584,7 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5613,7 +5615,7 @@ function tnc_cont_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 61,
+      'weight' => 10,
     ),
   );
 
@@ -5630,7 +5632,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'file_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5686,7 +5688,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 52,
+      'weight' => 13,
     ),
   );
 

@@ -79,7 +79,7 @@ function tnc_cont_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Multimèdia',
-    'weight' => '51',
+    'weight' => '8',
     'children' => array(
       0 => 'field_imatge_capcalera',
       1 => 'field_video',
@@ -110,7 +110,7 @@ function tnc_cont_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sessió',
-    'weight' => '57',
+    'weight' => '9',
     'children' => array(
       0 => 'field_entrada',
       1 => 'field_dia',
