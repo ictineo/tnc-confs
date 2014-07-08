@@ -65,6 +65,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
@@ -77,12 +78,14 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['label'] = '';
+  $handler->display->display_options['fields']['field_hora_sessio']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_hora_sessio']['element_type'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['element_wrapper_type'] = '0';
@@ -97,6 +100,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['fields']['field_url_compra_reserva']['label'] = '';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_type'] = '0';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_wrapper_type'] = '0';
@@ -114,6 +118,18 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
+  /* Camp: Global: Text personalitzat */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="event-wrapper host-entity-nid-[host_entity_id] current-entity-nid-!2"> 
+[field_sala]
+[title]
+[field_hora_sessio]
+[field_url_compra_reserva]
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Criteri d'ordenació: Field collection item: Hora (field_hora_sessio) */
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
