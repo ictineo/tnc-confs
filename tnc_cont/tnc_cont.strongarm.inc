@@ -69,6 +69,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_patrocinador';
+  $strongarm->value = 'edit-comment';
+  $export['additional_settings__active_tab_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_projecte_artistic';
   $strongarm->value = 'edit-i18n';
   $export['additional_settings__active_tab_projecte_artistic'] = $strongarm;
@@ -79,6 +86,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'additional_settings__active_tab_sessio';
   $strongarm->value = 'edit-i18n';
   $export['additional_settings__active_tab_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_tauler';
+  $strongarm->value = 'edit-page-title';
+  $export['additional_settings__active_tab_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -177,6 +191,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_patrocinador';
+  $strongarm->value = '0';
+  $export['ant_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_audio';
   $strongarm->value = '';
   $export['ant_pattern_audio'] = $strongarm;
@@ -233,6 +254,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_patrocinador';
+  $strongarm->value = '';
+  $export['ant_pattern_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_projecte_artistic';
   $strongarm->value = '';
   $export['ant_pattern_projecte_artistic'] = $strongarm;
@@ -243,6 +271,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'ant_pattern_sessio';
   $strongarm->value = '';
   $export['ant_pattern_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_tauler';
+  $strongarm->value = '';
+  $export['ant_pattern_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -317,6 +352,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_patrocinador';
+  $strongarm->value = 0;
+  $export['ant_php_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ant_php_projecte_artistic';
   $strongarm->value = 0;
   $export['ant_php_projecte_artistic'] = $strongarm;
@@ -327,6 +369,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'ant_php_sessio';
   $strongarm->value = 0;
   $export['ant_php_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_tauler';
+  $strongarm->value = 0;
+  $export['ant_php_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -355,6 +404,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'ant_sessio';
   $strongarm->value = '0';
   $export['ant_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_tauler';
+  $strongarm->value = '0';
+  $export['ant_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -436,9 +492,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_patrocinador';
+  $strongarm->value = 0;
+  $export['comment_anonymous_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_projecte_artistic';
   $strongarm->value = 0;
   $export['comment_anonymous_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_tauler';
+  $strongarm->value = 0;
+  $export['comment_anonymous_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -520,9 +590,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_patrocinador';
+  $strongarm->value = 1;
+  $export['comment_default_mode_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_projecte_artistic';
   $strongarm->value = 1;
   $export['comment_default_mode_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_tauler';
+  $strongarm->value = 1;
+  $export['comment_default_mode_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -597,9 +681,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_patrocinador';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_projecte_artistic';
   $strongarm->value = '50';
   $export['comment_default_per_page_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_tauler';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -702,9 +800,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_patrocinador';
+  $strongarm->value = 1;
+  $export['comment_form_location_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_projecte_artistic';
   $strongarm->value = 1;
   $export['comment_form_location_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_tauler';
+  $strongarm->value = 1;
+  $export['comment_form_location_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -740,6 +852,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'comment_page';
   $strongarm->value = '1';
   $export['comment_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_patrocinador';
+  $strongarm->value = '1';
+  $export['comment_patrocinador'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -800,9 +919,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_patrocinador';
+  $strongarm->value = '1';
+  $export['comment_preview_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_projecte_artistic';
   $strongarm->value = '1';
   $export['comment_preview_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_tauler';
+  $strongarm->value = '1';
+  $export['comment_preview_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -884,9 +1017,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_patrocinador';
+  $strongarm->value = 1;
+  $export['comment_subject_field_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_projecte_artistic';
   $strongarm->value = 1;
   $export['comment_subject_field_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_tauler';
+  $strongarm->value = 1;
+  $export['comment_subject_field_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -901,6 +1048,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'comment_subject_field_video';
   $strongarm->value = 1;
   $export['comment_subject_field_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_tauler';
+  $strongarm->value = '1';
+  $export['comment_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1616,6 +1770,75 @@ function tnc_cont_strongarm() {
     ),
   );
   $export['field_bundle_settings_field_collection_item__field_columna_1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_columna_2';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_columna_2'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_columna_3';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_columna_3'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_columna_4';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'entityreference_view_widget' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_columna_4'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2441,6 +2664,32 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__patrocinador';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '6',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '5',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '4',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__projecte_artistic';
   $strongarm->value = array(
     'view_modes' => array(
@@ -2495,6 +2744,35 @@ function tnc_cont_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__tauler';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'language' => array(
+          'weight' => '0',
+        ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2700,6 +2978,22 @@ function tnc_cont_strongarm() {
     ),
   );
   $export['field_bundle_settings_taxonomy_term__tarifes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flag_default_flag_status';
+  $strongarm->value = array(
+    'slide_portada' => TRUE,
+    'teletip_portada' => TRUE,
+    'carrousel_gran' => TRUE,
+    'carrousel_petit' => TRUE,
+    'disponible_megamenu' => TRUE,
+    'proximament_megamenu' => TRUE,
+    'afons_megamenu' => TRUE,
+    'entorn_proximament' => TRUE,
+  );
+  $export['flag_default_flag_status'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2926,9 +3220,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_patrocinador';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_sync_node_type_projecte_artistic';
   $strongarm->value = array();
   $export['i18n_sync_node_type_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_tauler';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2943,6 +3251,20 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'i18n_sync_node_type_video';
   $strongarm->value = array();
   $export['i18n_sync_node_type_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'image_jpeg_quality';
+  $strongarm->value = '75';
+  $export['image_jpeg_quality'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'image_toolkit';
+  $strongarm->value = 'gd';
+  $export['image_toolkit'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3003,6 +3325,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_patrocinador';
+  $strongarm->value = '0';
+  $export['language_content_type_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_projecte_artistic';
   $strongarm->value = '2';
   $export['language_content_type_projecte_artistic'] = $strongarm;
@@ -3013,6 +3342,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'language_content_type_sessio';
   $strongarm->value = '2';
   $export['language_content_type_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_tauler';
+  $strongarm->value = '2';
+  $export['language_content_type_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3111,9 +3447,34 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_patrocinador';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_projecte_artistic';
   $strongarm->value = array();
   $export['menu_options_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_sessio';
+  $strongarm->value = array();
+  $export['menu_options_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_tauler';
+  $strongarm->value = array(
+    0 => 'menu-tauler',
+  );
+  $export['menu_options_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3188,9 +3549,30 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_patrocinador';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_projecte_artistic';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_sessio';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_tauler';
+  $strongarm->value = 'menu-tauler:0';
+  $export['menu_parent_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3299,11 +3681,38 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_patrocinador';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_projecte_artistic';
   $strongarm->value = array(
     0 => 'status',
   );
   $export['node_options_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_sessio';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_tauler';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3383,9 +3792,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_patrocinador';
+  $strongarm->value = '1';
+  $export['node_preview_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_projecte_artistic';
   $strongarm->value = '1';
   $export['node_preview_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_tauler';
+  $strongarm->value = '1';
+  $export['node_preview_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3488,9 +3911,30 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_patrocinador';
+  $strongarm->value = 0;
+  $export['node_submitted_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_projecte_artistic';
   $strongarm->value = 0;
   $export['node_submitted_projecte_artistic'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_sessio';
+  $strongarm->value = 0;
+  $export['node_submitted_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_tauler';
+  $strongarm->value = 0;
+  $export['node_submitted_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3621,6 +4065,20 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_patrocinador';
+  $strongarm->value = '';
+  $export['page_title_type_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_patrocinador_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_patrocinador_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_projecte_artistic';
   $strongarm->value = '';
   $export['page_title_type_projecte_artistic'] = $strongarm;
@@ -3645,6 +4103,20 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'page_title_type_sessio_showfield';
   $strongarm->value = 0;
   $export['page_title_type_sessio_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_tauler';
+  $strongarm->value = '';
+  $export['page_title_type_tauler'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_tauler_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_tauler_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3740,6 +4212,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_patrocinador';
+  $strongarm->value = 'Desa i afegeix camps';
+  $export['save_continue_patrocinador'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_projecte_artistic';
   $strongarm->value = 'Desa i afegeix camps';
   $export['save_continue_projecte_artistic'] = $strongarm;
@@ -3750,6 +4229,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'save_continue_sessio';
   $strongarm->value = 'Desa i afegeix camps';
   $export['save_continue_sessio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_tauler';
+  $strongarm->value = 'Desa i afegeix camps';
+  $export['save_continue_tauler'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

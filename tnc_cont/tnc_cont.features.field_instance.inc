@@ -6285,6 +6285,198 @@ function tnc_cont_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-patrocinador-field_imatge'
+  $field_instances['node-patrocinador-field_imatge'] = array(
+    'bundle' => 'patrocinador',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'semantic_field_format' => 0,
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_imatge',
+    'label' => 'Imatge',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 'imce',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 0,
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 1,
+          ),
+        ),
+        'imce_filefield_on' => 1,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-patrocinador-field_link'
+  $field_instances['node-patrocinador-field_link'] = array(
+    'bundle' => 'patrocinador',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(
+          'semantic_field_format' => 0,
+        ),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_link',
+    'label' => 'link',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-patrocinador-field_tipus_patrocinador'
+  $field_instances['node-patrocinador-field_tipus_patrocinador'] = array(
+    'bundle' => 'patrocinador',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(
+          'semantic_field_format' => 0,
+        ),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_tipus_patrocinador',
+    'label' => 'Tipus de patrocinador',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-projecte_artistic-body'
   $field_instances['node-projecte_artistic-body'] = array(
     'bundle' => 'projecte_artistic',
@@ -7011,6 +7203,7 @@ function tnc_cont_field_default_field_instances() {
   t('Text lliure');
   t('Tipus d\'entorn');
   t('Tipus de multimèdia');
+  t('Tipus de patrocinador');
   t('Tria d\'entre la llista de suggeriments o introdueix un nou terme. En el camp Artista es poden incloure múltiples valors separats per comes.');
   t('Títol');
   t('Títol de la secció del megamenú');
@@ -7018,6 +7211,7 @@ function tnc_cont_field_default_field_instances() {
   t('Utilitza aquest apartat per completar les dates i horaris quan la fitxa d\'entorn refereix a una activitat que es repeteix diverses vegades.');
   t('Vídeo');
   t('Vídeos');
+  t('link');
   t('preu');
   t('Àudio');
 
