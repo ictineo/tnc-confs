@@ -850,7 +850,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
-  $strongarm->value = '1';
+  $strongarm->value = 0;
   $export['comment_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1153,7 +1153,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_1_type';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['easy_social_block_1_type'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1189,10 +1189,10 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_1_widgets';
   $strongarm->value = array(
-    'twitter' => 'twitter',
     'facebook' => 'facebook',
-    'googleplus' => 'googleplus',
-    'linkedin' => 'linkedin',
+    'twitter' => 'twitter',
+    'googleplus' => 0,
+    'linkedin' => 0,
   );
   $export['easy_social_block_1_widgets'] = $strongarm;
 
@@ -1366,8 +1366,8 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_global_widgets';
   $strongarm->value = array(
-    'twitter' => 'twitter',
     'facebook' => 'facebook',
+    'twitter' => 'twitter',
     'googleplus' => 0,
     'linkedin' => 0,
   );
@@ -2297,7 +2297,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_petit' => array(
           'default' => array(
-            'weight' => '25',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2311,7 +2311,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_gran' => array(
           'default' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2325,7 +2325,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_disponible_megamenu' => array(
           'default' => array(
-            'weight' => '23',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2339,7 +2339,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_proximament_megamenu' => array(
           'default' => array(
-            'weight' => '24',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2872,16 +2872,16 @@ function tnc_cont_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -3383,9 +3383,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_expanded';
-  $strongarm->value = array(
-    0 => 'menu-tauler',
-  );
+  $strongarm->value = array();
   $export['menu_expanded'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3905,7 +3903,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_page';
-  $strongarm->value = 0;
+  $strongarm->value = FALSE;
   $export['node_submitted_page'] = $strongarm;
 
   $strongarm = new stdClass();

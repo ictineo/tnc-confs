@@ -234,23 +234,23 @@ function tnc_ui_strongarm() {
   $strongarm->name = 'imce_profiles';
   $strongarm->value = array(
     1 => array(
-      'name' => 'TNC',
+      'name' => 'User-1',
       'usertab' => 1,
-      'filesize' => '0',
-      'quota' => '0',
-      'tuquota' => '0',
+      'filesize' => 0,
+      'quota' => 0,
+      'tuquota' => 0,
       'extensions' => '*',
       'dimensions' => '1200x1200',
-      'filenum' => '0',
+      'filenum' => 0,
       'directories' => array(
         0 => array(
           'name' => '.',
           'subnav' => 1,
           'browse' => 1,
           'upload' => 1,
-          'thumb' => 0,
+          'thumb' => 1,
           'delete' => 1,
-          'resize' => 0,
+          'resize' => 1,
           'mkdir' => 1,
           'rmdir' => 1,
         ),
@@ -275,17 +275,17 @@ function tnc_ui_strongarm() {
           'suffix' => '',
         ),
       ),
-      'mkdirnum' => '0',
+      'mkdirnum' => 0,
     ),
     2 => array(
       'name' => 'Sample profile',
       'usertab' => 1,
-      'filesize' => '0',
-      'quota' => '0',
-      'tuquota' => '0',
-      'extensions' => '*',
+      'filesize' => 1,
+      'quota' => 2,
+      'tuquota' => 0,
+      'extensions' => 'gif png jpg jpeg',
       'dimensions' => '800x600',
-      'filenum' => '0',
+      'filenum' => 1,
       'directories' => array(
         0 => array(
           'name' => 'u%uid',
@@ -307,7 +307,7 @@ function tnc_ui_strongarm() {
           'suffix' => '',
         ),
       ),
-      'mkdirnum' => '0',
+      'mkdirnum' => 2,
     ),
   );
   $export['imce_profiles'] = $strongarm;
@@ -482,7 +482,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = 'content/[node:title]';
   $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -551,7 +551,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
-  $strongarm->value = 'ES';
+  $strongarm->value = '';
   $export['site_default_country'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -689,7 +689,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'TNC_DEV_1';
+  $strongarm->value = 'Site-Install';
   $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -724,7 +724,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'bartik';
+  $strongarm->value = 'tnc';
   $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -753,9 +753,6 @@ function tnc_ui_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'variable_module_list';
   $strongarm->value = array(
-    'googleanalytics' => array(
-      0 => 'googleanalytics_account',
-    ),
     'easy_social' => array(
       0 => 'easy_social_ignore_paths',
       1 => 'easy_social_global_type',
@@ -838,42 +835,17 @@ function tnc_ui_strongarm() {
       0 => 'i18n_language_list',
     ),
     'i18n_string' => array(
-      0 => 'i18n_string_translate_langcode_ca',
-      1 => 'i18n_string_translate_langcode_es',
-      2 => 'i18n_string_translate_langcode_en',
-      3 => 'i18n_string_allowed_formats',
-      4 => 'i18n_string_source_language',
-      5 => 'i18n_string_debug',
+      0 => 'i18n_string_translate_langcode_en',
+      1 => 'i18n_string_allowed_formats',
+      2 => 'i18n_string_source_language',
+      3 => 'i18n_string_debug',
     ),
-    'i18n_node' => array(
-      0 => 'i18n_hide_translation_links',
-      1 => 'i18n_node_default_language_none',
-      2 => 'i18n_node_options_article',
-      3 => 'i18n_node_options_page',
-      4 => 'i18n_node_extended_article',
-      5 => 'i18n_node_extended_page',
-    ),
-    'i18n_select' => array(
-      0 => 'i18n_select_nodes',
-      1 => 'i18n_select_taxonomy',
-      2 => 'i18n_select_page_mode',
-      3 => 'i18n_select_page_list',
-      4 => 'i18n_select_page_block',
-      5 => 'i18n_select_skip_tags',
-    ),
-    'i18n_sync' => array(
-      0 => 'i18n_sync_node_type_article',
-      1 => 'i18n_sync_node_type_page',
+    'googleanalytics' => array(
+      0 => 'googleanalytics_account',
     ),
     'variable_realm' => array(
       0 => 'variable_realm_list_global',
-      1 => 'variable_realm_list_language',
-      2 => 'variable_realm_weight_global',
-      3 => 'variable_realm_weight_language',
-    ),
-    'i18n_variable' => array(
-      0 => 'i18n_variable_conf',
-      1 => 'i18n_variable_list',
+      1 => 'variable_realm_weight_global',
     ),
     'site_map' => array(
       0 => 'site_map_page_title',
@@ -939,7 +911,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1404802354;
+  $strongarm->value = 1404983081;
   $export['xmlsitemap_generated_last'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -974,7 +946,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   $strongarm = new stdClass();

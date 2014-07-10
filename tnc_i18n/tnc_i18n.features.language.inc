@@ -21,7 +21,7 @@ function tnc_i18n_locale_default_languages() {
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => -10,
+    'weight' => 0,
   );
   // Exported language: en.
   $languages['en'] = array(
@@ -47,7 +47,7 @@ function tnc_i18n_locale_default_languages() {
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'es',
-    'weight' => -9,
+    'weight' => 0,
   );
   return $languages;
 }

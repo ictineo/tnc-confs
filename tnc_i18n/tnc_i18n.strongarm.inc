@@ -21,7 +21,7 @@ function tnc_i18n_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
-  $strongarm->value = 'Europe/Madrid';
+  $strongarm->value = 'Europe/Berlin';
   $export['date_default_timezone'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -128,8 +128,8 @@ function tnc_i18n_strongarm() {
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => '-10',
-    'javascript' => 'CYeZh2oh8pXroaHtWIgQoY3AHPEyZ0p0KwLL9WxoFd0',
+    'weight' => '0',
+    'javascript' => '29-QJq4sfhAgDduXAiMoD9aMohXsGbtxNB_KZj-SZPE',
   );
   $export['language_default'] = $strongarm;
 

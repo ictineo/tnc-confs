@@ -31,7 +31,7 @@ function tnc_cont_default_rules_configuration() {
       "DO" : [
         { "data_set" : {
             "data" : [ "node:field-url-compra-reserva:title" ],
-            "value" : "Comprar entrades"
+            "value" : "Comprar"
           }
         }
       ]
