@@ -162,6 +162,130 @@ function tnc_ui_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_override';
+  $strongarm->value = 1;
+  $export['easy_social_block_2_override'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_title';
+  $strongarm->value = '';
+  $export['easy_social_block_2_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_type';
+  $strongarm->value = '0';
+  $export['easy_social_block_2_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_url_facebook';
+  $strongarm->value = '[current-path]';
+  $export['easy_social_block_2_url_facebook'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_url_twitter';
+  $strongarm->value = '[current-path]';
+  $export['easy_social_block_2_url_twitter'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_2_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 0,
+    'googleplus' => 0,
+    'linkedin' => 0,
+  );
+  $export['easy_social_block_2_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_appid';
+  $strongarm->value = '';
+  $export['easy_social_facebook_appid'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_color_scheme';
+  $strongarm->value = 'light';
+  $export['easy_social_facebook_color_scheme'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_font';
+  $strongarm->value = 'default';
+  $export['easy_social_facebook_font'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_send_button';
+  $strongarm->value = 1;
+  $export['easy_social_facebook_send_button'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_show_faces';
+  $strongarm->value = 1;
+  $export['easy_social_facebook_show_faces'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_verb';
+  $strongarm->value = 'both';
+  $export['easy_social_facebook_verb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_widget_type';
+  $strongarm->value = 'iframe';
+  $export['easy_social_facebook_widget_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_width_horizontal';
+  $strongarm->value = '88';
+  $export['easy_social_facebook_width_horizontal'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_facebook_width_vertical';
+  $strongarm->value = '48';
+  $export['easy_social_facebook_width_vertical'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_patrocinador_enable';
+  $strongarm->value = 0;
+  $export['easy_social_patrocinador_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_tauler_enable';
+  $strongarm->value = 0;
+  $export['easy_social_tauler_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'empty_timezone_message';
   $strongarm->value = 0;
   $export['empty_timezone_message'] = $strongarm;
@@ -730,6 +854,41 @@ function tnc_ui_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'theme_tnc_settings';
+  $strongarm->value = array(
+    'toggle_logo' => 1,
+    'toggle_name' => 1,
+    'toggle_slogan' => 1,
+    'toggle_node_user_picture' => 1,
+    'toggle_comment_user_picture' => 1,
+    'toggle_favicon' => 1,
+    'toggle_main_menu' => 1,
+    'toggle_secondary_menu' => 1,
+    'default_logo' => 0,
+    'logo_path' => 'public://logo-generalitat-menu-superior.png',
+    'default_favicon' => 1,
+    'favicon_path' => '',
+    'favicon_upload' => '',
+    'zen_breadcrumb' => 'yes',
+    'zen_breadcrumb_separator' => ' › ',
+    'zen_breadcrumb_home' => 1,
+    'zen_breadcrumb_trailing' => 0,
+    'zen_breadcrumb_title' => 0,
+    'zen_skip_link_anchor' => 'main-menu',
+    'zen_skip_link_text' => 'Jump to navigation',
+    'zen_html5_respond_meta' => array(
+      'respond' => 'respond',
+      'html5' => 'html5',
+      'meta' => 'meta',
+    ),
+    'zen_rebuild_registry' => 1,
+    'zen_wireframes' => 0,
+  );
+  $export['theme_tnc_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'transliteration_file_lowercase';
   $strongarm->value = 1;
   $export['transliteration_file_lowercase'] = $strongarm;
@@ -747,6 +906,119 @@ function tnc_ui_strongarm() {
   $strongarm->name = 'transliteration_search';
   $strongarm->value = 1;
   $export['transliteration_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_node_types';
+  $strongarm->value = array(
+    'twitterfield_pull_fitxa_entorn' => 'twitterfield_pull_fitxa_entorn',
+    'twitterfield_pull_fitxa_espectacle' => 'twitterfield_pull_fitxa_espectacle',
+    'twitterfield_pull_article' => 0,
+    'twitterfield_pull_page' => 0,
+    'twitterfield_pull_documentacio' => 0,
+    'twitterfield_pull_fitxa_premsa' => 0,
+    'twitterfield_pull_imatge' => 0,
+    'twitterfield_pull_megamenu' => 0,
+    'twitterfield_pull_patrocinador' => 0,
+    'twitterfield_pull_projecte_artistic' => 0,
+    'twitterfield_pull_tauler' => 0,
+    'twitterfield_pull_teletip' => 0,
+    'twitterfield_pull_video' => 0,
+    'twitterfield_pull_audio' => 0,
+  );
+  $export['twitterfield_pull_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_oauth_consumer_key';
+  $strongarm->value = 'C7TboiBWSll9VUuAnknTp56yv';
+  $export['twitterfield_pull_oauth_consumer_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_oauth_consumer_secret';
+  $strongarm->value = 'SDag9P9Xb5J1S1xgl1RrImPR1O0qZVI2qU5XAIp70vCDOGJVhz';
+  $export['twitterfield_pull_oauth_consumer_secret'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_oauth_token';
+  $strongarm->value = '1150953876-ARKQLVg1IfOzUxuqyiV4BoyTa8tbXNHuix1hgYE';
+  $export['twitterfield_pull_oauth_token'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_oauth_token_secret';
+  $strongarm->value = 'Lr6BlS2g2KOQ8pNnlZREtbkAOjHbn8r0zzU2dBY4jZ8Qh';
+  $export['twitterfield_pull_oauth_token_secret'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitterfield_pull_update_frequency';
+  $strongarm->value = '3600';
+  $export['twitterfield_pull_update_frequency'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_api';
+  $strongarm->value = 'https://api.twitter.com';
+  $export['twitter_api'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_consumer_key';
+  $strongarm->value = 'C7TboiBWSll9VUuAnknTp56yv';
+  $export['twitter_consumer_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_consumer_secret';
+  $strongarm->value = 'SDag9P9Xb5J1S1xgl1RrImPR1O0qZVI2qU5XAIp70vCDOGJVhz';
+  $export['twitter_consumer_secret'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_expire';
+  $strongarm->value = '0';
+  $export['twitter_expire'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_host';
+  $strongarm->value = 'http://twitter.com';
+  $export['twitter_host'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_import';
+  $strongarm->value = 0;
+  $export['twitter_import'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_search';
+  $strongarm->value = 'http://search.twitter.com';
+  $export['twitter_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'twitter_tinyurl';
+  $strongarm->value = 'http://tinyurl.com';
+  $export['twitter_tinyurl'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
