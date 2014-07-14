@@ -1200,7 +1200,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_count';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['easy_social_block_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1254,7 +1254,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_fitxa_entorn_enable';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['easy_social_fitxa_entorn_enable'] = $strongarm;
 
   $strongarm = new stdClass();
