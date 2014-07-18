@@ -38,6 +38,12 @@ function tnc_cont_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'dashboard_inactive',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

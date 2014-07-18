@@ -122,14 +122,14 @@ function tnc_i18n_strongarm() {
     'language' => 'ca',
     'name' => 'Catalan',
     'native' => 'Català',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n>1)',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
+    'formula' => '',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => '0',
-    'javascript' => '29-QJq4sfhAgDduXAiMoD9aMohXsGbtxNB_KZj-SZPE',
+    'weight' => 0,
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

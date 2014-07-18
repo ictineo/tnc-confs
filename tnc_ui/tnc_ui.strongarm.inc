@@ -441,23 +441,19 @@ function tnc_ui_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'imce_roles_profiles';
   $strongarm->value = array(
-    4 => array(
+    8 => array(
       'weight' => '0',
-      'public_pid' => '1',
+      'public_pid' => '2',
     ),
     3 => array(
       'weight' => '0',
-      'public_pid' => 0,
-    ),
-    6 => array(
-      'weight' => '0',
-      'public_pid' => '2',
+      'public_pid' => '1',
     ),
     5 => array(
       'weight' => '0',
       'public_pid' => '2',
     ),
-    8 => array(
+    6 => array(
       'weight' => '0',
       'public_pid' => '2',
     ),
@@ -465,9 +461,13 @@ function tnc_ui_strongarm() {
       'weight' => '0',
       'public_pid' => '2',
     ),
+    4 => array(
+      'weight' => '0',
+      'public_pid' => '1',
+    ),
     2 => array(
       'weight' => 11,
-      'public_pid' => 0,
+      'public_pid' => '1',
     ),
     1 => array(
       'weight' => 12,
@@ -643,7 +643,6 @@ function tnc_ui_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'node' => TRUE,
-    'taxonomy' => TRUE,
   );
   $export['path_alias_whitelist'] = $strongarm;
 
@@ -865,7 +864,8 @@ function tnc_ui_strongarm() {
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 1,
     'default_logo' => 0,
-    'logo_path' => 'public://logo-generalitat-menu-superior.png',
+    'logo_path' => '',
+    'logo_upload' => '',
     'default_favicon' => 1,
     'favicon_path' => '',
     'favicon_upload' => '',
@@ -883,6 +883,28 @@ function tnc_ui_strongarm() {
     ),
     'zen_rebuild_registry' => 1,
     'zen_wireframes' => 0,
+    'tnc_frontlink_1_enable' => 1,
+    'tnc_t_frontlink_1_0' => 'asdf',
+    'tnc_l_frontlink_1_0' => 'http://mit.edu',
+    'tnc_t_frontlink_1_1' => '',
+    'tnc_l_frontlink_1_1' => '',
+    'tnc_t_frontlink_1_2' => '',
+    'tnc_l_frontlink_1_2' => '',
+    'tnc_t_frontlink_1_3' => '',
+    'tnc_l_frontlink_1_3' => '',
+    'tnc_frontlink_2_enable' => 0,
+    'tnc_t_frontlink_2_0' => '',
+    'tnc_l_frontlink_2_0' => '',
+    'tnc_t_frontlink_2_1' => '',
+    'tnc_l_frontlink_2_1' => '',
+    'tnc_t_frontlink_2_2' => '',
+    'tnc_l_frontlink_2_2' => '',
+    'tnc_t_frontlink_2_3' => '',
+    'tnc_l_frontlink_2_3' => '',
+    'tnc_xxss_fb' => '',
+    'tnc_xxss_inst' => '',
+    'tnc_xxss_twt' => '',
+    'tnc_xxss_you' => '',
   );
   $export['theme_tnc_settings'] = $strongarm;
 
@@ -1183,7 +1205,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1405151806;
+  $strongarm->value = 1405718385;
   $export['xmlsitemap_generated_last'] = $strongarm;
 
   $strongarm = new stdClass();
