@@ -2832,7 +2832,8 @@ return $nids_or;';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -2938,6 +2939,15 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Date: Date (field_collection_item) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'field_collection_item';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'today';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
+  );
 
   /* Display: sessions */
   $handler = $view->new_display('entity_view', 'sessions', 'entity_view_1');

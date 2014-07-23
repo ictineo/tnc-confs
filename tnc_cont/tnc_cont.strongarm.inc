@@ -2005,7 +2005,7 @@ function tnc_cont_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -2141,6 +2141,10 @@ function tnc_cont_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'flag_entorn_proximament' => array(
           'default' => array(
@@ -2151,6 +2155,10 @@ function tnc_cont_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'flag_afons_megamenu' => array(
           'default' => array(
@@ -2158,6 +2166,10 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'entityreference_view_widget' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'full' => array(
             'weight' => '17',
             'visible' => FALSE,
           ),
@@ -2171,9 +2183,17 @@ function tnc_cont_strongarm() {
             'weight' => '13',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'sessions_entity_view_1' => array(
           'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
@@ -2187,6 +2207,10 @@ function tnc_cont_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
         ),
         'sessions_node_entity_view_2' => array(
           'entityreference_view_widget' => array(
@@ -2195,6 +2219,24 @@ function tnc_cont_strongarm() {
           ),
           'default' => array(
             'weight' => '8',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
+        'easy_social_1' => array(
+          'entityreference_view_widget' => array(
+            'weight' => '101',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '101',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '101',
             'visible' => TRUE,
           ),
         ),

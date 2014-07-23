@@ -2664,6 +2664,21 @@ function tnc_cont_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 3,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'mig',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'semantic_field_format' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2775,6 +2790,15 @@ function tnc_cont_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3213,6 +3237,12 @@ function tnc_cont_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3956,11 +3986,9 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
           'semantic_field_format' => '',
-          'view_mode' => 'entityreference_view_widget',
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'entityreference_entity_id',
         'weight' => 19,
       ),
       'entityreference_view_widget' => array(
@@ -6575,7 +6603,7 @@ function tnc_cont_field_default_field_instances() {
     'label' => 'Destacat lateral',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6666,55 +6694,6 @@ function tnc_cont_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-projecte_artistic-field_resum_destacat'
-  $field_instances['node-projecte_artistic-field_resum_destacat'] = array(
-    'bundle' => 'projecte_artistic',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_resum_destacat',
-    'label' => 'Resum Destacat',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 10,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 1,
     ),
   );
 
