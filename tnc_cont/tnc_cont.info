@@ -227,6 +227,7 @@ features[field_instance][] = node-patrocinador-field_tipus_patrocinador
 features[field_instance][] = node-projecte_artistic-body
 features[field_instance][] = node-projecte_artistic-field_destacat_lateral
 features[field_instance][] = node-projecte_artistic-field_imatge_capcalera
+features[field_instance][] = node-projecte_artistic-field_resum_destacat
 features[field_instance][] = node-teletip-body
 features[field_instance][] = node-teletip-field_imatge
 features[field_instance][] = node-video-field_artista

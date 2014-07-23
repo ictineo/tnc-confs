@@ -2679,16 +2679,16 @@ function tnc_cont_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -2763,16 +2763,16 @@ function tnc_cont_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(

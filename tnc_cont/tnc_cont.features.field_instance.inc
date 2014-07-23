@@ -6139,7 +6139,7 @@ function tnc_cont_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -6178,7 +6178,7 @@ function tnc_cont_field_default_field_instances() {
     'label' => 'Destacat lateral',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6188,7 +6188,7 @@ function tnc_cont_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -6268,7 +6268,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -6280,13 +6280,13 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(
-          'semantic_field_format' => '',
+          'semantic_field_format' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -6304,7 +6304,7 @@ function tnc_cont_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_resum_destacat',
-    'label' => 'Resum Destacat',
+    'label' => 'Resum destacat',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -6564,7 +6564,7 @@ function tnc_cont_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -6582,7 +6582,7 @@ function tnc_cont_field_default_field_instances() {
           'semantic_field_format' => '',
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -6613,7 +6613,7 @@ function tnc_cont_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -6629,7 +6629,7 @@ function tnc_cont_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -6693,7 +6693,56 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 9,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-projecte_artistic-field_resum_destacat'
+  $field_instances['node-projecte_artistic-field_resum_destacat'] = array(
+    'bundle' => 'projecte_artistic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_resum_destacat',
+    'label' => 'Resum destacat',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 10,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
     ),
   );
 
@@ -7267,7 +7316,7 @@ function tnc_cont_field_default_field_instances() {
   t('Premsa');
   t('Presentació');
   t('Públic');
-  t('Resum Destacat');
+  t('Resum destacat');
   t('Rol destacat');
   t('Sala');
   t('Subtítol');
