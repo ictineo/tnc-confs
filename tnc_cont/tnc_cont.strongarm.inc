@@ -2070,7 +2070,7 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -2102,8 +2102,8 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '4',
-            'visible' => TRUE,
+            'weight' => '8',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '8',
@@ -2120,8 +2120,8 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '7',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '9',
@@ -2159,6 +2159,10 @@ function tnc_cont_strongarm() {
             'weight' => '20',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'flag_afons_megamenu' => array(
           'default' => array(
@@ -2171,6 +2175,10 @@ function tnc_cont_strongarm() {
           ),
           'full' => array(
             'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -2186,6 +2194,10 @@ function tnc_cont_strongarm() {
           'full' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
         'sessions_entity_view_1' => array(
@@ -2211,6 +2223,10 @@ function tnc_cont_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'sessions_node_entity_view_2' => array(
           'entityreference_view_widget' => array(
@@ -2225,6 +2241,10 @@ function tnc_cont_strongarm() {
             'weight' => '8',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
         'easy_social_1' => array(
           'entityreference_view_widget' => array(
@@ -2238,6 +2258,10 @@ function tnc_cont_strongarm() {
           'full' => array(
             'weight' => '101',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '22',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -3034,6 +3058,8 @@ function tnc_cont_strongarm() {
     'proximament_megamenu' => TRUE,
     'afons_megamenu' => TRUE,
     'entorn_proximament' => TRUE,
+    'megamenu_edu_primaria' => TRUE,
+    'megamenu_edu_secundaria' => TRUE,
   );
   $export['flag_default_flag_status'] = $strongarm;
 
