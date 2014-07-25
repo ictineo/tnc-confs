@@ -2598,7 +2598,7 @@ function tnc_cont_field_default_field_instances() {
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -2679,7 +2679,7 @@ function tnc_cont_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'mig',
@@ -2687,7 +2687,7 @@ function tnc_cont_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -3085,7 +3085,7 @@ function tnc_cont_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(
           'semantic_field_format' => '',
@@ -3314,7 +3314,7 @@ function tnc_cont_field_default_field_instances() {
         'weight' => 7,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(
           'semantic_field_format' => '',
@@ -4000,9 +4000,11 @@ function tnc_cont_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'semantic_field_format' => '',
+          'links' => 1,
+          'semantic_field_format' => 0,
+          'view_mode' => 'entityreference_view_widget',
         ),
-        'type' => 'entityreference_entity_id',
+        'type' => 'entityreference_entity_view',
         'weight' => 19,
       ),
       'entityreference_view_widget' => array(
