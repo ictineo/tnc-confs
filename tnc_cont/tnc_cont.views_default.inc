@@ -3020,6 +3020,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_data']['element_type'] = '0';
   $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
@@ -3038,16 +3039,19 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
   /* Field: Content: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_type'] = '0';
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_wrapper_type'] = '0';
@@ -3063,8 +3067,10 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
@@ -3080,6 +3086,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['label'] = '';
+  $handler->display->display_options['fields']['field_rol_destacat']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_rol_destacat']['element_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
@@ -3090,6 +3097,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="grup_entorn">A l\'entorn</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Entorn */
@@ -3097,6 +3105,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['label'] = '';
+  $handler->display->display_options['fields']['field_entorn']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_entorn']['element_type'] = '0';
   $handler->display->display_options['fields']['field_entorn']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_entorn']['element_wrapper_type'] = '0';
@@ -3109,6 +3118,24 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_entorn']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="bloc">
+<div class="espectacle">
+[field_data]
+[field_sala]
+[field_imatge_capcalera]
+[title]
+[field_rol_destacat]
+</div>
+<div class="entorn">
+[nothing]
+[field_entorn] 
+</div></div>';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
