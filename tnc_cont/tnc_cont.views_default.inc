@@ -3128,7 +3128,8 @@ return $nids_or;';
 [field_data]
 [field_sala]
 [field_imatge_capcalera]
-[title]
+<div class="view-field-title">[title]</div>
+[field_autor]
 [field_rol_destacat]
 </div>
 <div class="entorn">
