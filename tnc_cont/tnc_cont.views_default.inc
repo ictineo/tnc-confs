@@ -3058,7 +3058,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_imatge_capcalera']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_imatge_capcalera']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'adaptive',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
@@ -3115,7 +3115,6 @@ return $nids_or;';
     'view_mode' => 'teaser',
     'links' => 1,
   );
-  $handler->display->display_options['fields']['field_entorn']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
   /* Field: Global: Custom text */
