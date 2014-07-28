@@ -142,7 +142,6 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Tot';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
-  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
@@ -185,6 +184,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
+  /* Contextual filter: Field collection item: Dia (field_dia_sessio) */
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['id'] = 'field_dia_sessio_value';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['table'] = 'field_data_field_dia_sessio';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['field'] = 'field_dia_sessio_value';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_dia_sessio_value']['summary_options']['items_per_page'] = '25';
 
   /* Display: bloc calendari */
   $handler = $view->new_display('block', 'bloc calendari', 'block');
@@ -1960,7 +1967,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Global: View */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
