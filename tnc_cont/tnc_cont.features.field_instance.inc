@@ -4990,12 +4990,12 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
         ),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 3,
       ),
       'entityreference_view_widget' => array(
@@ -5113,8 +5113,11 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'text_plain',
         'weight' => 15,
       ),
       'entityreference_view_widget' => array(
@@ -5280,9 +5283,12 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => '',
+        ),
+        'type' => 'text_plain',
         'weight' => 16,
       ),
       'entityreference_view_widget' => array(

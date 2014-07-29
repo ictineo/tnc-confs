@@ -2558,6 +2558,12 @@ function tnc_cont_strongarm() {
             'visible' => TRUE,
           ),
         ),
+        'eva_espectacle_entity_view_3' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );
