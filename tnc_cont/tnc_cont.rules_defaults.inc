@@ -22,9 +22,7 @@ function tnc_cont_default_rules_configuration() {
       },
       "IF" : [
         { "AND" : [
-            { "NOT data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "30" } },
-            { "NOT data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "31" } },
-            { "NOT data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "37" } }
+            { "NOT data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "117" } }
           ]
         }
       ],
@@ -50,9 +48,7 @@ function tnc_cont_default_rules_configuration() {
       },
       "IF" : [
         { "OR" : [
-            { "data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "30" } },
-            { "data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "31" } },
-            { "data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "37" } }
+            { "data_is" : { "data" : [ "node:field-tarifa:tid" ], "value" : "117" } }
           ]
         }
       ],

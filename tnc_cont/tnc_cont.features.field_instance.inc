@@ -297,11 +297,8 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'viewfield_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'entityreference_view_widget' => array(
@@ -623,7 +620,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -686,12 +683,9 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'viewfield',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'viewfield_default',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'entityreference_view_widget' => array(
@@ -744,7 +738,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'semantic_field_format' => '',
@@ -806,7 +800,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -869,7 +863,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -927,7 +921,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -970,7 +964,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => 'Títol de la secció del megamenú',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1013,7 +1007,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1077,11 +1071,8 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'viewfield',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'viewfield_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'entityreference_view_widget' => array(
@@ -1134,7 +1125,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1196,7 +1187,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1259,7 +1250,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1317,7 +1308,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1360,7 +1351,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => 'Títol de la secció del megamenú',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1403,7 +1394,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1467,11 +1458,8 @@ function tnc_cont_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'viewfield',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'viewfield_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'entityreference_view_widget' => array(
@@ -1524,7 +1512,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1586,7 +1574,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1649,7 +1637,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1707,7 +1695,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
@@ -1750,7 +1738,7 @@ function tnc_cont_field_default_field_instances() {
     'description' => 'Títol de la secció del megamenú',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'semantic_field_format' => '',
