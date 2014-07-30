@@ -3767,6 +3767,17 @@ return $nids_or;';
 
   /* Display: Espectacles pròximament */
   $handler = $view->new_display('block', 'Espectacles pròximament', 'block_2');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_data' => 'field_data',
+    'field_sala' => 'field_sala',
+    'title' => 'title',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: proximament_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
