@@ -4970,21 +4970,22 @@ function tnc_cont_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-fitxa_premsa-field_dia'
-  $field_instances['node-fitxa_premsa-field_dia'] = array(
+  // Exported field_instance: 'node-fitxa_premsa-field_dia_hora'
+  $field_instances['node-fitxa_premsa-field_dia_hora'] = array(
     'bundle' => 'fitxa_premsa',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'text',
+        'label' => 'above',
+        'module' => 'field_collection',
         'settings' => array(
-          'semantic_field_format' => '',
+          'semantic_field_format' => 0,
+          'view_mode' => 'full',
         ),
-        'type' => 'text_plain',
-        'weight' => 3,
+        'type' => 'field_collection_fields',
+        'weight' => 19,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -5001,20 +5002,17 @@ function tnc_cont_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_dia',
-    'label' => 'Dia',
+    'field_name' => 'field_dia_hora',
+    'label' => 'Dia i hores',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 56,
     ),
   );
@@ -5088,7 +5086,7 @@ function tnc_cont_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -5260,55 +5258,6 @@ function tnc_cont_field_default_field_instances() {
       ),
       'type' => 'file_generic',
       'weight' => 14,
-    ),
-  );
-
-  // Exported field_instance: 'node-fitxa_premsa-field_hora'
-  $field_instances['node-fitxa_premsa-field_hora'] = array(
-    'bundle' => 'fitxa_premsa',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'semantic_field_format' => '',
-        ),
-        'type' => 'text_plain',
-        'weight' => 16,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_hora',
-    'label' => 'Hora',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 57,
     ),
   );
 
