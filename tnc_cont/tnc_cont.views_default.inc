@@ -1134,6 +1134,8 @@ return $nids_or;';
 
   /* Display: Bloc carrousel gran */
   $handler = $view->new_display('block', 'Bloc carrousel gran', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Carrousel gran';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = '0';
@@ -1146,6 +1148,85 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Contingut: Autor */
+  $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
+  $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
+  $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
+  $handler->display->display_options['fields']['field_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_autor']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Entorn */
+  $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['label'] = '';
+  $handler->display->display_options['fields']['field_entorn']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_entorn']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_entorn']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Rol destacat */
+  $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['label'] = '';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Sala */
+  $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
+  $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: URL compra o reserva */
+  $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['label'] = '';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Imatge_capçalera */
+  $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -1935,6 +2016,7 @@ return $nids_or;';
     'field_rol_destacat' => 0,
     'field_sala' => 0,
     'field_url_compra_reserva' => 0,
+    'field_imatge_capcalera' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -1948,6 +2030,7 @@ return $nids_or;';
     'field_rol_destacat' => 0,
     'field_sala' => 0,
     'field_url_compra_reserva' => 0,
+    'field_imatge_capcalera' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -1959,7 +2042,7 @@ return $nids_or;';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['action_advanced'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '2';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
@@ -1974,6 +2057,85 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_gran';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Contingut: Autor */
+  $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
+  $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
+  $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
+  $handler->display->display_options['fields']['field_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_autor']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Entorn */
+  $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
+  $handler->display->display_options['fields']['field_entorn']['label'] = '';
+  $handler->display->display_options['fields']['field_entorn']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_entorn']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_entorn']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Rol destacat */
+  $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
+  $handler->display->display_options['fields']['field_rol_destacat']['label'] = '';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Sala */
+  $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
+  $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: URL compra o reserva */
+  $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['label'] = '';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Imatge_capçalera */
+  $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -3469,6 +3631,74 @@ return $nids_or;';
   $handler->display->display_options['bundles'] = array(
     0 => 'fitxa_entorn',
     1 => 'fitxa_espectacle',
+  );
+
+  /* Display: sessions premsa */
+  $handler = $view->new_display('entity_view', 'sessions premsa', 'entity_view_3');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Camp: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+  /* Camp: Field collection item: Host Entity ID */
+  $handler->display->display_options['fields']['host_entity_id']['id'] = 'host_entity_id';
+  $handler->display->display_options['fields']['host_entity_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['host_entity_id']['field'] = 'host_entity_id';
+  $handler->display->display_options['fields']['host_entity_id']['exclude'] = TRUE;
+  /* Camp: Field collection item: Dia */
+  $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
+  $handler->display->display_options['fields']['field_dia_sessio']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_dia_sessio']['alter']['text'] = '<div class="press">[field_dia_sessio]</div>';
+  $handler->display->display_options['fields']['field_dia_sessio']['element_label_class'] = 'press';
+  $handler->display->display_options['fields']['field_dia_sessio']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_dia_sessio']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_dia_sessio']['field_api_classes'] = TRUE;
+  /* Camp: Camp: Tarifa */
+  $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
+  $handler->display->display_options['fields']['field_tarifa']['label'] = '';
+  $handler->display->display_options['fields']['field_tarifa']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tarifa']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_tarifa']['alter']['text'] = '([field_tarifa])';
+  $handler->display->display_options['fields']['field_tarifa']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_tarifa']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_tarifa']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
+  /* Camp: Field collection item: Hora */
+  $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
+  $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
+  $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
+  $handler->display->display_options['fields']['field_hora_sessio']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hora_sessio']['alter']['text'] = '<div="press">[field_hora_sessio]</div>';
+  $handler->display->display_options['fields']['field_hora_sessio']['element_label_class'] = 'press';
+  $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'fitxa_premsa',
   );
   $export['sessions_node'] = $view;
 
