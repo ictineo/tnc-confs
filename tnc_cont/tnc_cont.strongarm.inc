@@ -1153,7 +1153,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_1_type';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['easy_social_block_1_type'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1189,10 +1189,10 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_1_widgets';
   $strongarm->value = array(
-    'twitter' => 'twitter',
     'facebook' => 'facebook',
-    'googleplus' => 'googleplus',
-    'linkedin' => 'linkedin',
+    'twitter' => 'twitter',
+    'googleplus' => 0,
+    'linkedin' => 0,
   );
   $export['easy_social_block_1_widgets'] = $strongarm;
 
@@ -1200,7 +1200,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_count';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['easy_social_block_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1254,7 +1254,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_fitxa_entorn_enable';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['easy_social_fitxa_entorn_enable'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1366,8 +1366,8 @@ function tnc_cont_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_global_widgets';
   $strongarm->value = array(
-    'twitter' => 'twitter',
     'facebook' => 'facebook',
+    'twitter' => 'twitter',
     'googleplus' => 0,
     'linkedin' => 0,
   );
@@ -2005,7 +2005,7 @@ function tnc_cont_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -2070,7 +2070,7 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -2102,8 +2102,8 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '4',
-            'visible' => TRUE,
+            'weight' => '8',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '8',
@@ -2120,8 +2120,8 @@ function tnc_cont_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '7',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '9',
@@ -2141,6 +2141,10 @@ function tnc_cont_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'flag_entorn_proximament' => array(
           'default' => array(
@@ -2149,6 +2153,14 @@ function tnc_cont_strongarm() {
           ),
           'entityreference_view_widget' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -2161,6 +2173,14 @@ function tnc_cont_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'eva_taxo_tarifes_entity_view_1' => array(
           'default' => array(
@@ -2171,9 +2191,21 @@ function tnc_cont_strongarm() {
             'weight' => '13',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
         ),
         'sessions_entity_view_1' => array(
           'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
@@ -2187,6 +2219,14 @@ function tnc_cont_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'sessions_node_entity_view_2' => array(
           'entityreference_view_widget' => array(
@@ -2196,6 +2236,32 @@ function tnc_cont_strongarm() {
           'default' => array(
             'weight' => '8',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+        ),
+        'easy_social_1' => array(
+          'entityreference_view_widget' => array(
+            'weight' => '101',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '101',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '101',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '22',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -2297,7 +2363,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_petit' => array(
           'default' => array(
-            'weight' => '25',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2311,7 +2377,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_gran' => array(
           'default' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2325,7 +2391,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_disponible_megamenu' => array(
           'default' => array(
-            'weight' => '23',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2339,7 +2405,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_proximament_megamenu' => array(
           'default' => array(
-            'weight' => '24',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -2492,6 +2558,12 @@ function tnc_cont_strongarm() {
             'visible' => TRUE,
           ),
         ),
+        'eva_espectacle_entity_view_3' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );
@@ -2637,16 +2709,16 @@ function tnc_cont_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -2721,16 +2793,16 @@ function tnc_cont_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -2872,16 +2944,16 @@ function tnc_cont_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -2992,6 +3064,8 @@ function tnc_cont_strongarm() {
     'proximament_megamenu' => TRUE,
     'afons_megamenu' => TRUE,
     'entorn_proximament' => TRUE,
+    'megamenu_edu_primaria' => TRUE,
+    'megamenu_edu_secundaria' => TRUE,
   );
   $export['flag_default_flag_status'] = $strongarm;
 

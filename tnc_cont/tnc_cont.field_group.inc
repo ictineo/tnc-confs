@@ -81,11 +81,11 @@ function tnc_cont_field_group_info() {
     'label' => 'Multimèdia',
     'weight' => '8',
     'children' => array(
-      0 => 'field_imatge_capcalera',
-      1 => 'field_video',
+      0 => 'field_documents',
+      1 => 'field_file_audio',
       2 => 'field_imatge',
-      3 => 'field_documents',
-      4 => 'field_file_audio',
+      3 => 'field_imatge_capcalera',
+      4 => 'field_video',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -113,8 +113,7 @@ function tnc_cont_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_entrada',
-      1 => 'field_dia',
-      2 => 'field_hora',
+      1 => 'field_dia_hora',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
