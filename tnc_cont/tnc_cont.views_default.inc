@@ -983,7 +983,7 @@ return $nids_or;';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Carrousel gran';
+  $handler->display->display_options['title'] = 'Carrousel gran vslideshow';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'més';
@@ -1678,7 +1678,7 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = '0';
+  $handler->display->display_options['style_options']['wrap'] = 'both';
   $handler->display->display_options['style_options']['visible'] = '1';
   $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
@@ -1893,6 +1893,94 @@ return $nids_or;';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_4';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Criteri d'ordenació: Contingut: Data de publicació */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+
+  /* Display: Bloc carrousel gran vslideshow */
+  $handler = $view->new_display('block', 'Bloc carrousel gran vslideshow', 'block_9');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹';
+  $handler->display->display_options['pager']['options']['tags']['next'] = '›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'slideshow';
+  $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
+  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
+  $handler->display->display_options['style_options']['skin_info'] = array(
+    'class' => 'default',
+    'name' => 'Per defecte',
+    'module' => 'views_slideshow',
+    'path' => '',
+    'stylesheets' => array(),
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['enable'] = 1;
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['hide_on_single_slide'] = 1;
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'title' => 0,
+    'field_autor' => 0,
+    'field_entorn' => 0,
+    'field_rol_destacat' => 0,
+    'field_sala' => 0,
+    'field_url_compra_reserva' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'title' => 0,
+    'field_autor' => 0,
+    'field_entorn' => 0,
+    'field_rol_destacat' => 0,
+    'field_sala' => 0,
+    'field_url_compra_reserva' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['pause'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['action_advanced'] = 1;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relació: Marcadors: carrousel_gran */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_gran';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Criteri d'ordenació: Draggableviews: Pes */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
