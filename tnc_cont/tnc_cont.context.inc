@@ -58,6 +58,39 @@ function tnc_cont_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'login_usuari';
+  $context->description = 'ubicar login només a user/';
+  $context->tag = 'administració';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'user' => 'user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('administració');
+  t('ubicar login només a user/');
+  $export['login_usuari'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'workbench';
   $context->description = 'blocks del workbench menu';
   $context->tag = 'administració';
