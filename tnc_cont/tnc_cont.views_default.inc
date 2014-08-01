@@ -4028,6 +4028,63 @@ return $nids_or;';
   $handler->display->display_options['relationships']['field_temporada_tid']['id'] = 'field_temporada_tid';
   $handler->display->display_options['relationships']['field_temporada_tid']['table'] = 'field_data_field_temporada';
   $handler->display->display_options['relationships']['field_temporada_tid']['field'] = 'field_temporada_tid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Imatge_capçalera */
+  $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge_capcalera']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
+  /* Field: Content: Sala */
+  $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
+  $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
+  $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'titol';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Subtítol */
+  $handler->display->display_options['fields']['field_subtitol']['id'] = 'field_subtitol';
+  $handler->display->display_options['fields']['field_subtitol']['table'] = 'field_data_field_subtitol';
+  $handler->display->display_options['fields']['field_subtitol']['field'] = 'field_subtitol';
+  $handler->display->display_options['fields']['field_subtitol']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitol']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitol']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_subtitol']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitol']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_subtitol']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitol']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="nested">[field_sala] <div class="field titol">[title]</div> [field_subtitol]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -4070,6 +4127,7 @@ return $nids_or;';
   $handler->display->display_options['filters']['type']['value'] = array(
     'fitxa_espectacle' => 'fitxa_espectacle',
   );
+  $handler->display->display_options['block_description'] = 'En cartell';
 
   /* Display: Espectacles pròximament */
   $handler = $view->new_display('block', 'Espectacles pròximament', 'block_2');
@@ -4142,6 +4200,7 @@ return $nids_or;';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Pròximament';
 
   /* Display: Entorn A fons */
   $handler = $view->new_display('block', 'Entorn A fons', 'block_3');
@@ -4202,6 +4261,7 @@ return $nids_or;';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'A fons';
 
   /* Display: Entorn proximament */
   $handler = $view->new_display('block', 'Entorn proximament', 'block_4');
@@ -4213,15 +4273,6 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'entorn_proximament';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_dia']['id'] = 'field_dia';
-  $handler->display->display_options['fields']['field_dia']['table'] = 'field_data_field_dia';
-  $handler->display->display_options['fields']['field_dia']['field'] = 'field_dia';
-  $handler->display->display_options['fields']['field_dia']['label'] = '';
-  $handler->display->display_options['fields']['field_dia']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_dia']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_dia']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_dia']['element_default_classes'] = FALSE;
   /* Field: Content: Dia i hores */
   $handler->display->display_options['fields']['field_dia_hora']['id'] = 'field_dia_hora';
   $handler->display->display_options['fields']['field_dia_hora']['table'] = 'field_data_field_dia_hora';
@@ -4267,6 +4318,7 @@ return $nids_or;';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Pròximament';
 
   /* Display: Dossiers premsa */
   $handler = $view->new_display('block', 'Dossiers premsa', 'block_5');

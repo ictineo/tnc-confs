@@ -403,14 +403,10 @@ function tnc_cont_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_columna_1-field_espectacle_menu'
   $field_instances['field_collection_item-field_columna_1-field_espectacle_menu'] = array(
     'bundle' => 'field_columna_1',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_1',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -437,13 +433,18 @@ function tnc_cont_field_default_field_instances() {
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -7278,6 +7279,8 @@ function tnc_cont_field_default_field_instances() {
   t('Resum destacat');
   t('Rol destacat');
   t('Sala');
+  t('Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15');
   t('Subtítol');
   t('Tarifa');
   t('Temporada');
