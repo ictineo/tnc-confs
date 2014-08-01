@@ -36,7 +36,6 @@ features[conditional_fields][] = field_collection_item:field_dia_hora
 features[conditional_fields][] = node:fitxa_espectacle
 features[conditional_fields][] = node:fitxa_premsa
 features[context][] = cosetes_home
-features[context][] = login_usuari
 features[context][] = workbench
 features[context][] = workbench2
 features[context][] = workbench3
