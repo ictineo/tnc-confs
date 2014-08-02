@@ -4018,6 +4018,14 @@ return $nids_or;';
 
   /* Display: Espectacles en cartell */
   $handler = $view->new_display('block', 'Espectacles en cartell', 'block_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'En cartell';
+  $handler->display->display_options['header']['area']['content'] = '> En cartell';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: disponible_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4143,6 +4151,14 @@ return $nids_or;';
     'title' => 'title',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Pròximament';
+  $handler->display->display_options['header']['area']['content'] = '> Pròximament';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: proximament_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4205,6 +4221,14 @@ return $nids_or;';
 
   /* Display: Entorn A fons */
   $handler = $view->new_display('block', 'Entorn A fons', 'block_3');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'A fons';
+  $handler->display->display_options['header']['area']['content'] = '> A fons';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: afons_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4266,6 +4290,14 @@ return $nids_or;';
 
   /* Display: Entorn proximament */
   $handler = $view->new_display('block', 'Entorn proximament', 'block_4');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Pròximament';
+  $handler->display->display_options['header']['area']['content'] = '> Pròximament';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: entorn_proximament */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
