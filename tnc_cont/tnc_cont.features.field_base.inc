@@ -833,7 +833,7 @@ function tnc_cont_field_default_field_bases() {
   // Exported field_base: 'field_espectacle_menu'
   $field_bases['field_espectacle_menu'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_espectacle_menu',
@@ -849,7 +849,7 @@ function tnc_cont_field_default_field_bases() {
   // Exported field_base: 'field_espectacle_prox'
   $field_bases['field_espectacle_prox'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_espectacle_prox',

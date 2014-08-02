@@ -230,7 +230,8 @@ function tnc_cont_field_default_field_instances() {
     'bundle' => 'field_columna_1',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -257,13 +258,18 @@ function tnc_cont_field_default_field_instances() {
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -286,14 +292,9 @@ function tnc_cont_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_columna_1-field_calendari'
   $field_instances['field_collection_item-field_columna_1-field_calendari'] = array(
     'bundle' => 'field_columna_1',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'calendar|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -317,13 +318,18 @@ function tnc_cont_field_default_field_instances() {
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 'calendar',
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 0,
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -331,7 +337,7 @@ function tnc_cont_field_default_field_instances() {
         'workbench_edited' => 0,
         'workbench_recent_content' => 0,
       ),
-      'force_default' => 1,
+      'force_default' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -376,7 +382,7 @@ function tnc_cont_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => '_top',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -467,14 +473,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_1-field_espectacle_prox'
   $field_instances['field_collection_item-field_columna_1-field_espectacle_prox'] = array(
     'bundle' => 'field_columna_1',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -501,13 +503,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -532,7 +539,7 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_1',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Introdueix el text que desitgis. Si col·loques una imatge, alínea-la a l\'esquerra i fitxa el seu ample a 100.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -563,7 +570,7 @@ Per exemple: 2014-15',
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
@@ -618,7 +625,8 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_2',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -645,13 +653,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -674,14 +687,9 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_2-field_calendari'
   $field_instances['field_collection_item-field_columna_2-field_calendari'] = array(
     'bundle' => 'field_columna_2',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'calendar|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -705,13 +713,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 'calendar',
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 0,
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -764,7 +777,7 @@ Per exemple: 2014-15',
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => '_top',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -791,14 +804,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_2-field_espectacle_menu'
   $field_instances['field_collection_item-field_columna_2-field_espectacle_menu'] = array(
     'bundle' => 'field_columna_2',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_1',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -825,13 +834,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -854,14 +868,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_2-field_espectacle_prox'
   $field_instances['field_collection_item-field_columna_2-field_espectacle_prox'] = array(
     'bundle' => 'field_columna_2',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -888,13 +898,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -919,7 +934,7 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_2',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Introdueix el text que desitgis. Si col·loques una imatge, alínea-la a l\'esquerra i fitxa el seu ample a 100.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -950,7 +965,7 @@ Per exemple: 2014-15',
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
@@ -1005,7 +1020,8 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_3',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1032,13 +1048,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1061,14 +1082,9 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_3-field_calendari'
   $field_instances['field_collection_item-field_columna_3-field_calendari'] = array(
     'bundle' => 'field_columna_3',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'calendar|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1092,13 +1108,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 'calendar',
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 0,
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1151,7 +1172,7 @@ Per exemple: 2014-15',
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => '_top',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -1178,14 +1199,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_3-field_espectacle_menu'
   $field_instances['field_collection_item-field_columna_3-field_espectacle_menu'] = array(
     'bundle' => 'field_columna_3',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_1',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1212,13 +1229,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1241,14 +1263,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_3-field_espectacle_prox'
   $field_instances['field_collection_item-field_columna_3-field_espectacle_prox'] = array(
     'bundle' => 'field_columna_3',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1275,13 +1293,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1306,7 +1329,7 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_3',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Introdueix el text que desitgis. Si col·loques una imatge, alínea-la a l\'esquerra i fitxa el seu ample a 100.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1337,7 +1360,7 @@ Per exemple: 2014-15',
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
@@ -1392,7 +1415,8 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_4',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1419,13 +1443,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1448,14 +1477,9 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_4-field_calendari'
   $field_instances['field_collection_item-field_columna_4-field_calendari'] = array(
     'bundle' => 'field_columna_4',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'calendar|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1479,13 +1503,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 'calendar',
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 0,
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1538,7 +1567,7 @@ Per exemple: 2014-15',
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => '_top',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -1565,14 +1594,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_4-field_espectacle_menu'
   $field_instances['field_collection_item-field_columna_4-field_espectacle_menu'] = array(
     'bundle' => 'field_columna_4',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_1',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1599,13 +1624,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1628,14 +1658,10 @@ Per exemple: 2014-15',
   // Exported field_instance: 'field_collection_item-field_columna_4-field_espectacle_prox'
   $field_instances['field_collection_item-field_columna_4-field_espectacle_prox'] = array(
     'bundle' => 'field_columna_4',
-    'default_value' => array(
-      0 => array(
-        'vname' => 'view_megamenu|block_2',
-        'vargs' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
+Per exemple: 2014-15',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1662,13 +1688,18 @@ Per exemple: 2014-15',
       'allowed_views' => array(
         'blo' => 0,
         'calendar' => 0,
+        'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
         'eva_taxo_tarifes' => 0,
         'field_collection_view' => 0,
         'gestio_megamenu' => 0,
         'list_node_page_titles' => 0,
+        'sessio_premsa' => 0,
+        'sessions' => 0,
         'sessions_node' => 0,
+        'temporada' => 0,
+        'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
         'vistes_auxiliars_premsa' => 0,
@@ -1693,7 +1724,7 @@ Per exemple: 2014-15',
     'bundle' => 'field_columna_4',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Introdueix el text que desitgis. Si col·loques una imatge, alínea-la a l\'esquerra i fitxa el seu ample a 100.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1724,7 +1755,7 @@ Per exemple: 2014-15',
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
@@ -7265,6 +7296,7 @@ Per exemple: 2014-15',
   t('Imatges');
   t('Incorpora una imatge com a previsualització del vídeo.');
   t('Introdueix data d\'inici i fi si l\'activitat cobreix un període de temps (per exemple, una exposició) o si té diverses sessions.');
+  t('Introdueix el text que desitgis. Si col·loques una imatge, alínea-la a l\'esquerra i fitxa el seu ample a 100.');
   t('Introdueix la data d\'inici de l\'espectacle i la data de finalització');
   t('Missatge');
   t('Model: 01:55\' (espectacle sense entreacte)');
@@ -7281,6 +7313,7 @@ Per exemple: 2014-15',
   t('Sala');
   t('Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
 Per exemple: 2014-15');
+  t('Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.');
   t('Subtítol');
   t('Tarifa');
   t('Temporada');
