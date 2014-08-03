@@ -3886,6 +3886,581 @@ return $nids_or;';
   $export['temporada'] = $view;
 
   $view = new view();
+  $view->name = 'tipus_patrocinadors';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Tipus patrocinadors';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'patrocinadors ';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Flags: patrocinadors */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Field: Content: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '7',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Patrocinadors A */
+  $handler = $view->new_display('block', 'Patrocinadors A', 'block');
+
+  /* Display: Patrocinadors B */
+  $handler = $view->new_display('block', 'Patrocinadors B', 'block_2');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_5';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '8',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Patrocinadors C */
+  $handler = $view->new_display('block', 'Patrocinadors C', 'block_3');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_6';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '9',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Patrocinadors D */
+  $handler = $view->new_display('block', 'Patrocinadors D', 'block_4');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_7';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '10',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Dragg Patrocinadors A */
+  $handler = $view->new_display('block', 'Dragg Patrocinadors A', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Dragg patrocinadors A';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_link' => 'field_link',
+    'field_imatge' => 'field_imatge',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_imatge' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+
+  /* Display: Dragg Patrocinadors B */
+  $handler = $view->new_display('block', 'Dragg Patrocinadors B', 'block_5');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Dragg patrocinadors B';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_link' => 'field_link',
+    'field_imatge' => 'field_imatge',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_imatge' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '8',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Dragg Patrocinadors C */
+  $handler = $view->new_display('block', 'Dragg Patrocinadors C', 'block_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Dragg patrocinadors C';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_link' => 'field_link',
+    'field_imatge' => 'field_imatge',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_imatge' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '9',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+
+  /* Display: Dragg Patrocinadors D */
+  $handler = $view->new_display('block', 'Dragg Patrocinadors D', 'block_7');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Dragg patrocinadors D';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_link' => 'field_link',
+    'field_imatge' => 'field_imatge',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_imatge' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'patrocinador' => 'patrocinador',
+  );
+  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['value'] = array(
+    0 => '10',
+  );
+  $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['vocabulary'] = 'patrocinadors';
+  $export['tipus_patrocinadors'] = $view;
+
+  $view = new view();
   $view->name = 'view_megamenu';
   $view->description = '';
   $view->tag = 'default';
@@ -4178,7 +4753,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_data']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_data']['settings'] = array(
     'format_type' => 'mig',
-    'fromto' => 'both',
+    'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
@@ -4248,7 +4823,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_data']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_data']['settings'] = array(
     'format_type' => 'mig',
-    'fromto' => 'both',
+    'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
@@ -4306,20 +4881,24 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'entorn_proximament';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Dia i hores */
-  $handler->display->display_options['fields']['field_dia_hora']['id'] = 'field_dia_hora';
-  $handler->display->display_options['fields']['field_dia_hora']['table'] = 'field_data_field_dia_hora';
-  $handler->display->display_options['fields']['field_dia_hora']['field'] = 'field_dia_hora';
-  $handler->display->display_options['fields']['field_dia_hora']['label'] = '';
-  $handler->display->display_options['fields']['field_dia_hora']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_dia_hora']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_dia_hora']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_dia_hora']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_dia_hora']['settings'] = array(
-    'view_mode' => 'entityreference_view_widget',
+  /* Field: Content: Data */
+  $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
+  $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['settings'] = array(
+    'format_type' => 'mig',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
   );
-  $handler->display->display_options['fields']['field_dia_hora']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_dia_hora']['field_api_classes'] = TRUE;
+  $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
   /* Field: Content: Tipus d'entorn */
   $handler->display->display_options['fields']['field_tipus_entorn']['id'] = 'field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['table'] = 'field_data_field_tipus_entorn';
@@ -4379,6 +4958,14 @@ return $nids_or;';
 
   /* Display: Primària */
   $handler = $view->new_display('block', 'Primària', 'block_6');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: megamenu_edu_primaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4403,6 +4990,14 @@ return $nids_or;';
 
   /* Display: Secundària */
   $handler = $view->new_display('block', 'Secundària', 'block_7');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: megamenu_edu_secundaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4427,6 +5022,14 @@ return $nids_or;';
 
   /* Display: Batxillerat */
   $handler = $view->new_display('block', 'Batxillerat', 'block_8');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: megamenu_batxillerat */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -4452,30 +5055,14 @@ return $nids_or;';
   /* Display: Patrocinadors */
   $handler = $view->new_display('block', 'Patrocinadors', 'block_9');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: dossier_premsa_megamen_ */
+  /* Relationship: Flags: patrocinadors */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'patrocinadors';
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge */
-  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
-  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
-  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
-  $handler->display->display_options['fields']['field_imatge']['label'] = '';
-  $handler->display->display_options['fields']['field_imatge']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
   /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
@@ -4489,6 +5076,23 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Imatge */
+  $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
+  $handler->display->display_options['fields']['field_imatge']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_imatge']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_imatge']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_imatge']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_imatge']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imatge']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
   /* Field: Content: Tipus de patrocinador */
   $handler->display->display_options['fields']['field_tipus_patrocinador']['id'] = 'field_tipus_patrocinador';
   $handler->display->display_options['fields']['field_tipus_patrocinador']['table'] = 'field_data_field_tipus_patrocinador';
@@ -4506,7 +5110,8 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="[field_tipus_patrocinador]"><a href="[field_link]">[field_imatge]</a></div>';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="patrocinador"><a href="[field_link]">[field_imatge]</a></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */

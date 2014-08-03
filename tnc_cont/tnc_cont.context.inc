@@ -164,11 +164,29 @@ function tnc_cont_context_default_contexts() {
           'region' => 'content',
           'weight' => '-3',
         ),
-        'views-view_megamenu-block_18' => array(
+        'views-tipus_patrocinadors-block_1' => array(
           'module' => 'views',
-          'delta' => 'view_megamenu-block_18',
+          'delta' => 'tipus_patrocinadors-block_1',
           'region' => 'content',
           'weight' => '-2',
+        ),
+        'views-tipus_patrocinadors-block_5' => array(
+          'module' => 'views',
+          'delta' => 'tipus_patrocinadors-block_5',
+          'region' => 'content',
+          'weight' => '-1',
+        ),
+        'views-tipus_patrocinadors-block_6' => array(
+          'module' => 'views',
+          'delta' => 'tipus_patrocinadors-block_6',
+          'region' => 'content',
+          'weight' => '0',
+        ),
+        'views-tipus_patrocinadors-block_7' => array(
+          'module' => 'views',
+          'delta' => 'tipus_patrocinadors-block_7',
+          'region' => 'content',
+          'weight' => '1',
         ),
       ),
     ),
