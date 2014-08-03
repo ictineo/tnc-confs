@@ -58,6 +58,39 @@ function tnc_cont_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'idioma';
+  $context->description = 'ubicació selecció d\'idioma';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'locale-language' => array(
+          'module' => 'locale',
+          'delta' => 'language',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('theme');
+  t('ubicació selecció d\'idioma');
+  $export['idioma'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'workbench';
   $context->description = 'blocks del workbench menu';
   $context->tag = 'administració';
