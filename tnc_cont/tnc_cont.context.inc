@@ -283,5 +283,44 @@ function tnc_cont_context_default_contexts() {
   t('blocks del workbench dragg carrousels portada');
   $export['workbench3'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'workbench4';
+  $context->description = 'Dragg ítems del megamenú';
+  $context->tag = 'administració';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'admin/workbench/items_menu' => 'admin/workbench/items_menu',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-carrega_megamenu-block_2' => array(
+          'module' => 'views',
+          'delta' => 'carrega_megamenu-block_2',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-carrega_megamenu-block_4' => array(
+          'module' => 'views',
+          'delta' => 'carrega_megamenu-block_4',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Dragg ítems del megamenú');
+  t('administració');
+  $export['workbench4'] = $context;
+
   return $export;
 }
