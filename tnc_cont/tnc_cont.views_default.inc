@@ -471,6 +471,9 @@ return $nids_or;';
 
   /* Display: Calendari home */
   $handler = $view->new_display('block', 'Calendari home', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month_home';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -519,18 +522,6 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
-  $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['relationship'] = 'field_dia_hora_node';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['label'] = '';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_url_compra_reserva']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
   /* Field: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
@@ -549,11 +540,6 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (field_collection_item) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -579,7 +565,7 @@ return $nids_or;';
   $handler->display->display_options['use_more_text'] = 'Tot el calendari';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
-  $handler->display->display_options['pager']['options']['date_id'] = 'month';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month_menu';
   $handler->display->display_options['pager']['options']['pager_position'] = 'both';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'calendar_style';
