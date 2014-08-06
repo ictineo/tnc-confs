@@ -1995,13 +1995,16 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_autor']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['element_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
@@ -2012,12 +2015,15 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['label'] = '';
+  $handler->display->display_options['fields']['field_entorn']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_entorn']['element_type'] = '0';
   $handler->display->display_options['fields']['field_entorn']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_entorn']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_entorn']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_entorn']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_entorn']['settings'] = array(
-    'link' => 0,
+    'view_mode' => 'teaser',
+    'links' => 1,
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
@@ -2026,6 +2032,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['label'] = '';
+  $handler->display->display_options['fields']['field_rol_destacat']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_rol_destacat']['element_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
@@ -2036,6 +2043,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
@@ -2047,12 +2055,48 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['label'] = '';
+  $handler->display->display_options['fields']['field_url_compra_reserva']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_type'] = '0';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
+  /* Field: Content: Data */
+  $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
+  $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_data']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['settings'] = array(
+    'format_type' => 'mig',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="tab">
+[field_url_compra_reserva]
+[field_sala]
+[field_data]
+<h3 class="titol">[title]</h3>
+[field_autor]
+[field_rol_destacat]
+<div class="grup_entorn">L\'entorn</div>
+[field_entorn]
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
