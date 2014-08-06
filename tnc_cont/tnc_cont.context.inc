@@ -122,6 +122,12 @@ function tnc_cont_context_default_contexts() {
           'region' => 'content',
           'weight' => '-8',
         ),
+        'views-carrousel-block_10' => array(
+          'module' => 'views',
+          'delta' => 'carrousel-block_10',
+          'region' => 'content',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
