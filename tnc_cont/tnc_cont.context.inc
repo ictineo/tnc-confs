@@ -74,30 +74,29 @@ function tnc_cont_context_default_contexts() {
         'menu-menu-peu' => array(
           'module' => 'menu',
           'delta' => 'menu-peu',
-          'region' => 'footer',
+          'region' => 'bottom',
           'weight' => '-10',
         ),
         'menu-menu-compra-d-abonaments' => array(
           'module' => 'menu',
           'delta' => 'menu-compra-d-abonaments',
-          'region' => 'footer',
+          'region' => 'bottom',
           'weight' => '-9',
         ),
         'menu-menu-compra-d-entrades' => array(
           'module' => 'menu',
           'delta' => 'menu-compra-d-entrades',
-          'region' => 'footer',
+          'region' => 'bottom',
           'weight' => '-8',
         ),
         'menu-menu-regala-tnc' => array(
           'module' => 'menu',
           'delta' => 'menu-regala-tnc',
-          'region' => 'footer',
+          'region' => 'bottom',
           'weight' => '-7',
         ),
       ),
     ),
-    'menu' => '0',
   );
   $context->condition_mode = 0;
 
