@@ -3376,6 +3376,10 @@ function tnc_cont_strongarm() {
     5 => 'navigation',
     6 => 'user-menu',
     7 => 'menu-tauler',
+    8 => 'menu-peu',
+    9 => 'menu-compra-d-abonaments',
+    10 => 'menu-compra-d-entrades',
+    11 => 'menu-regala-tnc',
   );
   $export['menu_default_active_menus'] = $strongarm;
 

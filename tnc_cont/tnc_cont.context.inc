@@ -58,6 +58,58 @@ function tnc_cont_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'footer';
+  $context->description = 'blocks menú del footer';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-peu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-peu',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
+        'menu-menu-compra-d-abonaments' => array(
+          'module' => 'menu',
+          'delta' => 'menu-compra-d-abonaments',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
+        'menu-menu-compra-d-entrades' => array(
+          'module' => 'menu',
+          'delta' => 'menu-compra-d-entrades',
+          'region' => 'footer',
+          'weight' => '-8',
+        ),
+        'menu-menu-regala-tnc' => array(
+          'module' => 'menu',
+          'delta' => 'menu-regala-tnc',
+          'region' => 'footer',
+          'weight' => '-7',
+        ),
+      ),
+    ),
+    'menu' => '0',
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('blocks menú del footer');
+  t('theme');
+  $export['footer'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'idioma';
   $context->description = 'ubicació selecció d\'idioma';
   $context->tag = 'theme';
