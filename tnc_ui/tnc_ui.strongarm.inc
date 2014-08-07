@@ -443,7 +443,7 @@ function tnc_ui_strongarm() {
   $strongarm->value = array(
     8 => array(
       'weight' => '0',
-      'public_pid' => '2',
+      'public_pid' => '1',
     ),
     3 => array(
       'weight' => '0',
@@ -463,11 +463,11 @@ function tnc_ui_strongarm() {
     ),
     4 => array(
       'weight' => '0',
-      'public_pid' => '1',
+      'public_pid' => '2',
     ),
     2 => array(
       'weight' => 11,
-      'public_pid' => '1',
+      'public_pid' => 0,
     ),
     1 => array(
       'weight' => 12,
@@ -643,6 +643,7 @@ function tnc_ui_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'node' => TRUE,
+    'taxonomy' => TRUE,
   );
   $export['path_alias_whitelist'] = $strongarm;
 
@@ -1205,7 +1206,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1405718385;
+  $strongarm->value = 1407365743;
   $export['xmlsitemap_generated_last'] = $strongarm;
 
   $strongarm = new stdClass();

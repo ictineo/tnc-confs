@@ -58,22 +58,20 @@ function tnc_ui_views_default_views() {
   $handler->display->display_options['fields']['field_entrada']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_entrada']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_entrada']['field_api_classes'] = TRUE;
-  /* Field: Content: Dia */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_dia']['id'] = 'field_dia';
   $handler->display->display_options['fields']['field_dia']['table'] = 'field_data_field_dia';
   $handler->display->display_options['fields']['field_dia']['field'] = 'field_dia';
   $handler->display->display_options['fields']['field_dia']['element_type'] = '0';
   $handler->display->display_options['fields']['field_dia']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_dia']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_dia']['field_api_classes'] = TRUE;
-  /* Field: Content: Hora */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_hora']['id'] = 'field_hora';
   $handler->display->display_options['fields']['field_hora']['table'] = 'field_data_field_hora';
   $handler->display->display_options['fields']['field_hora']['field'] = 'field_hora';
   $handler->display->display_options['fields']['field_hora']['element_type'] = '0';
   $handler->display->display_options['fields']['field_hora']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_hora']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_hora']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
