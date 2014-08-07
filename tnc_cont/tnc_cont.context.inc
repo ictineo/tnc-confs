@@ -328,5 +328,38 @@ function tnc_cont_context_default_contexts() {
   t('administració');
   $export['workbench4'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'xarxes_socials';
+  $context->description = 'block per les xxss del top menu';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-1' => array(
+          'module' => 'block',
+          'delta' => '1',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('block per les xxss del top menu');
+  t('theme');
+  $export['xarxes_socials'] = $context;
+
   return $export;
 }

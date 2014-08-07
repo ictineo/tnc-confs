@@ -1,6 +1,7 @@
 name = tnc_cont
 core = 7.x
 package = Features
+dependencies[] = block
 dependencies[] = calendar
 dependencies[] = conditional_fields
 dependencies[] = context
@@ -41,6 +42,7 @@ features[context][] = workbench
 features[context][] = workbench2
 features[context][] = workbench3
 features[context][] = workbench4
+features[context][] = xarxes_socials
 features[ctools][] = context:context:3
 features[ctools][] = custom_formatters:custom_formatters:2
 features[ctools][] = field_group:field_group:1
