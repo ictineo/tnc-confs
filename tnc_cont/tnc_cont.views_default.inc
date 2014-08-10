@@ -11,6 +11,116 @@ function tnc_cont_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'avis_portada';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Avis portada';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Avis portada';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Flags: publica_avis */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'publica_avis';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Field: Field: Text lliure */
+  $handler->display->display_options['fields']['field_text_lliure']['id'] = 'field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['table'] = 'field_data_field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['field'] = 'field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['label'] = '';
+  $handler->display->display_options['fields']['field_text_lliure']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_text_lliure']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_text_lliure']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'avis' => 'avis',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Gestió avisos */
+  $handler = $view->new_display('block', 'Gestió avisos', 'block_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_text_lliure' => 'field_text_lliure',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_text_lliure' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: publica_avis */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'publica_avis';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Text lliure */
+  $handler->display->display_options['fields']['field_text_lliure']['id'] = 'field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['table'] = 'field_data_field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['field'] = 'field_text_lliure';
+  $handler->display->display_options['fields']['field_text_lliure']['label'] = '';
+  $handler->display->display_options['fields']['field_text_lliure']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_text_lliure']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_text_lliure']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_text_lliure']['field_api_classes'] = TRUE;
+  /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Publica l\'avís';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Destaca avisos';
+  $export['avis_portada'] = $view;
+
+  $view = new view();
   $view->name = 'blo';
   $view->description = '';
   $view->tag = 'default';
