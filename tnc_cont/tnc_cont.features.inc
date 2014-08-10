@@ -525,6 +525,43 @@ function tnc_cont_flag_default_flags() {
     ),
     'api_version' => 3,
   );
+  // Exported flag: "Publica avís".
+  $flags['publica_avis'] = array(
+    'entity_type' => 'node',
+    'title' => 'Publica avís',
+    'global' => 1,
+    'types' => array(
+      0 => 'avis',
+    ),
+    'flag_short' => 'Publica aquest avís',
+    'flag_long' => 'Publica aquest avís',
+    'flag_message' => 'Avís publicat',
+    'unflag_short' => 'Despublica aquest avís',
+    'unflag_long' => 'Despublica aquest avís',
+    'unflag_message' => 'Avís despublicat',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 0,
+      'teaser' => 0,
+      'rss' => 0,
+      'search_index' => 0,
+      'search_result' => 0,
+      'entityreference_view_widget' => 0,
+      'token' => 0,
+    ),
+    'show_as_field' => 0,
+    'show_on_form' => 1,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'i18n' => 0,
+    'api_version' => 3,
+    'module' => 'tnc_cont',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
   // Exported flag: "Slide portada".
   $flags['slide_portada'] = array(
     'entity_type' => 'node',

@@ -256,6 +256,7 @@ features[flag][] = men_esquerre
 features[flag][] = men_superior
 features[flag][] = patrocinadors
 features[flag][] = proximament_megamenu
+features[flag][] = publica_avis
 features[flag][] = slide_portada
 features[flag][] = teletip_portada
 features[formatters][] = data_br
