@@ -26,17 +26,23 @@ function tnc_cont_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-avis_portada-block' => array(
+          'module' => 'views',
+          'delta' => 'avis_portada-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-carrousel-block_1' => array(
           'module' => 'views',
           'delta' => 'carrousel-block_1',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'views-carrousel-block_3' => array(
           'module' => 'views',
           'delta' => 'carrousel-block_3',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'system-main' => array(
           'module' => 'system',
@@ -54,63 +60,6 @@ function tnc_cont_context_default_contexts() {
   t('Ubicar els blocks que volem a la home');
   t('theme');
   $export['cosetes_home'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'footer';
-  $context->description = 'blocks menú del footer';
-  $context->tag = 'theme';
-  $context->conditions = array(
-    'sitewide' => array(
-      'values' => array(
-        1 => 1,
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => '2',
-          'region' => 'bottom',
-          'weight' => '-10',
-        ),
-        'menu-menu-peu' => array(
-          'module' => 'menu',
-          'delta' => 'menu-peu',
-          'region' => 'bottom',
-          'weight' => '-9',
-        ),
-        'menu-menu-compra-d-abonaments' => array(
-          'module' => 'menu',
-          'delta' => 'menu-compra-d-abonaments',
-          'region' => 'bottom',
-          'weight' => '-8',
-        ),
-        'menu-menu-compra-d-entrades' => array(
-          'module' => 'menu',
-          'delta' => 'menu-compra-d-entrades',
-          'region' => 'bottom',
-          'weight' => '-7',
-        ),
-        'menu-menu-regala-tnc' => array(
-          'module' => 'menu',
-          'delta' => 'menu-regala-tnc',
-          'region' => 'bottom',
-          'weight' => '-6',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('blocks menú del footer');
-  t('theme');
-  $export['footer'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -184,6 +133,12 @@ function tnc_cont_context_default_contexts() {
           'delta' => 'carrousel-block_10',
           'region' => 'content',
           'weight' => '-7',
+        ),
+        'views-avis_portada-block_1' => array(
+          'module' => 'views',
+          'delta' => 'avis_portada-block_1',
+          'region' => 'content',
+          'weight' => '-6',
         ),
       ),
     ),

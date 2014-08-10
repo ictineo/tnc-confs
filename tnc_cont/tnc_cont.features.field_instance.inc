@@ -2328,6 +2328,55 @@ Per exemple: 2014-15',
     ),
   );
 
+  // Exported field_instance: 'node-avis-field_text_lliure'
+  $field_instances['node-avis-field_text_lliure'] = array(
+    'bundle' => 'avis',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'semantic_field_format' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_text_lliure',
+    'label' => 'Text lliure',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-documentacio-field_artista'
   $field_instances['node-documentacio-field_artista'] = array(
     'bundle' => 'documentacio',

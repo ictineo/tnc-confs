@@ -617,6 +617,14 @@ function tnc_cont_node_info() {
       'title_label' => t('Títol'),
       'help' => '',
     ),
+    'avis' => array(
+      'name' => t('Avís'),
+      'base' => 'node_content',
+      'description' => t('Aquest contingut només s\'ha d\'utilitzar quan es vulgui fer algun avís "urgent i destacat" a la portada de la web.'),
+      'has_title' => '1',
+      'title_label' => t('Títol'),
+      'help' => '',
+    ),
     'documentacio' => array(
       'name' => t('Documentació'),
       'base' => 'node_content',

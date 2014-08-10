@@ -56,7 +56,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_megamenu';
-  $strongarm->value = 'edit-xmlsitemap';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_megamenu'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -443,6 +443,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_avis';
+  $strongarm->value = 0;
+  $export['comment_anonymous_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_documentacio';
   $strongarm->value = 0;
   $export['comment_anonymous_documentacio'] = $strongarm;
@@ -534,9 +541,23 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_avis';
+  $strongarm->value = '1';
+  $export['comment_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_audio';
   $strongarm->value = 1;
   $export['comment_default_mode_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_avis';
+  $strongarm->value = 1;
+  $export['comment_default_mode_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -628,6 +649,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'comment_default_per_page_audio';
   $strongarm->value = '50';
   $export['comment_default_per_page_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_avis';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -751,6 +779,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_avis';
+  $strongarm->value = 1;
+  $export['comment_form_location_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_documentacio';
   $strongarm->value = 1;
   $export['comment_form_location_documentacio'] = $strongarm;
@@ -870,6 +905,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_avis';
+  $strongarm->value = '1';
+  $export['comment_preview_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_documentacio';
   $strongarm->value = '1';
   $export['comment_preview_documentacio'] = $strongarm;
@@ -964,6 +1006,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'comment_subject_field_audio';
   $strongarm->value = 1;
   $export['comment_subject_field_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_avis';
+  $strongarm->value = 1;
+  $export['comment_subject_field_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1937,6 +1986,35 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__avis';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'flag' => array(
+          'weight' => '2',
+        ),
+        'metatags' => array(
+          'weight' => '5',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '3',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '4',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__documentacio';
   $strongarm->value = array(
     'view_modes' => array(
@@ -2579,16 +2657,19 @@ function tnc_cont_strongarm() {
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'title' => array(
-          'weight' => '4',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '6',
+        ),
+        'flag' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(
@@ -3276,6 +3357,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_avis';
+  $strongarm->value = '1';
+  $export['language_content_type_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_documentacio';
   $strongarm->value = '2';
   $export['language_content_type_documentacio'] = $strongarm;
@@ -3312,7 +3400,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_megamenu';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['language_content_type_megamenu'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3396,6 +3484,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'menu_options_audio';
   $strongarm->value = array();
   $export['menu_options_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_avis';
+  $strongarm->value = array();
+  $export['menu_options_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3498,6 +3593,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'menu_parent_audio';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_avis';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3613,6 +3715,16 @@ function tnc_cont_strongarm() {
     1 => 'promote',
   );
   $export['node_options_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_avis';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3745,6 +3857,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_avis';
+  $strongarm->value = '1';
+  $export['node_preview_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_documentacio';
   $strongarm->value = '1';
   $export['node_preview_documentacio'] = $strongarm;
@@ -3860,6 +3979,13 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'node_submitted_audio';
   $strongarm->value = 0;
   $export['node_submitted_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_avis';
+  $strongarm->value = 0;
+  $export['node_submitted_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
