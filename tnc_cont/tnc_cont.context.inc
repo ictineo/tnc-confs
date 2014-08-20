@@ -64,6 +64,63 @@ function tnc_cont_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'footer';
+  $context->description = 'blocks menú del footer';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'bottom',
+          'weight' => '-10',
+        ),
+        'menu-menu-peu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-peu',
+          'region' => 'bottom',
+          'weight' => '-9',
+        ),
+        'menu-menu-compra-d-abonaments' => array(
+          'module' => 'menu',
+          'delta' => 'menu-compra-d-abonaments',
+          'region' => 'bottom',
+          'weight' => '-8',
+        ),
+        'menu-menu-compra-d-entrades' => array(
+          'module' => 'menu',
+          'delta' => 'menu-compra-d-entrades',
+          'region' => 'bottom',
+          'weight' => '-7',
+        ),
+        'menu-menu-regala-tnc' => array(
+          'module' => 'menu',
+          'delta' => 'menu-regala-tnc',
+          'region' => 'bottom',
+          'weight' => '-6',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('blocks menú del footer');
+  t('theme');
+  $export['footer'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'idioma';
   $context->description = 'ubicació selecció d\'idioma';
   $context->tag = 'theme';
@@ -93,6 +150,39 @@ function tnc_cont_context_default_contexts() {
   t('theme');
   t('ubicació selecció d\'idioma');
   $export['idioma'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'login_usuari';
+  $context->description = 'ubicar login només a user/';
+  $context->tag = 'administració';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'user' => 'user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('administració');
+  t('ubicar login només a user/');
+  $export['login_usuari'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

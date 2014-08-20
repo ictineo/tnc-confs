@@ -556,11 +556,11 @@ function tnc_cont_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'tnc_cont',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Slide portada".
   $flags['slide_portada'] = array(

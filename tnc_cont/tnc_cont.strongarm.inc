@@ -1187,6 +1187,39 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_avis_count';
+  $strongarm->value = '1';
+  $export['easy_social_avis_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_avis_enable';
+  $strongarm->value = 0;
+  $export['easy_social_avis_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_avis_type';
+  $strongarm->value = '0';
+  $export['easy_social_avis_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_avis_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 'twitter',
+    'googleplus' => 0,
+    'linkedin' => 0,
+  );
+  $export['easy_social_avis_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_block_1_override';
   $strongarm->value = 0;
   $export['easy_social_block_1_override'] = $strongarm;
@@ -3079,6 +3112,27 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'flag_men_esquerre_default_megamenu';
+  $strongarm->value = 0;
+  $export['flag_men_esquerre_default_megamenu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flag_men_superior_default_megamenu';
+  $strongarm->value = 0;
+  $export['flag_men_superior_default_megamenu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flag_publica_avis_default_avis';
+  $strongarm->value = 0;
+  $export['flag_publica_avis_default_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_audio';
   $strongarm->value = 1;
   $export['i18n_node_extended_audio'] = $strongarm;
@@ -3451,6 +3505,19 @@ function tnc_cont_strongarm() {
   $strongarm->name = 'language_content_type_video';
   $strongarm->value = '2';
   $export['language_content_type_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'locale_language_providers_weight_language';
+  $strongarm->value = array(
+    'locale-url' => '-9',
+    'locale-session' => '-8',
+    'locale-user' => '-7',
+    'locale-browser' => '-6',
+    'language-default' => '-10',
+  );
+  $export['locale_language_providers_weight_language'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -4095,6 +4162,20 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_avis';
+  $strongarm->value = '';
+  $export['page_title_type_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_avis_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_avis_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_documentacio';
   $strongarm->value = '';
   $export['page_title_type_documentacio'] = $strongarm;
@@ -4298,6 +4379,13 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_avis';
+  $strongarm->value = 'Save and add fields';
+  $export['save_continue_avis'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_documentacio';
   $strongarm->value = 'Desa i afegeix camps';
   $export['save_continue_documentacio'] = $strongarm;
@@ -4399,12 +4487,32 @@ function tnc_cont_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_menu_link_menu-peu';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_menu_link_menu-peu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_audio';
   $strongarm->value = array(
     'status' => '0',
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_avis';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_avis'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
