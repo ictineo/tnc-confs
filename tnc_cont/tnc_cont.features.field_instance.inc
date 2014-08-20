@@ -256,8 +256,9 @@ Per exemple: 2014-15',
     'required' => 0,
     'settings' => array(
       'allowed_views' => array(
+        'avis_portada' => 0,
         'blo' => 0,
-        'calendar' => 0,
+        'calendar' => 'calendar',
         'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
@@ -270,6 +271,9 @@ Per exemple: 2014-15',
         'sessions_node' => 0,
         'temporada' => 0,
         'tipus_patrocinadors' => 'tipus_patrocinadors',
+        'tipus_patrocinadors_b' => 0,
+        'tipus_patrocinadors_c' => 0,
+        'tipus_patrocinadors_d' => 0,
         'tweets' => 0,
         'view_megamenu' => 'view_megamenu',
         'vistes_auxiliars' => 0,
@@ -287,66 +291,6 @@ Per exemple: 2014-15',
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_columna_1-field_calendari'
-  $field_instances['field_collection_item-field_columna_1-field_calendari'] = array(
-    'bundle' => 'field_columna_1',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_calendari',
-    'label' => 'Calendari',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'blo' => 0,
-        'calendar' => 'calendar',
-        'carrega_megamenu' => 0,
-        'carrousel' => 0,
-        'eva_espectacle' => 0,
-        'eva_taxo_tarifes' => 0,
-        'field_collection_view' => 0,
-        'gestio_megamenu' => 0,
-        'list_node_page_titles' => 0,
-        'sessio_premsa' => 0,
-        'sessions' => 0,
-        'sessions_node' => 0,
-        'temporada' => 0,
-        'tweets' => 0,
-        'view_megamenu' => 0,
-        'vistes_auxiliars' => 0,
-        'vistes_auxiliars_premsa' => 0,
-        'workbench_current_user' => 0,
-        'workbench_edited' => 0,
-        'workbench_recent_content' => 0,
-      ),
-      'force_default' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(),
-      'type' => 'viewfield_select',
-      'weight' => 4,
     ),
   );
 
@@ -652,8 +596,9 @@ Per exemple: 2014-15',
     'required' => 0,
     'settings' => array(
       'allowed_views' => array(
+        'avis_portada' => 0,
         'blo' => 0,
-        'calendar' => 0,
+        'calendar' => 'calendar',
         'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
@@ -686,66 +631,6 @@ Per exemple: 2014-15',
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_columna_2-field_calendari'
-  $field_instances['field_collection_item-field_columna_2-field_calendari'] = array(
-    'bundle' => 'field_columna_2',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_calendari',
-    'label' => 'Calendari',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'blo' => 0,
-        'calendar' => 'calendar',
-        'carrega_megamenu' => 0,
-        'carrousel' => 0,
-        'eva_espectacle' => 0,
-        'eva_taxo_tarifes' => 0,
-        'field_collection_view' => 0,
-        'gestio_megamenu' => 0,
-        'list_node_page_titles' => 0,
-        'sessio_premsa' => 0,
-        'sessions' => 0,
-        'sessions_node' => 0,
-        'temporada' => 0,
-        'tweets' => 0,
-        'view_megamenu' => 0,
-        'vistes_auxiliars' => 0,
-        'vistes_auxiliars_premsa' => 0,
-        'workbench_current_user' => 0,
-        'workbench_edited' => 0,
-        'workbench_recent_content' => 0,
-      ),
-      'force_default' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(),
-      'type' => 'viewfield_select',
-      'weight' => 4,
     ),
   );
 
@@ -1051,8 +936,9 @@ Per exemple: 2014-15',
     'required' => 0,
     'settings' => array(
       'allowed_views' => array(
+        'avis_portada' => 0,
         'blo' => 0,
-        'calendar' => 0,
+        'calendar' => 'calendar',
         'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
@@ -1085,66 +971,6 @@ Per exemple: 2014-15',
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_columna_3-field_calendari'
-  $field_instances['field_collection_item-field_columna_3-field_calendari'] = array(
-    'bundle' => 'field_columna_3',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_calendari',
-    'label' => 'Calendari',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'blo' => 0,
-        'calendar' => 'calendar',
-        'carrega_megamenu' => 0,
-        'carrousel' => 0,
-        'eva_espectacle' => 0,
-        'eva_taxo_tarifes' => 0,
-        'field_collection_view' => 0,
-        'gestio_megamenu' => 0,
-        'list_node_page_titles' => 0,
-        'sessio_premsa' => 0,
-        'sessions' => 0,
-        'sessions_node' => 0,
-        'temporada' => 0,
-        'tweets' => 0,
-        'view_megamenu' => 0,
-        'vistes_auxiliars' => 0,
-        'vistes_auxiliars_premsa' => 0,
-        'workbench_current_user' => 0,
-        'workbench_edited' => 0,
-        'workbench_recent_content' => 0,
-      ),
-      'force_default' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(),
-      'type' => 'viewfield_select',
-      'weight' => 4,
     ),
   );
 
@@ -1450,8 +1276,9 @@ Per exemple: 2014-15',
     'required' => 0,
     'settings' => array(
       'allowed_views' => array(
+        'avis_portada' => 0,
         'blo' => 0,
-        'calendar' => 0,
+        'calendar' => 'calendar',
         'carrega_megamenu' => 0,
         'carrousel' => 0,
         'eva_espectacle' => 0,
@@ -1484,66 +1311,6 @@ Per exemple: 2014-15',
       'settings' => array(),
       'type' => 'viewfield_select',
       'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_columna_4-field_calendari'
-  $field_instances['field_collection_item-field_columna_4-field_calendari'] = array(
-    'bundle' => 'field_columna_4',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'entityreference_view_widget' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_calendari',
-    'label' => 'Calendari',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'blo' => 0,
-        'calendar' => 'calendar',
-        'carrega_megamenu' => 0,
-        'carrousel' => 0,
-        'eva_espectacle' => 0,
-        'eva_taxo_tarifes' => 0,
-        'field_collection_view' => 0,
-        'gestio_megamenu' => 0,
-        'list_node_page_titles' => 0,
-        'sessio_premsa' => 0,
-        'sessions' => 0,
-        'sessions_node' => 0,
-        'temporada' => 0,
-        'tweets' => 0,
-        'view_megamenu' => 0,
-        'vistes_auxiliars' => 0,
-        'vistes_auxiliars_premsa' => 0,
-        'workbench_current_user' => 0,
-        'workbench_edited' => 0,
-        'workbench_recent_content' => 0,
-      ),
-      'force_default' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(),
-      'type' => 'viewfield_select',
-      'weight' => 4,
     ),
   );
 
@@ -5996,7 +5763,7 @@ Per exemple: 2014-15',
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -6043,7 +5810,7 @@ Per exemple: 2014-15',
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -6090,7 +5857,7 @@ Per exemple: 2014-15',
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -6137,7 +5904,7 @@ Per exemple: 2014-15',
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -7326,7 +7093,6 @@ Per exemple: 2014-15',
   t('Artista i càrrec');
   t('Audiodescripció');
   t('Autor');
-  t('Calendari');
   t('Columna 1');
   t('Columna 2');
   t('Columna 3');
@@ -7375,7 +7141,6 @@ Per exemple: 2014-15',
   t('Sala');
   t('Selecciona el llistat que vols mostrar al megamenú. Si necessites filtrar els resultats per temporada, utilitza el camp de text "Arguments" per col·locar el nom de la temporada <strong>tal i com apareix a la taxonomia</strong>.
 Per exemple: 2014-15');
-  t('Selecciona l\'opció <strong>Calendari-menú</strong> si vols col·locar el calendari en el megamenú.');
   t('Subtítol');
   t('Tarifa');
   t('Temporada');

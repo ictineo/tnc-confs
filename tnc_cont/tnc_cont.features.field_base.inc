@@ -238,22 +238,6 @@ function tnc_cont_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_calendari'
-  $field_bases['field_calendari'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_calendari',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'viewfield',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'viewfield',
-  );
-
   // Exported field_base: 'field_camps_tarifa'
   $field_bases['field_camps_tarifa'] = array(
     'active' => 1,
