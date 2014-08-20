@@ -121,14 +121,14 @@ function tnc_i18n_strongarm() {
   $strongarm->value = (object) array(
     'language' => 'ca',
     'name' => 'Catalan',
-    'native' => 'Català',
-    'direction' => 0,
+    'native' => 'cat',
+    'direction' => '0',
     'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'plurals' => '2',
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => 0,
+    'weight' => '-10',
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
@@ -137,7 +137,21 @@ function tnc_i18n_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_negotiation_language';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    'language-default' => array(
+      'callbacks' => array(
+        'language' => 'language_from_default',
+      ),
+    ),
+    'locale-url' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+  );
   $export['language_negotiation_language'] = $strongarm;
 
   $strongarm = new stdClass();

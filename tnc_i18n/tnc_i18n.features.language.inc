@@ -14,20 +14,20 @@ function tnc_i18n_locale_default_languages() {
   $languages['ca'] = array(
     'language' => 'ca',
     'name' => 'Catalan',
-    'native' => 'Català',
+    'native' => 'cat',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 2,
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => 0,
+    'weight' => -10,
   );
   // Exported language: en.
   $languages['en'] = array(
     'language' => 'en',
     'name' => 'English',
-    'native' => 'English',
+    'native' => 'eng',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 0,
@@ -40,14 +40,14 @@ function tnc_i18n_locale_default_languages() {
   $languages['es'] = array(
     'language' => 'es',
     'name' => 'Spanish',
-    'native' => 'Español',
+    'native' => 'esp',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 2,
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'es',
-    'weight' => 0,
+    'weight' => -9,
   );
   return $languages;
 }

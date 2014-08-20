@@ -885,27 +885,27 @@ function tnc_ui_strongarm() {
     'zen_rebuild_registry' => 1,
     'zen_wireframes' => 0,
     'tnc_frontlink_1_enable' => 1,
-    'tnc_t_frontlink_1_0' => 'asdf',
+    'tnc_t_frontlink_1_0' => 'Bústia de recepeció de textos teatrals',
     'tnc_l_frontlink_1_0' => 'http://mit.edu',
-    'tnc_t_frontlink_1_1' => '',
-    'tnc_l_frontlink_1_1' => '',
-    'tnc_t_frontlink_1_2' => '',
-    'tnc_l_frontlink_1_2' => '',
-    'tnc_t_frontlink_1_3' => '',
-    'tnc_l_frontlink_1_3' => '',
-    'tnc_frontlink_2_enable' => 0,
-    'tnc_t_frontlink_2_0' => '',
-    'tnc_l_frontlink_2_0' => '',
-    'tnc_t_frontlink_2_1' => '',
-    'tnc_l_frontlink_2_1' => '',
-    'tnc_t_frontlink_2_2' => '',
-    'tnc_l_frontlink_2_2' => '',
-    'tnc_t_frontlink_2_3' => '',
-    'tnc_l_frontlink_2_3' => '',
-    'tnc_xxss_fb' => '',
-    'tnc_xxss_inst' => '',
-    'tnc_xxss_twt' => '',
-    'tnc_xxss_you' => '',
+    'tnc_t_frontlink_1_1' => 'Llegir el teatre',
+    'tnc_l_frontlink_1_1' => 'http://mit.edu',
+    'tnc_t_frontlink_1_2' => 'Projecte pedagògic',
+    'tnc_l_frontlink_1_2' => 'http://mit.edu',
+    'tnc_t_frontlink_1_3' => 'Llibreria',
+    'tnc_l_frontlink_1_3' => 'http://mit.edu',
+    'tnc_frontlink_2_enable' => 1,
+    'tnc_t_frontlink_2_0' => 'Visites guiades',
+    'tnc_l_frontlink_2_0' => 'http://mit.edu',
+    'tnc_t_frontlink_2_1' => 'restaurant',
+    'tnc_l_frontlink_2_1' => 'http://mit.edu',
+    'tnc_t_frontlink_2_2' => 'Videoteca',
+    'tnc_l_frontlink_2_2' => 'http://mit.edu',
+    'tnc_t_frontlink_2_3' => 'Accessibilitat',
+    'tnc_l_frontlink_2_3' => 'http://mit.edu',
+    'tnc_xxss_fb' => 'http://www.tnc.cat/facebook',
+    'tnc_xxss_inst' => 'http://www.tnc.cat/instagram',
+    'tnc_xxss_twt' => 'http://www.tnc.cat/twitter',
+    'tnc_xxss_you' => 'http://www.tnc.cat/youtube',
   );
   $export['theme_tnc_settings'] = $strongarm;
 
@@ -1206,7 +1206,7 @@ function tnc_ui_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1407365743;
+  $strongarm->value = 1408525862;
   $export['xmlsitemap_generated_last'] = $strongarm;
 
   $strongarm = new stdClass();

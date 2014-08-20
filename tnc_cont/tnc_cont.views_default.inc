@@ -1439,7 +1439,7 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = 'both';
+  $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['visible'] = '1';
   $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
