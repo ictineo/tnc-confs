@@ -19,6 +19,19 @@ function tnc_cont_default_fe_block_boxes() {
   $export['logo_tnc_footer'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Workbench: accessos directes a edició menus';
+  $fe_block_boxes->format = 'editor_web';
+  $fe_block_boxes->machine_name = 'workbench_customlinks_menus';
+  $fe_block_boxes->body = '<ul>
+<li><a href="/admin/structure/menu/manage/menu-compra-d-abonaments">Edita: Compra d\'abonaments</a></li>
+<li><a href="/admin/structure/menu/manage/menu-compra-d-entrades">Edita: Compra d\'entrades</a></li>
+<li><a href="/admin/structure/menu/manage/menu-peu">Edita: Informació pràctica</a></li>
+<li><a href="/admin/structure/menu/manage/menu-regala-tnc">Edita: Regala TNC</a></li>
+</ul>';
+
+  $export['workbench_customlinks_menus'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Xarxes socials de la barra superior';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'xxss_barra_superior';

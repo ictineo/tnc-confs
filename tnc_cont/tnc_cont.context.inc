@@ -433,6 +433,39 @@ function tnc_cont_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'workbench_ediciomenus';
+  $context->description = 'bloc d\'accessos directes a edició de menus';
+  $context->tag = 'administració';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'admin/workbench/flag_items_menu' => 'admin/workbench/flag_items_menu',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => '6',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('administració');
+  t('bloc d\'accessos directes a edició de menus');
+  $export['workbench_ediciomenus'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'xarxes_socials';
   $context->description = 'block per les xxss del top menu';
   $context->tag = 'theme';

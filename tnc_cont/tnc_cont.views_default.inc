@@ -24,21 +24,25 @@ function tnc_cont_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Avis portada';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: publica_avis */
+  /* Relació: Marcadors: publica_avis */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'publica_avis';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Field: Text lliure */
+  /* Camp: Camp: Text lliure */
   $handler->display->display_options['fields']['field_text_lliure']['id'] = 'field_text_lliure';
   $handler->display->display_options['fields']['field_text_lliure']['table'] = 'field_data_field_text_lliure';
   $handler->display->display_options['fields']['field_text_lliure']['field'] = 'field_text_lliure';
@@ -49,19 +53,19 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_text_lliure']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_text_lliure']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_text_lliure']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -91,7 +95,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: publica_avis */
+  /* Relació: Marcadors: publica_avis */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -99,7 +103,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'publica_avis';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Text lliure */
+  /* Camp: Camp: Text lliure */
   $handler->display->display_options['fields']['field_text_lliure']['id'] = 'field_text_lliure';
   $handler->display->display_options['fields']['field_text_lliure']['table'] = 'field_data_field_text_lliure';
   $handler->display->display_options['fields']['field_text_lliure']['field'] = 'field_text_lliure';
@@ -110,7 +114,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_text_lliure']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_text_lliure']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_text_lliure']['field_api_classes'] = TRUE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
@@ -156,21 +160,21 @@ function tnc_cont_views_default_views() {
     'item_id' => 'item_id',
     'host_entity_id' => 'host_entity_id',
   );
-  /* Relationship: Field collection item: Entity with the Dia i hores (field_dia_hora) */
+  /* Relació: Field collection item: Entity with the Dia i hores (field_dia_hora) */
   $handler->display->display_options['relationships']['field_dia_hora_node']['id'] = 'field_dia_hora_node';
   $handler->display->display_options['relationships']['field_dia_hora_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_dia_hora_node']['field'] = 'field_dia_hora_node';
-  /* Field: Field collection item: Field collection item ID */
+  /* Camp: Field collection item: Field collection item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Host Entity ID */
+  /* Camp: Field collection item: Host Entity ID */
   $handler->display->display_options['fields']['host_entity_id']['id'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['host_entity_id']['field'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['exclude'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -183,7 +187,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -191,7 +195,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -205,7 +209,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -218,7 +222,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Field: Tarifa */
+  /* Camp: Camp: Tarifa */
   $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
@@ -229,7 +233,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -241,11 +245,11 @@ function tnc_cont_views_default_views() {
 [field_url_compra_reserva]
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Field collection item: Hora (field_hora_sessio) */
+  /* Criteri d'ordenació: Field collection item: Hora (field_hora_sessio) */
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['field'] = 'field_hora_sessio_value';
-  /* Contextual filter: Date: Date (field_collection_item) */
+  /* Filtre contextual: Data: Data (field_collection_item) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -257,7 +261,7 @@ function tnc_cont_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
   );
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -295,7 +299,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
-  /* Contextual filter: Field collection item: Dia (field_dia_sessio) */
+  /* Filtre contextual: Field collection item: Dia (field_dia_sessio) */
   $handler->display->display_options['arguments']['field_dia_sessio_value']['id'] = 'field_dia_sessio_value';
   $handler->display->display_options['arguments']['field_dia_sessio_value']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['arguments']['field_dia_sessio_value']['field'] = 'field_dia_sessio_value';
@@ -312,17 +316,17 @@ return $nids_or;';
   /* Display: bloc calendari premsa */
   $handler = $view->new_display('block', 'bloc calendari premsa', 'block_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field collection item: Field collection item ID */
+  /* Camp: Field collection item: Field collection item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Host Entity ID */
+  /* Camp: Field collection item: Host Entity ID */
   $handler->display->display_options['fields']['host_entity_id']['id'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['host_entity_id']['field'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['exclude'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -335,7 +339,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -343,7 +347,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -357,7 +361,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -370,7 +374,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Field: Tarifa */
+  /* Camp: Camp: Tarifa */
   $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
@@ -381,7 +385,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -393,7 +397,7 @@ return $nids_or;';
 [field_url_compra_reserva]
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Camp: Controlador trencat/desaparegut */
   $handler->display->display_options['fields']['field_dia']['id'] = 'field_dia';
   $handler->display->display_options['fields']['field_dia']['table'] = 'field_data_field_dia';
   $handler->display->display_options['fields']['field_dia']['field'] = 'field_dia';
@@ -453,12 +457,12 @@ return $nids_or;';
     21 => '#ffffff',
     20 => '#ffffff',
   );
-  /* Relationship: Field collection item: Entity with the Dia i hores (field_dia_hora) */
+  /* Relació: Field collection item: Entity with the Dia i hores (field_dia_hora) */
   $handler->display->display_options['relationships']['field_dia_hora_node']['id'] = 'field_dia_hora_node';
   $handler->display->display_options['relationships']['field_dia_hora_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_dia_hora_node']['field'] = 'field_dia_hora_node';
   $handler->display->display_options['relationships']['field_dia_hora_node']['required'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -466,14 +470,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -486,7 +490,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -498,7 +502,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: Dia */
+  /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
@@ -516,7 +520,7 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
-  /* Field: Field: Tarifa */
+  /* Camp: Camp: Tarifa */
   $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
@@ -527,11 +531,11 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Sort criterion: Field collection item: Dia (field_dia_sessio) */
+  /* Criteri d'ordenació: Field collection item: Dia (field_dia_sessio) */
   $handler->display->display_options['sorts']['field_dia_sessio_value']['id'] = 'field_dia_sessio_value';
   $handler->display->display_options['sorts']['field_dia_sessio_value']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['sorts']['field_dia_sessio_value']['field'] = 'field_dia_sessio_value';
-  /* Sort criterion: Field collection item: Hora (field_hora_sessio) */
+  /* Criteri d'ordenació: Field collection item: Hora (field_hora_sessio) */
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['field'] = 'field_hora_sessio_value';
@@ -558,7 +562,7 @@ return $nids_or;';
   $handler->display->display_options['row_options']['colors']['legend'] = 'type';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (field_collection_item) */
+  /* Filtre contextual: Data: Data (field_collection_item) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -604,7 +608,7 @@ return $nids_or;';
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -612,14 +616,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_dia_hora_node';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -632,7 +636,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: Dia */
+  /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
@@ -651,7 +655,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (field_collection_item) */
+  /* Filtre contextual: Data: Data (field_collection_item) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -703,7 +707,7 @@ return $nids_or;';
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field collection item: Dia */
+  /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
@@ -721,20 +725,21 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_dia_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_dia_sessio']['delta_offset'] = '0';
-  /* Field: Field collection item: Field collection item ID */
+  /* Camp: Field collection item: Field collection item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['label'] = '';
   $handler->display->display_options['fields']['item_id']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (field_collection_item) */
+  /* Filtre contextual: Data: Data (field_collection_item) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Tot';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
@@ -766,14 +771,14 @@ return $nids_or;';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: men_superior */
+  /* Relació: Marcadors: men_superior */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'Menú superior';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'men_superior';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -784,7 +789,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['element_type'] = 'h4';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Columna 1 */
+  /* Camp: Contingut: Columna 1 */
   $handler->display->display_options['fields']['field_columna_1']['id'] = 'field_columna_1';
   $handler->display->display_options['fields']['field_columna_1']['table'] = 'field_data_field_columna_1';
   $handler->display->display_options['fields']['field_columna_1']['field'] = 'field_columna_1';
@@ -798,7 +803,7 @@ return $nids_or;';
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_columna_1']['field_api_classes'] = TRUE;
-  /* Field: Content: Columna 2 */
+  /* Camp: Contingut: Columna 2 */
   $handler->display->display_options['fields']['field_columna_2']['id'] = 'field_columna_2';
   $handler->display->display_options['fields']['field_columna_2']['table'] = 'field_data_field_columna_2';
   $handler->display->display_options['fields']['field_columna_2']['field'] = 'field_columna_2';
@@ -812,7 +817,7 @@ return $nids_or;';
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_columna_2']['field_api_classes'] = TRUE;
-  /* Field: Content: Columna 3 */
+  /* Camp: Contingut: Columna 3 */
   $handler->display->display_options['fields']['field_columna_3']['id'] = 'field_columna_3';
   $handler->display->display_options['fields']['field_columna_3']['table'] = 'field_data_field_columna_3';
   $handler->display->display_options['fields']['field_columna_3']['field'] = 'field_columna_3';
@@ -826,7 +831,7 @@ return $nids_or;';
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_columna_3']['field_api_classes'] = TRUE;
-  /* Field: Content: Columna 4 */
+  /* Camp: Contingut: Columna 4 */
   $handler->display->display_options['fields']['field_columna_4']['id'] = 'field_columna_4';
   $handler->display->display_options['fields']['field_columna_4']['table'] = 'field_data_field_columna_4';
   $handler->display->display_options['fields']['field_columna_4']['field'] = 'field_columna_4';
@@ -840,14 +845,14 @@ return $nids_or;';
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_columna_4']['field_api_classes'] = TRUE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -862,25 +867,25 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'mm-slide-wrapper';
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -897,7 +902,7 @@ return $nids_or;';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -906,7 +911,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -924,13 +929,13 @@ return $nids_or;';
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Menú superior';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrega_megamenu:block_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -979,26 +984,26 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Disponible al menú superior';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -1013,7 +1018,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Menú esquerre';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: men_esquerre */
+  /* Relació: Marcadors: men_esquerre */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -1021,13 +1026,13 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'men_esquerre';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrega_megamenu:block_4';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -1076,7 +1081,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: men_esquerre */
+  /* Relació: Marcadors: men_esquerre */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -1084,26 +1089,26 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'men_esquerre';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Menú esquerre';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -1113,13 +1118,13 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrega_megamenu:block_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -1144,7 +1149,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -1152,7 +1157,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = 'Destaca els continguts de Megamenú al menú esquerre o al menú horitzontal.';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: men_superior */
+  /* Relació: Marcadors: men_superior */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -1160,7 +1165,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'men_superior';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Flags: men_esquerre */
+  /* Relació: Marcadors: men_esquerre */
   $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
   $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
@@ -1168,20 +1173,19 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'men_esquerre';
   $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Títol';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Destaca al megamenú superior';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
@@ -1223,20 +1227,20 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: carrousel_gran */
+  /* Relació: Marcadors: carrousel_gran */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_gran';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -1246,7 +1250,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -1260,7 +1264,7 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -1270,7 +1274,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -1281,7 +1285,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -1292,25 +1296,25 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1392,35 +1396,35 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: slide_portada */
+  /* Relació: Marcadors: slide_portada */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'slide_portada';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Slide de portada';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -1455,14 +1459,14 @@ return $nids_or;';
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: teletip_portada */
+  /* Relació: Marcadors: teletip_portada */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'teletip_portada';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -1477,7 +1481,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Content: Presentació */
+  /* Camp: Contingut: Presentació */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -1488,27 +1492,27 @@ return $nids_or;';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_8';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1550,19 +1554,19 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: teletip_portada */
+  /* Relació: Marcadors: teletip_portada */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'teletip_portada';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -1577,45 +1581,45 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = '';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_6';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -1683,21 +1687,21 @@ return $nids_or;';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: carrousel_gran */
+  /* Relació: Marcadors: carrousel_gran */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_gran';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -1707,7 +1711,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -1721,7 +1725,7 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -1731,7 +1735,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -1742,7 +1746,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -1753,7 +1757,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -1769,13 +1773,13 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -1790,14 +1794,14 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: slide_portada */
+  /* Relació: Marcadors: slide_portada */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'slide_portada';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1808,7 +1812,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['element_type'] = 'h4';
   $handler->display->display_options['fields']['title']['element_class'] = 'titol';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -1819,7 +1823,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -1837,7 +1841,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -1848,7 +1852,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -1860,7 +1864,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -1872,7 +1876,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -1888,7 +1892,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -1907,7 +1911,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Subtítol */
+  /* Camp: Contingut: Subtítol */
   $handler->display->display_options['fields']['field_subtitol']['id'] = 'field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['table'] = 'field_data_field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['field'] = 'field_subtitol';
@@ -1918,7 +1922,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_subtitol']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_subtitol']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_subtitol']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -1944,13 +1948,13 @@ return $nids_or;';
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_6';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -2045,21 +2049,21 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: carrousel_petit */
+  /* Relació: Marcadors: carrousel_petit */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_petit';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2067,14 +2071,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Carrousel petit';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -2101,7 +2105,7 @@ return $nids_or;';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2110,7 +2114,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -2121,7 +2125,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -2138,7 +2142,7 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -2149,7 +2153,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2161,7 +2165,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -2173,7 +2177,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -2192,7 +2196,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2208,7 +2212,7 @@ return $nids_or;';
 [field_entorn]
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -2224,13 +2228,13 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -2303,28 +2307,28 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Carrousel gran';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -2354,14 +2358,14 @@ return $nids_or;';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: carrousel_petit */
+  /* Relació: Marcadors: carrousel_petit */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'carrousel_petit';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -2376,7 +2380,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Tipus d'entorn */
+  /* Camp: Contingut: Tipus d'entorn */
   $handler->display->display_options['fields']['field_tipus_entorn']['id'] = 'field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['table'] = 'field_data_field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['field'] = 'field_tipus_entorn';
@@ -2387,14 +2391,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tipus_entorn']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_entorn']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tipus_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2405,7 +2409,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -2417,13 +2421,13 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_4';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -2445,7 +2449,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -2453,7 +2457,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>Arrossega els elements amb la creueta de la dreta fins la posició desitjada i prem "desa"</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -2502,7 +2506,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: teletip_portada */
+  /* Relació: Marcadors: teletip_portada */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -2510,7 +2514,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'teletip_portada';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -2525,7 +2529,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Content: Presentació */
+  /* Camp: Contingut: Presentació */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -2535,7 +2539,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
@@ -2543,27 +2547,27 @@ return $nids_or;';
   $handler->display->display_options['fields']['ops']['label'] = 'Destaca a portada';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'carrousel:block_8';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2603,14 +2607,14 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2620,7 +2624,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -2630,7 +2634,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -2640,7 +2644,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -2656,12 +2660,12 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Entorn (field_entorn) */
+  /* Filtre contextual: Contingut: Entorn (field_entorn) */
   $handler->display->display_options['arguments']['field_entorn_target_id']['id'] = 'field_entorn_target_id';
   $handler->display->display_options['arguments']['field_entorn_target_id']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['arguments']['field_entorn_target_id']['field'] = 'field_entorn_target_id';
@@ -2675,14 +2679,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_entorn_target_id']['validate_options']['types'] = array(
     'fitxa_entorn' => 'fitxa_entorn',
   );
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2693,12 +2697,12 @@ return $nids_or;';
   /* Display: EVA caixa espectacle */
   $handler = $view->new_display('entity_view', 'EVA caixa espectacle', 'entity_view_1');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
+  /* Relació: Referència d'entitat: Referenced Entity */
   $handler->display->display_options['relationships']['field_entorn_target_id']['id'] = 'field_entorn_target_id';
   $handler->display->display_options['relationships']['field_entorn_target_id']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['relationships']['field_entorn_target_id']['field'] = 'field_entorn_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -2713,7 +2717,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2721,7 +2725,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2732,7 +2736,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -2751,7 +2755,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -2761,7 +2765,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -2771,7 +2775,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -2782,14 +2786,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Global: View */
+  /* Camp: Global: Mostra */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
@@ -2801,7 +2805,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['view']['display'] = 'page_1';
   $handler->display->display_options['fields']['view']['arguments'] = '!nid, !1';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -2812,7 +2816,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Entorn (field_entorn) */
+  /* Filtre contextual: Contingut: Entorn (field_entorn) */
   $handler->display->display_options['arguments']['field_entorn_target_id']['id'] = 'field_entorn_target_id';
   $handler->display->display_options['arguments']['field_entorn_target_id']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['arguments']['field_entorn_target_id']['field'] = 'field_entorn_target_id';
@@ -2824,14 +2828,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_entorn_target_id']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2863,19 +2867,19 @@ return $nids_or;';
   $handler->display->display_options['row_options']['view_mode'] = 'entityreference_view_widget';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referencing entity */
+  /* Relació: Referència d'entitat: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['id'] = 'reverse_field_entorn_node';
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['field'] = 'reverse_field_entorn_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2886,7 +2890,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -2896,7 +2900,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -2907,7 +2911,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -2918,7 +2922,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid_1']['id'] = 'nid_1';
   $handler->display->display_options['arguments']['nid_1']['table'] = 'node';
   $handler->display->display_options['arguments']['nid_1']['field'] = 'nid';
@@ -2931,14 +2935,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid_1']['not'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -2951,12 +2955,12 @@ return $nids_or;';
   $handler = $view->new_display('entity_view', 'EVA espectacle per premsa', 'entity_view_3');
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
+  /* Relació: Referència d'entitat: Referenced Entity */
   $handler->display->display_options['relationships']['field_premsa_target_id']['id'] = 'field_premsa_target_id';
   $handler->display->display_options['relationships']['field_premsa_target_id']['table'] = 'field_data_field_premsa';
   $handler->display->display_options['relationships']['field_premsa_target_id']['field'] = 'field_premsa_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -2971,7 +2975,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -2979,7 +2983,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -2990,7 +2994,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -3009,7 +3013,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -3019,7 +3023,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -3029,7 +3033,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Content: URL compra o reserva */
+  /* Camp: Contingut: URL compra o reserva */
   $handler->display->display_options['fields']['field_url_compra_reserva']['id'] = 'field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['table'] = 'field_data_field_url_compra_reserva';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field'] = 'field_url_compra_reserva';
@@ -3040,14 +3044,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_url_compra_reserva']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url_compra_reserva']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_url_compra_reserva']['field_api_classes'] = TRUE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Global: View */
+  /* Camp: Global: Mostra */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
@@ -3059,7 +3063,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['view']['display'] = 'page_2';
   $handler->display->display_options['fields']['view']['arguments'] = '!nid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -3072,14 +3076,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3102,19 +3106,19 @@ return $nids_or;';
   $handler->display->display_options['row_options']['view_mode'] = 'entityreference_view_widget';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referencing entity */
+  /* Relació: Referència d'entitat: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['id'] = 'reverse_field_entorn_node';
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_entorn_node']['field'] = 'reverse_field_entorn_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -3125,7 +3129,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -3135,7 +3139,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -3146,7 +3150,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -3159,14 +3163,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3211,16 +3215,16 @@ return $nids_or;';
     'field_nom' => 'field_nom',
     'field_preu_1' => 'field_preu_1',
   );
-  /* Relationship: Taxonomy term: Content using Tarifa */
+  /* Relació: Terme de taxonomia: Contingut utilitza Tarifa */
   $handler->display->display_options['relationships']['reverse_field_tarifa_node']['id'] = 'reverse_field_tarifa_node';
   $handler->display->display_options['relationships']['reverse_field_tarifa_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_tarifa_node']['field'] = 'reverse_field_tarifa_node';
-  /* Relationship: Taxonomy term: Tarifa (field_camps_tarifa) */
+  /* Relació: Terme de taxonomia: Tarifa (field_camps_tarifa) */
   $handler->display->display_options['relationships']['field_camps_tarifa_value']['id'] = 'field_camps_tarifa_value';
   $handler->display->display_options['relationships']['field_camps_tarifa_value']['table'] = 'field_data_field_camps_tarifa';
   $handler->display->display_options['relationships']['field_camps_tarifa_value']['field'] = 'field_camps_tarifa_value';
   $handler->display->display_options['relationships']['field_camps_tarifa_value']['delta'] = '-1';
-  /* Field: Field collection item: Nom */
+  /* Camp: Field collection item: Nom */
   $handler->display->display_options['fields']['field_nom']['id'] = 'field_nom';
   $handler->display->display_options['fields']['field_nom']['table'] = 'field_data_field_nom';
   $handler->display->display_options['fields']['field_nom']['field'] = 'field_nom';
@@ -3231,21 +3235,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_nom']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_nom']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_nom']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: preu */
+  /* Camp: Field collection item: preu */
   $handler->display->display_options['fields']['field_preu_1']['id'] = 'field_preu_1';
   $handler->display->display_options['fields']['field_preu_1']['table'] = 'field_data_field_preu';
   $handler->display->display_options['fields']['field_preu_1']['field'] = 'field_preu';
   $handler->display->display_options['fields']['field_preu_1']['relationship'] = 'field_camps_tarifa_value';
   $handler->display->display_options['fields']['field_preu_1']['label'] = '';
   $handler->display->display_options['fields']['field_preu_1']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Descripció */
+  /* Camp: Field collection item: Descripció */
   $handler->display->display_options['fields']['field_descripcio_tarifa']['id'] = 'field_descripcio_tarifa';
   $handler->display->display_options['fields']['field_descripcio_tarifa']['table'] = 'field_data_field_descripcio_tarifa';
   $handler->display->display_options['fields']['field_descripcio_tarifa']['field'] = 'field_descripcio_tarifa';
   $handler->display->display_options['fields']['field_descripcio_tarifa']['relationship'] = 'field_camps_tarifa_value';
   $handler->display->display_options['fields']['field_descripcio_tarifa']['label'] = '';
   $handler->display->display_options['fields']['field_descripcio_tarifa']['element_label_colon'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -3256,7 +3260,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Field: Tarifa (field_tarifa) */
+  /* Filtre contextual: Camp: Tarifa (field_tarifa) */
   $handler->display->display_options['arguments']['field_tarifa_tid']['id'] = 'field_tarifa_tid';
   $handler->display->display_options['arguments']['field_tarifa_tid']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['arguments']['field_tarifa_tid']['field'] = 'field_tarifa_tid';
@@ -3266,7 +3270,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_tarifa_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_tarifa_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_tarifa_tid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  /* Criteri de filtratge: Vocabulari de la taxonomia: Nom-màquina */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
@@ -3279,7 +3283,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Eva Taxo';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Unfiltered text */
+  /* Capçalera: Global: Text sense filtrar */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
@@ -3319,14 +3323,14 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div> Selecciona els elements disponibles per aparèixer al megamenú<div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -3342,7 +3346,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -3445,7 +3449,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: disponible_megamenu */
+  /* Relació: Marcadors: disponible_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -3453,7 +3457,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Flags: slide_portada */
+  /* Relació: Marcadors: slide_portada */
   $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
   $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
@@ -3461,7 +3465,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'slide_portada';
   $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
-  /* Relationship: Flags: carrousel_gran */
+  /* Relació: Marcadors: carrousel_gran */
   $handler->display->display_options['relationships']['flag_content_rel_2']['id'] = 'flag_content_rel_2';
   $handler->display->display_options['relationships']['flag_content_rel_2']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_2']['field'] = 'flag_content_rel';
@@ -3469,7 +3473,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_2']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_2']['flag'] = 'carrousel_gran';
   $handler->display->display_options['relationships']['flag_content_rel_2']['user_scope'] = 'any';
-  /* Relationship: Flags: carrousel_petit */
+  /* Relació: Marcadors: carrousel_petit */
   $handler->display->display_options['relationships']['flag_content_rel_3']['id'] = 'flag_content_rel_3';
   $handler->display->display_options['relationships']['flag_content_rel_3']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_3']['field'] = 'flag_content_rel';
@@ -3477,7 +3481,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_3']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_3']['flag'] = 'carrousel_petit';
   $handler->display->display_options['relationships']['flag_content_rel_3']['user_scope'] = 'any';
-  /* Relationship: Flags: proximament_megamenu */
+  /* Relació: Marcadors: proximament_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel_4']['id'] = 'flag_content_rel_4';
   $handler->display->display_options['relationships']['flag_content_rel_4']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_4']['field'] = 'flag_content_rel';
@@ -3485,7 +3489,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_4']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'proximament_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_edu_primaria */
+  /* Relació: Marcadors: megamenu_edu_primaria */
   $handler->display->display_options['relationships']['flag_content_rel_5']['id'] = 'flag_content_rel_5';
   $handler->display->display_options['relationships']['flag_content_rel_5']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_5']['field'] = 'flag_content_rel';
@@ -3493,7 +3497,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_5']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_5']['flag'] = 'megamenu_edu_primaria';
   $handler->display->display_options['relationships']['flag_content_rel_5']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_edu_secundaria */
+  /* Relació: Marcadors: megamenu_edu_secundaria */
   $handler->display->display_options['relationships']['flag_content_rel_6']['id'] = 'flag_content_rel_6';
   $handler->display->display_options['relationships']['flag_content_rel_6']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_6']['field'] = 'flag_content_rel';
@@ -3501,7 +3505,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_6']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_6']['flag'] = 'megamenu_edu_secundaria';
   $handler->display->display_options['relationships']['flag_content_rel_6']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_batxillerat */
+  /* Relació: Marcadors: megamenu_batxillerat */
   $handler->display->display_options['relationships']['flag_content_rel_7']['id'] = 'flag_content_rel_7';
   $handler->display->display_options['relationships']['flag_content_rel_7']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_7']['field'] = 'flag_content_rel';
@@ -3510,59 +3514,59 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_7']['flag'] = 'megamenu_batxillerat';
   $handler->display->display_options['relationships']['flag_content_rel_7']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
   $handler->display->display_options['fields']['ops_1']['label'] = 'Destaca al slide de portada';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_2']['id'] = 'ops_2';
   $handler->display->display_options['fields']['ops_2']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_2']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_2']['relationship'] = 'flag_content_rel_2';
   $handler->display->display_options['fields']['ops_2']['label'] = 'Destaca al carrousel gran de portada';
   $handler->display->display_options['fields']['ops_2']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_3']['id'] = 'ops_3';
   $handler->display->display_options['fields']['ops_3']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_3']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_3']['relationship'] = 'flag_content_rel_3';
   $handler->display->display_options['fields']['ops_3']['label'] = 'Destaca al carrousel petit de portada';
   $handler->display->display_options['fields']['ops_3']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Espectacle "en cartell" al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_4']['id'] = 'ops_4';
   $handler->display->display_options['fields']['ops_4']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_4']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_4']['relationship'] = 'flag_content_rel_4';
   $handler->display->display_options['fields']['ops_4']['label'] = 'Espectacle "pròximament" al megamenú';
   $handler->display->display_options['fields']['ops_4']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_5']['id'] = 'ops_5';
   $handler->display->display_options['fields']['ops_5']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_5']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_5']['relationship'] = 'flag_content_rel_5';
   $handler->display->display_options['fields']['ops_5']['label'] = 'Educació primària al megamenú';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_6']['id'] = 'ops_6';
   $handler->display->display_options['fields']['ops_6']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_6']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_6']['relationship'] = 'flag_content_rel_6';
   $handler->display->display_options['fields']['ops_6']['label'] = 'Educació secundària al megamenú';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_7']['id'] = 'ops_7';
   $handler->display->display_options['fields']['ops_7']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_7']['field'] = 'ops';
@@ -3570,7 +3574,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['ops_7']['label'] = 'Batxillerat al megamenú';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3604,7 +3608,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: slide_portada */
+  /* Relació: Marcadors: slide_portada */
   $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
   $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
@@ -3612,7 +3616,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'slide_portada';
   $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
-  /* Relationship: Flags: carrousel_gran */
+  /* Relació: Marcadors: carrousel_gran */
   $handler->display->display_options['relationships']['flag_content_rel_2']['id'] = 'flag_content_rel_2';
   $handler->display->display_options['relationships']['flag_content_rel_2']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_2']['field'] = 'flag_content_rel';
@@ -3620,7 +3624,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_2']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_2']['flag'] = 'carrousel_gran';
   $handler->display->display_options['relationships']['flag_content_rel_2']['user_scope'] = 'any';
-  /* Relationship: Flags: carrousel_petit */
+  /* Relació: Marcadors: carrousel_petit */
   $handler->display->display_options['relationships']['flag_content_rel_3']['id'] = 'flag_content_rel_3';
   $handler->display->display_options['relationships']['flag_content_rel_3']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_3']['field'] = 'flag_content_rel';
@@ -3628,7 +3632,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_3']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_3']['flag'] = 'carrousel_petit';
   $handler->display->display_options['relationships']['flag_content_rel_3']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_edu_primaria */
+  /* Relació: Marcadors: megamenu_edu_primaria */
   $handler->display->display_options['relationships']['flag_content_rel_5']['id'] = 'flag_content_rel_5';
   $handler->display->display_options['relationships']['flag_content_rel_5']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_5']['field'] = 'flag_content_rel';
@@ -3636,7 +3640,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_5']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_5']['flag'] = 'megamenu_edu_primaria';
   $handler->display->display_options['relationships']['flag_content_rel_5']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_edu_secundaria */
+  /* Relació: Marcadors: megamenu_edu_secundaria */
   $handler->display->display_options['relationships']['flag_content_rel_6']['id'] = 'flag_content_rel_6';
   $handler->display->display_options['relationships']['flag_content_rel_6']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_6']['field'] = 'flag_content_rel';
@@ -3644,7 +3648,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_6']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_6']['flag'] = 'megamenu_edu_secundaria';
   $handler->display->display_options['relationships']['flag_content_rel_6']['user_scope'] = 'any';
-  /* Relationship: Flags: megamenu_batxillerat */
+  /* Relació: Marcadors: megamenu_batxillerat */
   $handler->display->display_options['relationships']['flag_content_rel_7']['id'] = 'flag_content_rel_7';
   $handler->display->display_options['relationships']['flag_content_rel_7']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_7']['field'] = 'flag_content_rel';
@@ -3652,7 +3656,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_7']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_7']['flag'] = 'megamenu_batxillerat';
   $handler->display->display_options['relationships']['flag_content_rel_7']['user_scope'] = 'any';
-  /* Relationship: Flags: afons_megamenu */
+  /* Relació: Marcadors: afons_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -3660,7 +3664,7 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'afons_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Flags: entorn_proximament */
+  /* Relació: Marcadors: entorn_proximament */
   $handler->display->display_options['relationships']['flag_content_rel_4']['id'] = 'flag_content_rel_4';
   $handler->display->display_options['relationships']['flag_content_rel_4']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_4']['field'] = 'flag_content_rel';
@@ -3669,57 +3673,57 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'entorn_proximament';
   $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
   $handler->display->display_options['fields']['ops_1']['label'] = 'Destaca al slide de portada';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_2']['id'] = 'ops_2';
   $handler->display->display_options['fields']['ops_2']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_2']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_2']['relationship'] = 'flag_content_rel_2';
   $handler->display->display_options['fields']['ops_2']['label'] = 'Destaca al carrousel gran de portada';
   $handler->display->display_options['fields']['ops_2']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_3']['id'] = 'ops_3';
   $handler->display->display_options['fields']['ops_3']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_3']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_3']['relationship'] = 'flag_content_rel_3';
   $handler->display->display_options['fields']['ops_3']['label'] = 'Destaca al carrousel petit de portada';
   $handler->display->display_options['fields']['ops_3']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Entorn A fons';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_4']['id'] = 'ops_4';
   $handler->display->display_options['fields']['ops_4']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_4']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_4']['relationship'] = 'flag_content_rel_4';
   $handler->display->display_options['fields']['ops_4']['label'] = 'Entorn pròximament';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_5']['id'] = 'ops_5';
   $handler->display->display_options['fields']['ops_5']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_5']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_5']['relationship'] = 'flag_content_rel_5';
   $handler->display->display_options['fields']['ops_5']['label'] = 'Educació primària al megamenú';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_6']['id'] = 'ops_6';
   $handler->display->display_options['fields']['ops_6']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_6']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_6']['relationship'] = 'flag_content_rel_6';
   $handler->display->display_options['fields']['ops_6']['label'] = 'Educació secundària al megamenú';
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops_7']['id'] = 'ops_7';
   $handler->display->display_options['fields']['ops_7']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_7']['field'] = 'ops';
@@ -3727,7 +3731,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['ops_7']['label'] = 'Batxillerat al megamenú';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3761,7 +3765,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: dossier_premsa_megamen_ */
+  /* Relació: Marcadors: dossier_premsa_megamen_ */
   $handler->display->display_options['relationships']['flag_content_rel_4']['id'] = 'flag_content_rel_4';
   $handler->display->display_options['relationships']['flag_content_rel_4']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel_4']['field'] = 'flag_content_rel';
@@ -3770,12 +3774,12 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel_4']['flag'] = 'dossier_premsa_megamen_';
   $handler->display->display_options['relationships']['flag_content_rel_4']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
@@ -3783,7 +3787,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['ops']['label'] = 'Premsa al megamenú';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -3817,12 +3821,12 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field collection item: Field collection item ID */
+  /* Camp: Field collection item: Field collection item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Dia */
+  /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
@@ -3840,7 +3844,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_dia_sessio']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -3856,7 +3860,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Field: Tarifa */
+  /* Camp: Camp: Tarifa */
   $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
@@ -3871,7 +3875,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tarifa']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_tarifa']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -3915,27 +3919,27 @@ return $nids_or;';
     'nothing' => 'nothing',
   );
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Header: Global: Unfiltered text */
+  /* Capçalera: Global: Text sense filtrar */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Sessions';
   $handler->display->display_options['header']['area_text_custom']['content'] = 'Pròximes Sessions';
-  /* Relationship: Field collection item: Entity with the Dia i hores (field_dia_hora) */
+  /* Relació: Field collection item: Entity with the Dia i hores (field_dia_hora) */
   $handler->display->display_options['relationships']['field_dia_hora_node']['id'] = 'field_dia_hora_node';
   $handler->display->display_options['relationships']['field_dia_hora_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_dia_hora_node']['field'] = 'field_dia_hora_node';
-  /* Field: Field collection item: Field collection item ID */
+  /* Camp: Field collection item: Field collection item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Host Entity ID */
+  /* Camp: Field collection item: Host Entity ID */
   $handler->display->display_options['fields']['host_entity_id']['id'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['table'] = 'field_collection_item';
   $handler->display->display_options['fields']['host_entity_id']['field'] = 'host_entity_id';
   $handler->display->display_options['fields']['host_entity_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Dia */
+  /* Camp: Field collection item: Dia */
   $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
@@ -3954,7 +3958,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_dia_sessio']['field_api_classes'] = TRUE;
-  /* Field: Field: Tarifa */
+  /* Camp: Camp: Tarifa */
   $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
   $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
@@ -3969,7 +3973,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tarifa']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_tarifa']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: Hora */
+  /* Camp: Field collection item: Hora */
   $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
@@ -3982,7 +3986,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -3991,15 +3995,15 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = TRUE;
-  /* Sort criterion: Field collection item: Dia (field_dia_sessio) */
+  /* Criteri d'ordenació: Field collection item: Dia (field_dia_sessio) */
   $handler->display->display_options['sorts']['field_dia_sessio_value']['id'] = 'field_dia_sessio_value';
   $handler->display->display_options['sorts']['field_dia_sessio_value']['table'] = 'field_data_field_dia_sessio';
   $handler->display->display_options['sorts']['field_dia_sessio_value']['field'] = 'field_dia_sessio_value';
-  /* Sort criterion: Field collection item: Hora (field_hora_sessio) */
+  /* Criteri d'ordenació: Field collection item: Hora (field_hora_sessio) */
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['field'] = 'field_hora_sessio_value';
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -4022,14 +4026,14 @@ return $nids_or;';
   /* Display: Audiodescripció */
   $handler = $view->new_display('entity_view', 'Audiodescripció', 'entity_view_2');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Unfiltered text */
+  /* Capçalera: Global: Text sense filtrar */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Espectacle amb audiodescripció';
   $handler->display->display_options['header']['area_text_custom']['content'] = 'Espectacle amb audiodescripció per a persones cegues';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Filtre contextual: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -4042,7 +4046,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Field collection item: Audiodescripció (field_audiodescripcio) */
+  /* Criteri de filtratge: Field collection item: Audiodescripció (field_audiodescripcio) */
   $handler->display->display_options['filters']['field_audiodescripcio_value']['id'] = 'field_audiodescripcio_value';
   $handler->display->display_options['filters']['field_audiodescripcio_value']['table'] = 'field_data_field_audiodescripcio';
   $handler->display->display_options['filters']['field_audiodescripcio_value']['field'] = 'field_audiodescripcio_value';
@@ -4053,74 +4057,6 @@ return $nids_or;';
   $handler->display->display_options['bundles'] = array(
     0 => 'fitxa_entorn',
     1 => 'fitxa_espectacle',
-  );
-
-  /* Display: sessions premsa */
-  $handler = $view->new_display('entity_view', 'sessions premsa', 'entity_view_3');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field collection item: Field collection item ID */
-  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
-  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
-  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
-  $handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Host Entity ID */
-  $handler->display->display_options['fields']['host_entity_id']['id'] = 'host_entity_id';
-  $handler->display->display_options['fields']['host_entity_id']['table'] = 'field_collection_item';
-  $handler->display->display_options['fields']['host_entity_id']['field'] = 'host_entity_id';
-  $handler->display->display_options['fields']['host_entity_id']['exclude'] = TRUE;
-  /* Field: Field collection item: Dia */
-  $handler->display->display_options['fields']['field_dia_sessio']['id'] = 'field_dia_sessio';
-  $handler->display->display_options['fields']['field_dia_sessio']['table'] = 'field_data_field_dia_sessio';
-  $handler->display->display_options['fields']['field_dia_sessio']['field'] = 'field_dia_sessio';
-  $handler->display->display_options['fields']['field_dia_sessio']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_dia_sessio']['alter']['text'] = '<div class="press">[field_dia_sessio]</div>';
-  $handler->display->display_options['fields']['field_dia_sessio']['element_label_class'] = 'press';
-  $handler->display->display_options['fields']['field_dia_sessio']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_dia_sessio']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-  );
-  $handler->display->display_options['fields']['field_dia_sessio']['field_api_classes'] = TRUE;
-  /* Field: Field: Tarifa */
-  $handler->display->display_options['fields']['field_tarifa']['id'] = 'field_tarifa';
-  $handler->display->display_options['fields']['field_tarifa']['table'] = 'field_data_field_tarifa';
-  $handler->display->display_options['fields']['field_tarifa']['field'] = 'field_tarifa';
-  $handler->display->display_options['fields']['field_tarifa']['label'] = '';
-  $handler->display->display_options['fields']['field_tarifa']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_tarifa']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_tarifa']['alter']['text'] = '([field_tarifa])';
-  $handler->display->display_options['fields']['field_tarifa']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_tarifa']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_tarifa']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_tarifa']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_tarifa']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_tarifa']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_tarifa']['field_api_classes'] = TRUE;
-  /* Field: Field collection item: Hora */
-  $handler->display->display_options['fields']['field_hora_sessio']['id'] = 'field_hora_sessio';
-  $handler->display->display_options['fields']['field_hora_sessio']['table'] = 'field_data_field_hora_sessio';
-  $handler->display->display_options['fields']['field_hora_sessio']['field'] = 'field_hora_sessio';
-  $handler->display->display_options['fields']['field_hora_sessio']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_hora_sessio']['alter']['text'] = '<div="press">[field_hora_sessio]</div>';
-  $handler->display->display_options['fields']['field_hora_sessio']['element_label_class'] = 'press';
-  $handler->display->display_options['fields']['field_hora_sessio']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_hora_sessio']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_hora_sessio']['field_api_classes'] = TRUE;
-  $handler->display->display_options['entity_type'] = 'node';
-  $handler->display->display_options['bundles'] = array(
-    0 => 'fitxa_premsa',
   );
   $export['sessions_node'] = $view;
 
@@ -4149,7 +4085,7 @@ return $nids_or;';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -4168,7 +4104,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -4180,7 +4116,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -4196,7 +4132,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -4205,7 +4141,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Autor */
+  /* Camp: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -4216,7 +4152,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Rol destacat */
+  /* Camp: Contingut: Rol destacat */
   $handler->display->display_options['fields']['field_rol_destacat']['id'] = 'field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['table'] = 'field_data_field_rol_destacat';
   $handler->display->display_options['fields']['field_rol_destacat']['field'] = 'field_rol_destacat';
@@ -4227,7 +4163,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_rol_destacat']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_rol_destacat']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_rol_destacat']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -4235,7 +4171,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="grup_entorn">A l\'entorn</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Entorn */
+  /* Camp: Contingut: Entorn */
   $handler->display->display_options['fields']['field_entorn']['id'] = 'field_entorn';
   $handler->display->display_options['fields']['field_entorn']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['fields']['field_entorn']['field'] = 'field_entorn';
@@ -4252,7 +4188,7 @@ return $nids_or;';
   );
   $handler->display->display_options['fields']['field_entorn']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_entorn']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -4271,23 +4207,23 @@ return $nids_or;';
 [field_entorn] 
 </div></div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: Content: Data -  start date (field_data) */
+  /* Criteri d'ordenació: Contingut: Data - data d'inici (field_data) */
   $handler->display->display_options['sorts']['field_data_value']['id'] = 'field_data_value';
   $handler->display->display_options['sorts']['field_data_value']['table'] = 'field_data_field_data';
   $handler->display->display_options['sorts']['field_data_value']['field'] = 'field_data_value';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4300,14 +4236,14 @@ return $nids_or;';
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4331,20 +4267,24 @@ return $nids_or;';
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'patrocinadors ';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: patrocinadors */
+  /* Relació: Marcadors: patrocinadors */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4356,7 +4296,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4373,32 +4313,32 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4411,14 +4351,14 @@ return $nids_or;';
   $handler = $view->new_display('block', 'Patrocinadors A', 'block');
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -4426,7 +4366,7 @@ return $nids_or;';
     'patrocinador' => 'patrocinador',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Has taxonomy term */
+  /* Criteri de filtratge: Contingut: Té terme de taxonomia */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -4438,34 +4378,34 @@ return $nids_or;';
   /* Display: Patrocinadors B */
   $handler = $view->new_display('block', 'Patrocinadors B', 'block_2');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_5';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4477,34 +4417,34 @@ return $nids_or;';
   /* Display: Patrocinadors C */
   $handler = $view->new_display('block', 'Patrocinadors C', 'block_3');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_6';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4516,34 +4456,34 @@ return $nids_or;';
   /* Display: Patrocinadors D */
   $handler = $view->new_display('block', 'Patrocinadors D', 'block_4');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_7';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4583,12 +4523,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4600,7 +4540,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4617,7 +4557,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -4656,12 +4596,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4673,7 +4613,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4690,7 +4630,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -4699,21 +4639,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4753,12 +4693,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4770,7 +4710,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4787,7 +4727,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -4796,21 +4736,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4850,12 +4790,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4867,7 +4807,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4884,7 +4824,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -4893,21 +4833,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -4931,20 +4871,24 @@ return $nids_or;';
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'patrocinadors ';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: patrocinadors */
+  /* Relació: Marcadors: patrocinadors */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -4956,7 +4900,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -4973,32 +4917,32 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5010,34 +4954,34 @@ return $nids_or;';
   /* Display: Patrocinadors B */
   $handler = $view->new_display('block', 'Patrocinadors B', 'block_2');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_5';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5077,12 +5021,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -5094,7 +5038,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -5111,7 +5055,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -5120,21 +5064,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5158,20 +5102,24 @@ return $nids_or;';
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'patrocinadors ';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: patrocinadors */
+  /* Relació: Marcadors: patrocinadors */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -5183,7 +5131,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -5200,32 +5148,32 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5237,34 +5185,34 @@ return $nids_or;';
   /* Display: Patrocinadors C */
   $handler = $view->new_display('block', 'Patrocinadors C', 'block_3');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_6';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5304,12 +5252,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -5321,7 +5269,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -5338,7 +5286,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -5347,21 +5295,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5385,20 +5333,24 @@ return $nids_or;';
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'patrocinadors ';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: patrocinadors */
+  /* Relació: Marcadors: patrocinadors */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'patrocinadors';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -5410,7 +5362,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -5427,32 +5379,32 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5464,34 +5416,34 @@ return $nids_or;';
   /* Display: Patrocinadors D */
   $handler = $view->new_display('block', 'Patrocinadors D', 'block_4');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'tipus_patrocinadors:block_7';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5531,12 +5483,12 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: link */
+  /* Camp: Contingut: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -5548,7 +5500,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['field_api_classes'] = TRUE;
-  /* Field: Content: Imatge */
+  /* Camp: Contingut: Imatge */
   $handler->display->display_options['fields']['field_imatge']['id'] = 'field_imatge';
   $handler->display->display_options['fields']['field_imatge']['table'] = 'field_data_field_imatge';
   $handler->display->display_options['fields']['field_imatge']['field'] = 'field_imatge';
@@ -5565,7 +5517,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge']['field_api_classes'] = TRUE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -5574,21 +5526,21 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'patrocinador' => 'patrocinador',
   );
-  /* Filter criterion: Content: Tipus de patrocinador (field_tipus_patrocinador) */
+  /* Criteri de filtratge: Contingut: Tipus de patrocinador (field_tipus_patrocinador) */
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['id'] = 'field_tipus_patrocinador_tid';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['table'] = 'field_data_field_tipus_patrocinador';
   $handler->display->display_options['filters']['field_tipus_patrocinador_tid']['field'] = 'field_tipus_patrocinador_tid';
@@ -5623,13 +5575,13 @@ return $nids_or;';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Flags: disponible_megamenu */
+  /* Relació: Marcadors: disponible_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -5644,7 +5596,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -5655,14 +5607,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Subtítol */
+  /* Camp: Contingut: Subtítol */
   $handler->display->display_options['fields']['field_subtitol']['id'] = 'field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['table'] = 'field_data_field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['field'] = 'field_subtitol';
@@ -5672,17 +5624,17 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_subtitol']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_subtitol']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_subtitol']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Field: Temporada (field_temporada) */
+  /* Filtre contextual: Camp: Temporada (field_temporada) */
   $handler->display->display_options['arguments']['field_temporada_tid']['id'] = 'field_temporada_tid';
   $handler->display->display_options['arguments']['field_temporada_tid']['table'] = 'field_data_field_temporada';
   $handler->display->display_options['arguments']['field_temporada_tid']['field'] = 'field_temporada_tid';
@@ -5692,7 +5644,7 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_temporada_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_temporada_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_temporada_tid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -5708,7 +5660,7 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -5717,7 +5669,7 @@ return $nids_or;';
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -5732,7 +5684,7 @@ return $nids_or;';
   /* Display: Espectacles en cartell */
   $handler = $view->new_display('block', 'Espectacles en cartell', 'block_1');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5740,18 +5692,18 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> En cartell';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: disponible_megamenu */
+  /* Relació: Marcadors: disponible_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Field: Temporada (field_temporada) */
+  /* Relació: Camp: Temporada (field_temporada) */
   $handler->display->display_options['relationships']['field_temporada_tid']['id'] = 'field_temporada_tid';
   $handler->display->display_options['relationships']['field_temporada_tid']['table'] = 'field_data_field_temporada';
   $handler->display->display_options['relationships']['field_temporada_tid']['field'] = 'field_temporada_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge_capçalera */
+  /* Camp: Contingut: Imatge_capçalera */
   $handler->display->display_options['fields']['field_imatge_capcalera']['id'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
@@ -5766,7 +5718,7 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -5778,7 +5730,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -5789,7 +5741,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_class'] = 'titol';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Subtítol */
+  /* Camp: Contingut: Subtítol */
   $handler->display->display_options['fields']['field_subtitol']['id'] = 'field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['table'] = 'field_data_field_subtitol';
   $handler->display->display_options['fields']['field_subtitol']['field'] = 'field_subtitol';
@@ -5800,7 +5752,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_subtitol']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_subtitol']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_subtitol']['field_api_classes'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Camp: Global: Text personalitzat */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -5808,20 +5760,20 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="nested">[field_sala] <div class="field titol">[title]</div> [field_subtitol]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_10';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Taxonomy term: Name */
+  /* Filtre contextual: Terme de taxonomia: Nom */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
@@ -5835,14 +5787,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -5865,7 +5817,7 @@ return $nids_or;';
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5873,14 +5825,14 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> Pròximament';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: proximament_megamenu */
+  /* Relació: Marcadors: proximament_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'proximament_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -5898,7 +5850,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Sala */
+  /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
@@ -5909,7 +5861,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_sala']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_sala']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -5917,14 +5869,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_11';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -5935,7 +5887,7 @@ return $nids_or;';
   /* Display: Entorn A fons */
   $handler = $view->new_display('block', 'Entorn A fons', 'block_3');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -5943,14 +5895,14 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> A fons';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: afons_megamenu */
+  /* Relació: Marcadors: afons_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'afons_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -5968,7 +5920,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Tipus d'entorn */
+  /* Camp: Contingut: Tipus d'entorn */
   $handler->display->display_options['fields']['field_tipus_entorn']['id'] = 'field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['table'] = 'field_data_field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['field'] = 'field_tipus_entorn';
@@ -5979,7 +5931,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tipus_entorn']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_entorn']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tipus_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -5987,13 +5939,13 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_12';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6004,7 +5956,7 @@ return $nids_or;';
   /* Display: Entorn proximament */
   $handler = $view->new_display('block', 'Entorn proximament', 'block_4');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6012,14 +5964,14 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> Pròximament';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: entorn_proximament */
+  /* Relació: Marcadors: entorn_proximament */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'entorn_proximament';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Data */
+  /* Camp: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -6037,7 +5989,7 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Tipus d'entorn */
+  /* Camp: Contingut: Tipus d'entorn */
   $handler->display->display_options['fields']['field_tipus_entorn']['id'] = 'field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['table'] = 'field_data_field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['field'] = 'field_tipus_entorn';
@@ -6048,7 +6000,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tipus_entorn']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_entorn']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tipus_entorn']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -6056,13 +6008,13 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_13';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6073,7 +6025,7 @@ return $nids_or;';
   /* Display: Dossiers premsa */
   $handler = $view->new_display('block', 'Dossiers premsa', 'block_5');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: dossier_premsa_megamen_ */
+  /* Relació: Marcadors: dossier_premsa_megamen_ */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6081,13 +6033,13 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_14';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6097,7 +6049,7 @@ return $nids_or;';
   /* Display: Primària */
   $handler = $view->new_display('block', 'Primària', 'block_6');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6105,7 +6057,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_edu_primaria */
+  /* Relació: Marcadors: megamenu_edu_primaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6113,13 +6065,13 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_primaria';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_15';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6129,7 +6081,7 @@ return $nids_or;';
   /* Display: Secundària */
   $handler = $view->new_display('block', 'Secundària', 'block_7');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6137,7 +6089,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_edu_secundaria */
+  /* Relació: Marcadors: megamenu_edu_secundaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6145,13 +6097,13 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_secundaria';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_16';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6161,7 +6113,7 @@ return $nids_or;';
   /* Display: Batxillerat */
   $handler = $view->new_display('block', 'Batxillerat', 'block_8');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
+  /* Capçalera: Global: Àrea de text */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -6169,7 +6121,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_batxillerat */
+  /* Relació: Marcadors: megamenu_batxillerat */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6177,13 +6129,13 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_batxillerat';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'view_megamenu:block_17';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6194,7 +6146,7 @@ return $nids_or;';
   $handler = $view->new_display('block', 'Patrocinadors', 'block_9');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View */
+  /* Camp: Global: Mostra */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
@@ -6253,46 +6205,46 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: disponible_megamenu */
+  /* Relació: Marcadors: disponible_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'disponible_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Field: Temporada (field_temporada) */
+  /* Relació: Camp: Temporada (field_temporada) */
   $handler->display->display_options['relationships']['field_temporada_tid']['id'] = 'field_temporada_tid';
   $handler->display->display_options['relationships']['field_temporada_tid']['table'] = 'field_data_field_temporada';
   $handler->display->display_options['relationships']['field_temporada_tid']['field'] = 'field_temporada_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Name */
+  /* Camp: Terme de taxonomia: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'field_temporada_tid';
   $handler->display->display_options['fields']['name']['label'] = 'Temporada';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Espectacle "en cartell" al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6302,14 +6254,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6317,14 +6269,14 @@ return $nids_or;';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -6369,32 +6321,32 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: proximament_megamenu */
+  /* Relació: Marcadors: proximament_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'proximament_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Espectacle "pròximament" al megamenú';
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6404,14 +6356,14 @@ return $nids_or;';
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -6457,33 +6409,33 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: afons_megamenu */
+  /* Relació: Marcadors: afons_megamenu */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'afons_megamenu';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Entorn A fons';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6541,33 +6493,33 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: entorn_proximament */
+  /* Relació: Marcadors: entorn_proximament */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'entorn_proximament';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Entorn "pròximament" al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6625,7 +6577,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: dossier_premsa_megamen_ */
+  /* Relació: Marcadors: dossier_premsa_megamen_ */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6633,27 +6585,27 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dossier_premsa_megamen_';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Secció Dossier de premsa al megamenú';
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6711,7 +6663,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_edu_primaria */
+  /* Relació: Marcadors: megamenu_edu_primaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6719,26 +6671,26 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_primaria';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Educació primària al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6796,7 +6748,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_edu_secundaria */
+  /* Relació: Marcadors: megamenu_edu_secundaria */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6804,26 +6756,26 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_edu_secundaria';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Educació secundària al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6881,7 +6833,7 @@ return $nids_or;';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: megamenu_batxillerat */
+  /* Relació: Marcadors: megamenu_batxillerat */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -6889,26 +6841,26 @@ return $nids_or;';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'megamenu_batxillerat';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Title */
+  /* Camp: Contingut: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Flags: Flag link */
+  /* Camp: Marcadors: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Batxillerat al megamenú';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Camp: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -6951,18 +6903,18 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Entorn (field_entorn) */
+  /* Filtre contextual: Contingut: Entorn (field_entorn) */
   $handler->display->display_options['arguments']['field_entorn_target_id']['id'] = 'field_entorn_target_id';
   $handler->display->display_options['arguments']['field_entorn_target_id']['table'] = 'field_data_field_entorn';
   $handler->display->display_options['arguments']['field_entorn_target_id']['field'] = 'field_entorn_target_id';
@@ -6972,14 +6924,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_entorn_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_entorn_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_entorn_target_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -7019,18 +6971,18 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Nid */
+  /* Camp: Contingut: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Criteri d'ordenació: Contingut: Data de publicació */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Premsa (field_premsa) */
+  /* Filtre contextual: Contingut: Premsa (field_premsa) */
   $handler->display->display_options['arguments']['field_premsa_target_id']['id'] = 'field_premsa_target_id';
   $handler->display->display_options['arguments']['field_premsa_target_id']['table'] = 'field_data_field_premsa';
   $handler->display->display_options['arguments']['field_premsa_target_id']['field'] = 'field_premsa_target_id';
@@ -7040,14 +6992,14 @@ return $nids_or;';
   $handler->display->display_options['arguments']['field_premsa_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_premsa_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_premsa_target_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Criteri de filtratge: Contingut: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Criteri de filtratge: Contingut: Tipus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

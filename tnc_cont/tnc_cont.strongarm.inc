@@ -56,7 +56,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_megamenu';
-  $strongarm->value = 'edit-workflow';
+  $strongarm->value = 'edit-xmlsitemap';
   $export['additional_settings__active_tab_megamenu'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2690,19 +2690,16 @@ function tnc_cont_strongarm() {
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '4',
         ),
         'path' => array(
-          'weight' => '5',
-        ),
-        'xmlsitemap' => array(
           'weight' => '6',
         ),
-        'flag' => array(
-          'weight' => '8',
+        'xmlsitemap' => array(
+          'weight' => '7',
         ),
       ),
       'display' => array(
@@ -3454,7 +3451,7 @@ function tnc_cont_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_megamenu';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['language_content_type_megamenu'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3531,9 +3528,9 @@ function tnc_cont_strongarm() {
     5 => 'navigation',
     6 => 'user-menu',
     7 => 'menu-tauler',
-    8 => 'menu-peu',
-    9 => 'menu-compra-d-abonaments',
-    10 => 'menu-compra-d-entrades',
+    8 => 'menu-compra-d-abonaments',
+    9 => 'menu-compra-d-entrades',
+    10 => 'menu-peu',
     11 => 'menu-regala-tnc',
   );
   $export['menu_default_active_menus'] = $strongarm;
