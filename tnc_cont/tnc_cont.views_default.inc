@@ -2217,6 +2217,7 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_imatge_capcalera']['table'] = 'field_data_field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['field'] = 'field_imatge_capcalera';
   $handler->display->display_options['fields']['field_imatge_capcalera']['label'] = '';
+  $handler->display->display_options['fields']['field_imatge_capcalera']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_type'] = '0';
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_imatge_capcalera']['element_wrapper_type'] = '0';
@@ -2227,6 +2228,21 @@ return $nids_or;';
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_imatge_capcalera']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Imatge carrousel gran de portada */
+  $handler->display->display_options['fields']['field_img_carrousel']['id'] = 'field_img_carrousel';
+  $handler->display->display_options['fields']['field_img_carrousel']['table'] = 'field_data_field_img_carrousel';
+  $handler->display->display_options['fields']['field_img_carrousel']['field'] = 'field_img_carrousel';
+  $handler->display->display_options['fields']['field_img_carrousel']['label'] = '';
+  $handler->display->display_options['fields']['field_img_carrousel']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_img_carrousel']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_img_carrousel']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_img_carrousel']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_img_carrousel']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_img_carrousel']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_img_carrousel']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -2398,11 +2414,30 @@ return $nids_or;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Camp: Contingut: Data */
+  $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
+  $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
+  $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_data']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_data']['settings'] = array(
+    'format_type' => 'mig',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
   /* Camp: Contingut: Sala */
   $handler->display->display_options['fields']['field_sala']['id'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['table'] = 'field_data_field_sala';
   $handler->display->display_options['fields']['field_sala']['field'] = 'field_sala';
   $handler->display->display_options['fields']['field_sala']['label'] = '';
+  $handler->display->display_options['fields']['field_sala']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_sala']['element_type'] = '0';
   $handler->display->display_options['fields']['field_sala']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sala']['element_wrapper_type'] = '0';

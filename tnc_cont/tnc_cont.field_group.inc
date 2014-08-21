@@ -51,10 +51,10 @@ function tnc_cont_field_group_info() {
     'label' => 'Multimèdia',
     'weight' => '7',
     'children' => array(
-      0 => 'field_imatges',
-      1 => 'field_videos',
-      2 => 'field_audio',
-      3 => 'field_documentacio',
+      0 => 'field_audio',
+      1 => 'field_documentacio',
+      2 => 'field_imatges',
+      3 => 'field_videos',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

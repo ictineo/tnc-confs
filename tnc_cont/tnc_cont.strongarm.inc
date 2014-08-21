@@ -2209,7 +2209,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_petit' => array(
           'default' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -2227,7 +2227,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_carrousel_gran' => array(
           'default' => array(
-            'weight' => '19',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -2255,7 +2255,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_entorn_proximament' => array(
           'default' => array(
-            'weight' => '20',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'entityreference_view_widget' => array(
@@ -2265,7 +2265,7 @@ function tnc_cont_strongarm() {
         ),
         'flag_afons_megamenu' => array(
           'default' => array(
-            'weight' => '17',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'entityreference_view_widget' => array(

@@ -2411,7 +2411,7 @@ Per exemple: 2014-15',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -2472,7 +2472,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -2584,7 +2584,7 @@ Per exemple: 2014-15',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -2695,7 +2695,7 @@ Per exemple: 2014-15',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -2837,6 +2837,81 @@ Per exemple: 2014-15',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-fitxa_entorn-field_img_carrousel'
+  $field_instances['node-fitxa_entorn-field_img_carrousel'] = array(
+    'bundle' => 'fitxa_entorn',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_img_carrousel',
+    'label' => 'Imatge carrousel gran de portada',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 1,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
       'weight' => 10,
     ),
   );
@@ -2895,7 +2970,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -2959,7 +3034,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -3017,7 +3092,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -3032,7 +3107,7 @@ Per exemple: 2014-15',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'entityreference_view_widget' => array(
         'label' => 'hidden',
@@ -3075,7 +3150,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -3090,7 +3165,7 @@ Per exemple: 2014-15',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -3127,7 +3202,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -3142,7 +3217,7 @@ Per exemple: 2014-15',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'entityreference_view_widget' => array(
         'label' => 'hidden',
@@ -3188,7 +3263,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -3547,7 +3622,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -3850,7 +3925,7 @@ Per exemple: 2014-15',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
-          'semantic_field_format' => 0,
+          'semantic_field_format' => '',
           'view_mode' => 'entityreference_view_widget',
         ),
         'type' => 'entityreference_entity_view',
@@ -3957,7 +4032,7 @@ Per exemple: 2014-15',
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -4087,8 +4162,8 @@ Per exemple: 2014-15',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'medium',
-          'semantic_field_format' => '',
+          'image_style' => '',
+          'semantic_field_format' => 0,
         ),
         'type' => 'image',
         'weight' => 0,
@@ -4158,7 +4233,7 @@ Per exemple: 2014-15',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -4219,6 +4294,92 @@ Per exemple: 2014-15',
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 49,
+    ),
+  );
+
+  // Exported field_instance: 'node-fitxa_espectacle-field_img_carrousel'
+  $field_instances['node-fitxa_espectacle-field_img_carrousel'] = array(
+    'bundle' => 'fitxa_espectacle',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'semantic_field_format' => 0,
+        ),
+        'type' => 'image',
+        'weight' => 33,
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_img_carrousel',
+    'label' => 'Imatge carrousel gran de portada',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 1,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 6,
     ),
   );
 
@@ -4380,7 +4541,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -4490,7 +4651,7 @@ Per exemple: 2014-15',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -7119,6 +7280,7 @@ Per exemple: 2014-15',
   t('Hora');
   t('Idioma');
   t('Imatge');
+  t('Imatge carrousel gran de portada');
   t('Imatge preview');
   t('Imatge_capçalera');
   t('Imatges');
