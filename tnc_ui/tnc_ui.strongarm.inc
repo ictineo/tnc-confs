@@ -906,13 +906,13 @@ function tnc_ui_strongarm() {
     'tnc_xxss_inst' => 'http://www.tnc.cat/instagram',
     'tnc_xxss_twt' => 'http://www.tnc.cat/twitter',
     'tnc_xxss_you' => 'http://www.tnc.cat/youtube',
-    'tnc_0_text' => 'link 0',
+    'tnc_0_text' => 'Entrades',
     'tnc_0_url' => 'http://mit.edu',
-    'tnc_1_text' => 'text 1',
+    'tnc_1_text' => 'Abonaments',
     'tnc_1_url' => 'http://mit.edu',
-    'tnc_2_text' => 'link 2',
+    'tnc_2_text' => 'Ajudan\'s',
     'tnc_2_url' => 'http://mit.edu',
-    'tnc_3_text' => 'text 3',
+    'tnc_3_text' => 'Subscriut-te',
     'tnc_3_url' => 'http://mit.edu',
   );
   $export['theme_tnc_settings'] = $strongarm;

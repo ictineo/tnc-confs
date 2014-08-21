@@ -1927,7 +1927,9 @@ return $nids_or;';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_imatge_capcalera]
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="mm-next-slide">&nbsp;</div>
+<div class="field-content-2wrapper">
+[field_imatge_capcalera]
 <div class="tab tab-big">
 [field_url_compra_reserva]
 [field_sala]
@@ -1945,8 +1947,14 @@ return $nids_or;';
 [title]
 [field_autor]
 </div>
-';
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Camp: Contingut: Enllaç */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
