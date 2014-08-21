@@ -107,6 +107,12 @@ function tnc_cont_context_default_contexts() {
           'region' => 'bottom',
           'weight' => '-6',
         ),
+        'menu-menu-restaurant-tnc' => array(
+          'module' => 'menu',
+          'delta' => 'menu-restaurant-tnc',
+          'region' => 'bottom',
+          'weight' => '-5',
+        ),
       ),
     ),
   );

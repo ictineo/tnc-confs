@@ -438,6 +438,7 @@ return $nids_or;';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
   $handler->display->display_options['style_plugin'] = 'calendar_style';
   $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '1';
   $handler->display->display_options['style_options']['with_weekno'] = '0';
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
@@ -539,6 +540,16 @@ return $nids_or;';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['id'] = 'field_hora_sessio_value';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['table'] = 'field_data_field_hora_sessio';
   $handler->display->display_options['sorts']['field_hora_sessio_value']['field'] = 'field_hora_sessio_value';
+  /* Filtre contextual: Data: Data (field_collection_item) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_dia_sessio.field_dia_sessio_value' => 'field_data_field_dia_sessio.field_dia_sessio_value',
+  );
 
   /* Display: Calendari general */
   $handler = $view->new_display('page', 'Calendari general', 'page_1');
@@ -5732,7 +5743,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'En cartell';
-  $handler->display->display_options['header']['area']['content'] = '> En cartell';
+  $handler->display->display_options['header']['area']['content'] = 'En cartell';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: disponible_megamenu */
@@ -5865,7 +5876,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Pròximament';
-  $handler->display->display_options['header']['area']['content'] = '> Pròximament';
+  $handler->display->display_options['header']['area']['content'] = 'Pròximament';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: proximament_megamenu */
@@ -5935,7 +5946,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'A fons';
-  $handler->display->display_options['header']['area']['content'] = '> A fons';
+  $handler->display->display_options['header']['area']['content'] = 'A fons';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: afons_megamenu */
@@ -5963,6 +5974,13 @@ return $nids_or;';
     'show_repeat_rule' => 'show',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
+  /* Camp: Contingut: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Camp: Contingut: Tipus d'entorn */
   $handler->display->display_options['fields']['field_tipus_entorn']['id'] = 'field_tipus_entorn';
   $handler->display->display_options['fields']['field_tipus_entorn']['table'] = 'field_data_field_tipus_entorn';
@@ -5974,13 +5992,6 @@ return $nids_or;';
   $handler->display->display_options['fields']['field_tipus_entorn']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_entorn']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_tipus_entorn']['field_api_classes'] = TRUE;
-  /* Camp: Contingut: Títol */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Criteri d'ordenació: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -6004,7 +6015,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Pròximament';
-  $handler->display->display_options['header']['area']['content'] = '> Pròximament';
+  $handler->display->display_options['header']['area']['content'] = 'Pròximament';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: entorn_proximament */
@@ -6097,7 +6108,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Obres recomanades';
-  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = 'Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: megamenu_edu_primaria */
@@ -6129,7 +6140,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'obres recomanades';
-  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = 'Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: megamenu_edu_secundaria */
@@ -6161,7 +6172,7 @@ return $nids_or;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'obres recomanades';
-  $handler->display->display_options['header']['area']['content'] = '> Obres recomanades';
+  $handler->display->display_options['header']['area']['content'] = 'Obres recomanades';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relació: Marcadors: megamenu_batxillerat */

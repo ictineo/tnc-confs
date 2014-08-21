@@ -2690,16 +2690,19 @@ function tnc_cont_strongarm() {
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'title' => array(
-          'weight' => '4',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '6',
+        ),
+        'flag' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(
@@ -3532,6 +3535,7 @@ function tnc_cont_strongarm() {
     9 => 'menu-compra-d-entrades',
     10 => 'menu-peu',
     11 => 'menu-regala-tnc',
+    12 => 'menu-restaurant-tnc',
   );
   $export['menu_default_active_menus'] = $strongarm;
 
