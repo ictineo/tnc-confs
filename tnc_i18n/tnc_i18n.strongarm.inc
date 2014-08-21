@@ -123,13 +123,13 @@ function tnc_i18n_strongarm() {
     'name' => 'Catalan',
     'native' => 'cat',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '-10',
-    'javascript' => '',
+    'javascript' => '-wMQPlEY2HKJ7eFrHRFoDAO3jYcn4Seu6J5Vw8NB-gE',
   );
   $export['language_default'] = $strongarm;
 

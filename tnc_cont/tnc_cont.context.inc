@@ -446,11 +446,11 @@ function tnc_cont_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-6' => array(
+        'block-5' => array(
           'module' => 'block',
-          'delta' => '6',
+          'delta' => '5',
           'region' => 'content',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
       ),
     ),
